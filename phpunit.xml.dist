@@ -18,7 +18,7 @@
 >
 
     <testsuites>
-        <testsuite name="Mfinante Test Suite">
+        <testsuite name="RaceTec Client Test Suite">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>

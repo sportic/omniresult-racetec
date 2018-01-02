@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "81ce4c75e79b322234931ca83a0aeb14",
+    "content-hash": "43ce64800ecb1cf1a889cc697f32004b",
     "packages": [
         {
             "name": "fabpot/goutte",
@@ -621,16 +621,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.2",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "5f81907ea43bfa971ac2c7fbac593ebe7cd7d333"
+                "reference": "e593f06dd90a81c7b70ac1c49862a061b0ec06d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/5f81907ea43bfa971ac2c7fbac593ebe7cd7d333",
-                "reference": "5f81907ea43bfa971ac2c7fbac593ebe7cd7d333",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/e593f06dd90a81c7b70ac1c49862a061b0ec06d2",
+                "reference": "e593f06dd90a81c7b70ac1c49862a061b0ec06d2",
                 "shasum": ""
             },
             "require": {
@@ -638,18 +638,17 @@
                 "psr/container": "^1.0"
             },
             "conflict": {
-                "symfony/config": "<3.3.7",
+                "symfony/config": "<3.3.1",
                 "symfony/finder": "<3.3",
-                "symfony/proxy-manager-bridge": "<3.4",
-                "symfony/yaml": "<3.4"
+                "symfony/yaml": "<3.3"
             },
             "provide": {
                 "psr/container-implementation": "1.0"
             },
             "require-dev": {
-                "symfony/config": "~3.3|~4.0",
-                "symfony/expression-language": "~2.8|~3.0|~4.0",
-                "symfony/yaml": "~3.4|~4.0"
+                "symfony/config": "~3.3",
+                "symfony/expression-language": "~2.8|~3.0",
+                "symfony/yaml": "~3.3"
             },
             "suggest": {
                 "symfony/config": "",
@@ -661,7 +660,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "3.3-dev"
                 }
             },
             "autoload": {
@@ -688,7 +687,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-12-14T19:40:10+00:00"
+            "time": "2017-09-05T20:39:38+00:00"
         },
         {
             "name": "symfony/dom-crawler",

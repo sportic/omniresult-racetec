@@ -30,8 +30,8 @@ class ClientBridge implements GuzzleClientInterface
             'User-Agent',
             'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0'
         );
-        /** IMPORTANT - the delay is necessary to make sure the javascript is all loaded */
-        $request->setDelay(12);
+//        /** IMPORTANT - the delay is necessary to make sure the javascript is all loaded */
+//        $request->setDelay(12);
 
         /**
          * @see \JonnyW\PhantomJs\Http\Response

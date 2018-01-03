@@ -28,8 +28,18 @@ class ClientBridge implements GuzzleClientInterface
         $request = $client->getMessageFactory()->createRequest($uri, $method);
         $request->addHeader(
             'User-Agent',
-            'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0'
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0'
         );
+
+        $request->addHeader(
+            'Content-Type',
+            'application/x-www-form-urlencoded'
+        );
+
+        if (isset($options['form_params'])) {
+            $request->setRequestData($options['form_params']);
+        }
+
 //        /** IMPORTANT - the delay is necessary to make sure the javascript is all loaded */
 //        $request->setDelay(12);
 
@@ -81,6 +91,7 @@ class ClientBridge implements GuzzleClientInterface
             $this->phantomJsClient = PhantomJsBaseClient::getInstance();
             $this->phantomJsClient->getEngine()->setPath(PhantomBinary::getBin());
         }
+
         return $this->phantomJsClient;
     }
 }

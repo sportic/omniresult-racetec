@@ -24,10 +24,9 @@ class ClientFactory
     public static function getGoutteClient()
     {
         $options = [
-            'headers' => [
-                'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0',
-            ],
+            'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0'
         ];
+
         return new Client($options);
     }
 

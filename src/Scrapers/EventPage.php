@@ -15,6 +15,7 @@ class EventPage extends AbstractScraper
     protected $cId;
     protected $rId;
     protected $eId = 1;
+    protected $page = 1;
 
     /**
      * EventPage constructor.
@@ -22,12 +23,14 @@ class EventPage extends AbstractScraper
      * @param $cId
      * @param $rId
      * @param int $eId
+     * @param int $page
      */
-    public function __construct($cId, $rId, int $eId)
+    public function __construct(int $cId, int $rId, int $eId = 1, int $page = 1)
     {
-        $this->cId = $cId;
-        $this->rId = $rId;
-        $this->eId = $eId;
+        $this->cId  = $cId;
+        $this->rId  = $rId;
+        $this->eId  = $eId;
+        $this->page = $page;
     }
 
 
@@ -80,14 +83,43 @@ class EventPage extends AbstractScraper
     }
 
     /**
+     * @return int
+     */
+    public function getPage(): int
+    {
+        return $this->page;
+    }
+
+    /**
+     * @param int $page
+     */
+    public function setPage(int $page)
+    {
+        $this->page = $page;
+    }
+
+    /**
      * @inheritdoc
      */
     protected function generateCrawler()
     {
-        $crawler = $this->getClient()->request(
+        $client  = $this->getClient();
+        $crawler = $client->request(
             'GET',
             $this->getCrawlerUri()
         );
+
+        $cPage = $this->getPage();
+        if ($cPage > 1) {
+            $link        = $crawler->filter('#ctl00_Content_Main_grdTopPager')->selectLink($this->getPage())->first()->getNode(0);
+            $href        = $link->getAttribute('href');
+            $eventTarget = str_replace(["javascript:__doPostBack('", "','')"], '', $href);
+
+            $crawler->filter('#__EVENTTARGET')->getNode(0)->setAttribute('value', $eventTarget);
+
+            $form    = $crawler->filter('#aspnetForm')->form();
+            $crawler = $client->submit($form);
+        }
 
         return $crawler;
     }
@@ -98,8 +130,8 @@ class EventPage extends AbstractScraper
     public function getCrawlerUri()
     {
         return 'http://cronometraj.racetecresults.com/Results.aspx?'
-        . 'CId=' . $this->getCId()
-        . '&RId=' . $this->getRId()
-        . '&EId=' . $this->getEId();
+               . 'CId=' . $this->getCId()
+               . '&RId=' . $this->getRId()
+               . '&EId=' . $this->getEId();
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Sportic\Timing\RaceTecClient\Scrapers;
 
-use Sportic\Timing\RaceTecClient\Clients\ClientFactory;
+use ByTIC\GouttePhantomJs\Clients\ClientFactory;
 use Sportic\Timing\RaceTecClient\Parsers\AbstractParser;
 use Goutte\Client;
 use Symfony\Component\DomCrawler\Crawler;

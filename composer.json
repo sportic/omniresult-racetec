@@ -15,9 +15,7 @@
   },
   "require": {
     "php": "^7.0",
-    "fabpot/goutte": "^3.2",
-    "symfony/dependency-injection":"3.3.9",
-    "jonnyw/php-phantomjs": "^4.6"
+    "bytic/goutte-phantomjs-bridge": "^1.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0",
@@ -26,10 +24,10 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "PhantomInstaller\\Installer::installPhantomJS"
+      "ByTIC\\GouttePhantomJs\\Composer\\PhantomInstaller::installPhantomJS"
     ],
     "post-update-cmd": [
-      "PhantomInstaller\\Installer::installPhantomJS"
+      "ByTIC\\GouttePhantomJs\\Composer\\PhantomInstaller::installPhantomJS"
     ]
   }
 }

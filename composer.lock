@@ -4,8 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "43ce64800ecb1cf1a889cc697f32004b",
+    "content-hash": "6a0851364d4e9d383be2cd354bb16a39",
     "packages": [
+        {
+            "name": "bytic/goutte-phantomjs-bridge",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ByTIC/goutte-phantomjs-bridge.git",
+                "reference": "336d4085ca89af2a9b618d3846a003fb4551fbe1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ByTIC/goutte-phantomjs-bridge/zipball/336d4085ca89af2a9b618d3846a003fb4551fbe1",
+                "reference": "336d4085ca89af2a9b618d3846a003fb4551fbe1",
+                "shasum": ""
+            },
+            "require": {
+                "fabpot/goutte": "^3.2",
+                "jonnyw/php-phantomjs": "^4.6",
+                "php": "^7.0",
+                "symfony/dependency-injection": "3.3.9"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9",
+                "phpunit/phpunit": "^6.2",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ByTIC\\GouttePhantomJs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Solomon",
+                    "email": "hello@gabrielsolomon.ro"
+                }
+            ],
+            "description": "a scraper for getting data from racetec websites",
+            "time": "2018-01-03T20:51:01+00:00"
+        },
         {
             "name": "fabpot/goutte",
             "version": "v3.2.2",

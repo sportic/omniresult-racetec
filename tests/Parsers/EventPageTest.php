@@ -1,9 +1,10 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient\Tests\Scrapers;
+namespace Sportic\Timing\RaceTecClient\Tests\Parsers;
 
 use PHPUnit\Framework\TestCase;
-use Sportic\Timing\RaceTecClient\Scrapers\EventPage;
+use Sportic\Timing\RaceTecClient\Scrapers\EventPage as EventPageScraper;
+use Sportic\Timing\RaceTecClient\Parsers\EventPage as EventPageParser;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
@@ -12,36 +13,24 @@ use Symfony\Component\DomCrawler\Crawler;
  */
 class EventPageTest extends TestCase
 {
-    public function testGetCrawlerUri()
+    public function testGenerateContent()
     {
-        $crawler = $this->getCrawler();
+        $parameters = require TEST_FIXTURE_PATH . DS . 'Parsers' . DS . 'event_page.php';
 
-        static::assertInstanceOf(Crawler::class, $crawler);
+        $scrapper = new EventPageScraper('16648', '2091', '1');
 
-        static::assertSame(
-            'http://cronometraj.racetecresults.com/Results.aspx?CId=16648&RId=2091&EId=1',
-            $crawler->getUri()
+        $crawler = new Crawler(null, $scrapper->getCrawlerUri());
+        $crawler->addContent(
+            file_get_contents(
+                TEST_FIXTURE_PATH . DS . 'Parsers' . DS . 'event_page.html'
+            ),
+            'text/html;charset=utf-8'
         );
-    }
 
-    public function testGetCrawlerHtml()
-    {
-        $crawler = $this->getCrawler();
+        $parser = new EventPageParser();
+        $parser->setScraper($scrapper);
+        $parser->setCrawler($crawler);
 
-        static::assertInstanceOf(Crawler::class, $crawler);
-
-
-        static::assertContains('Marius-Alexandru Dragu', $crawler->html());
-        file_put_contents(TEST_FIXTURE_PATH . '/Parsers/event_page.html', $crawler->html());
-    }
-
-    /**
-     * @return Crawler
-     */
-    protected function getCrawler()
-    {
-        $scraper = new EventPage('16648', '2091', '1');
-
-        return $scraper->getCrawler();
+        self::assertEquals($parameters, $parser->getContent());
     }
 }

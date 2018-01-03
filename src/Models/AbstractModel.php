@@ -10,6 +10,15 @@ use Sportic\Timing\RaceTecClient\Helper;
  */
 abstract class AbstractModel
 {
+    /**
+     * AbstractModel constructor.
+     *
+     * @param array $parameters
+     */
+    public function __construct($parameters = [])
+    {
+        $this->setParameters($parameters);
+    }
 
     /**
      * @param array $parameters

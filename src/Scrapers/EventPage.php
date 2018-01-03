@@ -86,12 +86,20 @@ class EventPage extends AbstractScraper
     {
         $crawler = $this->getClient()->request(
             'GET',
-            'http://cronometraj.racetecresults.com/Results.aspx?'
-            . 'CId=' . $this->getCId()
-            . '&RId=' . $this->getRId()
-            . '&EId=' . $this->getEId()
+            $this->getCrawlerUri()
         );
 
         return $crawler;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCrawlerUri()
+    {
+        return 'http://cronometraj.racetecresults.com/Results.aspx?'
+        . 'CId=' . $this->getCId()
+        . '&RId=' . $this->getRId()
+        . '&EId=' . $this->getEId();
     }
 }

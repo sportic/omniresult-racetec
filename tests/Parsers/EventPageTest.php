@@ -38,21 +38,32 @@ class EventPageTest extends TestCase
 
     public function testGenerateContentResultList()
     {
-
         self::assertCount(50, self::$parametersParsed['results']['list']);
         self::assertInstanceOf(Result::class, self::$parametersParsed['results']['list'][5]);
         self::assertEquals(
             [
-                'posGen' => '6',
-                'bib' => '247',
-                'fullName' => 'Sorin Boriceanu',
-                'time' => '02:04:16',
-                'category' => 'Masculin 35-39',
+                'posGen'      => '6',
+                'bib'         => '247',
+                'fullName'    => 'Sorin Boriceanu',
+                'time'        => '02:04:16',
+                'category'    => 'Masculin 35-39',
                 'posCategory' => '3',
-                'gender' => 'Male',
-                'posGender' => '6',
+                'gender'      => 'Male',
+                'posGender'   => '6',
             ],
             self::$parametersParsed['results']['list'][5]->__toArray()
+        );
+    }
+
+    public function testGenerateContentResultPagination()
+    {
+        self::assertEquals(
+            [
+                'current' => 1,
+                'all'     => 5,
+                'items'   => 222,
+            ],
+            self::$parametersParsed['results']['pagination']
         );
     }
 
@@ -81,11 +92,11 @@ class EventPageTest extends TestCase
         self::$parser->setScraper($scrapper);
         self::$parser->setCrawler($crawler);
 
-        self::$parametersParsed =  self::$parser->getContent();
+        self::$parametersParsed = self::$parser->getContent();
 
-        file_put_contents(
-            TEST_FIXTURE_PATH . DS . 'Parsers' . DS . 'event_page.serialized',
-            serialize(self::$parametersParsed)
-        );
+//        file_put_contents(
+//            TEST_FIXTURE_PATH . DS . 'Parsers' . DS . 'event_page.serialized',
+//            serialize(self::$parametersParsed)
+//        );
     }
 }

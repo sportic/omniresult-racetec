@@ -19,9 +19,10 @@ class EventPage extends AbstractParser
      */
     protected function generateContent()
     {
-        $this->returnContent['races']   = $this->parseRaces();
-        $this->returnContent['results']['header'] = $this->parseResultsHeader();
-        $this->returnContent['results']['list'] = $this->parseResultsTable();
+        $this->returnContent['races']                 = $this->parseRaces();
+        $this->returnContent['results']['header']     = $this->parseResultsHeader();
+        $this->returnContent['results']['list']       = $this->parseResultsTable();
+        $this->returnContent['results']['pagination'] = $this->parseResultsPagination();
 
         return $this->returnContent;
     }
@@ -57,8 +58,8 @@ class EventPage extends AbstractParser
      */
     protected function parseResultsTable()
     {
-        $return = [];
-        $resultsRows      = $this->getCrawler()->filter(
+        $return      = [];
+        $resultsRows = $this->getCrawler()->filter(
             '#ctl00_Content_Main_grdNew_DXMainTable > tbody > tr'
         );
         if ($resultsRows->count() > 0) {
@@ -109,7 +110,7 @@ class EventPage extends AbstractParser
     protected function parseResultsRow(DOMElement $row)
     {
         $parameters = [];
-        $i = 0;
+        $i          = 0;
         foreach ($row->childNodes as $cell) {
             if ($cell instanceof DOMElement) {
                 $parameters = $this->parseResultsRowCell($i, $cell, $parameters);
@@ -144,5 +145,30 @@ class EventPage extends AbstractParser
         }
 
         return $parameters;
+    }
+
+    /**
+     * @return array
+     */
+    protected function parseResultsPagination()
+    {
+        $return = [
+            'current' => 1,
+            'all'     => 1,
+            'items'   => 1,
+        ];
+
+        $paginationObject = $this->getCrawler()->filter(
+            '#ctl00_Content_Main_lblTopPager'
+        );
+
+        if ($paginationObject->count() > 0) {
+            $elements          = explode(' ', $paginationObject->html());
+            $return['current'] = intval($elements[1]);
+            $return['all']     = intval($elements[3]);
+            $return['items']   = intval(str_replace('(', '', $elements[4]));
+        }
+
+        return $return;
     }
 }

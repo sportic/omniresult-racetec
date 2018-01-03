@@ -3,6 +3,7 @@
 namespace Sportic\Timing\RaceTecClient\Tests\Parsers;
 
 use PHPUnit\Framework\TestCase;
+use Sportic\Timing\RaceTecClient\Models\Result;
 use Sportic\Timing\RaceTecClient\Scrapers\EventPage as EventPageScraper;
 use Sportic\Timing\RaceTecClient\Parsers\EventPage as EventPageParser;
 use Symfony\Component\DomCrawler\Crawler;
@@ -13,9 +14,58 @@ use Symfony\Component\DomCrawler\Crawler;
  */
 class EventPageTest extends TestCase
 {
-    public function testGenerateContent()
+    protected static $parameters;
+
+    /**
+     * @var EventPageParser
+     */
+    protected static $parser;
+
+    /**
+     * @var array
+     */
+    protected static $parametersParsed;
+
+    public function testGenerateContentRaces()
     {
-        $parameters = require TEST_FIXTURE_PATH . DS . 'Parsers' . DS . 'event_page.php';
+        self::assertCount(5, self::$parametersParsed['races']);
+    }
+
+    public function testGenerateContentResultHeader()
+    {
+        self::assertCount(8, self::$parametersParsed['results']['header']);
+    }
+
+    public function testGenerateContentResultList()
+    {
+
+        self::assertCount(50, self::$parametersParsed['results']['list']);
+        self::assertInstanceOf(Result::class, self::$parametersParsed['results']['list'][5]);
+        self::assertEquals(
+            [
+                'posGen' => '6',
+                'bib' => '247',
+                'fullName' => 'Sorin Boriceanu',
+                'time' => '02:04:16',
+                'category' => 'Masculin 35-39',
+                'posCategory' => '3',
+                'gender' => 'Male',
+                'posGender' => '6',
+            ],
+            self::$parametersParsed['results']['list'][5]->__toArray()
+        );
+    }
+
+    public function testGenerateContentAll()
+    {
+        self::assertEquals(self::$parameters, self::$parametersParsed);
+    }
+
+    public static function setUpBeforeClass()
+    {
+        self::$parameters = unserialize(
+            file_get_contents(TEST_FIXTURE_PATH . DS . 'Parsers' . DS . 'event_page.serialized')
+        );
 
         $scrapper = new EventPageScraper('16648', '2091', '1');
 
@@ -27,10 +77,15 @@ class EventPageTest extends TestCase
             'text/html;charset=utf-8'
         );
 
-        $parser = new EventPageParser();
-        $parser->setScraper($scrapper);
-        $parser->setCrawler($crawler);
+        self::$parser = new EventPageParser();
+        self::$parser->setScraper($scrapper);
+        self::$parser->setCrawler($crawler);
 
-        self::assertEquals($parameters, $parser->getContent());
+        self::$parametersParsed =  self::$parser->getContent();
+
+        file_put_contents(
+            TEST_FIXTURE_PATH . DS . 'Parsers' . DS . 'event_page.serialized',
+            serialize(self::$parametersParsed)
+        );
     }
 }

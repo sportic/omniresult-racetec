@@ -117,4 +117,12 @@ abstract class AbstractScraper
 
         return $classNamespacePath.'\Parsers\\'.$classFirstName;
     }
+
+    /**
+     * @return string
+     */
+    protected function getCrawlerUriHost()
+    {
+        return 'http://cronometraj.racetecresults.com';
+    }
 }

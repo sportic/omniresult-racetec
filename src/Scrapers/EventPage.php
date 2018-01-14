@@ -129,7 +129,7 @@ class EventPage extends AbstractScraper
      */
     public function getCrawlerUri()
     {
-        return 'http://cronometraj.racetecresults.com/Results.aspx?'
+        return $this->getCrawlerUriHost().'/Results.aspx?'
                . 'CId=' . $this->getCId()
                . '&RId=' . $this->getRId()
                . '&EId=' . $this->getEId();

@@ -72,5 +72,4 @@ class ResultPageTest extends TestCase
 //            serialize(self::$parametersParsed)
 //        );
     }
-    
 }

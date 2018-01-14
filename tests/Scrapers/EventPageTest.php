@@ -30,9 +30,8 @@ class EventPageTest extends TestCase
 
         static::assertInstanceOf(Crawler::class, $crawler);
 
-
         static::assertContains('Marius-Alexandru Dragu', $crawler->html());
-        file_put_contents(TEST_FIXTURE_PATH . '/Parsers/event_page.html', $crawler->html());
+//        file_put_contents(TEST_FIXTURE_PATH . '/Parsers/event_page.html', $crawler->html());
     }
 
     /**

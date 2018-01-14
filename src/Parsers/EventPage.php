@@ -136,7 +136,7 @@ class EventPage extends AbstractParser
     {
         if (isset($this->returnContent['results']['header'][$colCount])) {
             $field = $this->returnContent['results']['header'][$colCount];
-            if ($field == 'full_name') {
+            if ($field == 'fullName') {
                 $parameters['href'] = $cell->firstChild->getAttribute('href');
                 $parameters[$field] = trim($cell->nodeValue);
             } else {

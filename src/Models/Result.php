@@ -11,6 +11,7 @@ class Result extends AbstractModel
     protected $posGen;
     protected $bib;
     protected $fullName;
+    protected $href;
     protected $time;
     protected $category;
     protected $posCategory;

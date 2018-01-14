@@ -45,6 +45,7 @@ class EventPageTest extends TestCase
                 'posGen'      => '6',
                 'bib'         => '247',
                 'fullName'    => 'Sorin Boriceanu',
+                'href'        => 'MyResults.aspx?uid=16648-2091-1-29984',
                 'time'        => '02:04:16',
                 'category'    => 'Masculin 35-39',
                 'posCategory' => '3',

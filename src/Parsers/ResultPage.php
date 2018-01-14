@@ -51,17 +51,17 @@ class ResultPage extends AbstractParser
     protected function parsePositions()
     {
         $posGenData = $this->getCrawler()->filter('#ctl00_Content_Main_lblResOPos')->text();
-        list ($posGen, $participants) = explode('/', $posGenData);
+        list($posGen, $participants) = explode('/', $posGenData);
         $this->returnContent['pos_gen'] = trim($posGen);
         $this->returnContent['race']['participants'] = trim($participants);
 
         $posGenData = $this->getCrawler()->filter('#ctl00_Content_Main_lblResGPos')->text();
-        list ($posGen, $participants) = explode('/', $posGenData);
+        list($posGen, $participants) = explode('/', $posGenData);
         $this->returnContent['pos_gender'] = trim($posGen);
         $this->returnContent['gender']['participants'] = trim($participants);
 
         $posGenData = $this->getCrawler()->filter('#ctl00_Content_Main_lblResCPos')->text();
-        list ($posGen, $participants) = explode('/', $posGenData);
+        list($posGen, $participants) = explode('/', $posGenData);
         $this->returnContent['pos_category'] = trim($posGen);
         $this->returnContent['category']['participants'] = trim($participants);
     }

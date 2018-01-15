@@ -3,6 +3,7 @@
 namespace Sportic\Timing\RaceTecClient\Tests\Parsers;
 
 use PHPUnit\Framework\TestCase;
+use Sportic\Timing\RaceTecClient\Models\Split;
 use Sportic\Timing\RaceTecClient\Scrapers\ResultPage as PageScraper;
 use Sportic\Timing\RaceTecClient\Parsers\ResultPage as PageParser;
 use Symfony\Component\DomCrawler\Crawler;
@@ -45,6 +46,22 @@ class ResultPageTest extends TestCase
         self::assertSame('Finished', self::$parametersParsed['status']['name']);
     }
 
+    public function testSplits()
+    {
+        /** @var Split[] $splits */
+        $splits = self::$parametersParsed['splits'];
+        self::assertEquals(12, count($splits));
+
+        self::assertInstanceOf(Split::class, $splits[0]);
+        self::assertSame('Swim', $splits[0]->getName());
+        self::assertSame('00:17:21.53', $splits[0]->getTime());
+
+        self::assertInstanceOf(Split::class, $splits[8]);
+        self::assertSame('Ciclism 7', $splits[8]->getName());
+        self::assertSame('01:17:11.19', $splits[8]->getTimeFromStart());
+        self::assertSame('00:08:50.52', $splits[8]->getTime());
+    }
+
     public static function setUpBeforeClass()
     {
         self::$parameters = unserialize(
@@ -68,9 +85,8 @@ class ResultPageTest extends TestCase
         self::$parametersParsed = self::$parser->getContent();
 
 //        file_put_contents(
-//            TEST_FIXTURE_PATH . DS . 'Parsers' . DS . 'event_page.serialized',
+//            TEST_FIXTURE_PATH . DS . 'Parsers' . DS . 'result_page.serialized',
 //            serialize(self::$parametersParsed)
 //        );
     }
-    
 }

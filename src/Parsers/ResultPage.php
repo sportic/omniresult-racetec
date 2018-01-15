@@ -55,29 +55,29 @@ class ResultPage extends AbstractParser
     protected function parsePositions()
     {
         $posGenData = $this->getCrawler()->filter('#ctl00_Content_Main_lblResOPos')->text();
-        list ($posGen, $participants) = explode('/', $posGenData);
-        $this->returnContent['pos_gen']              = trim($posGen);
+        list($posGen, $participants) = explode('/', $posGenData);
+        $this->returnContent['pos_gen'] = trim($posGen);
         $this->returnContent['race']['participants'] = trim($participants);
 
         $posGenData = $this->getCrawler()->filter('#ctl00_Content_Main_lblResGPos')->text();
-        list ($posGen, $participants) = explode('/', $posGenData);
-        $this->returnContent['pos_gender']             = trim($posGen);
+        list($posGen, $participants) = explode('/', $posGenData);
+        $this->returnContent['pos_gender'] = trim($posGen);
         $this->returnContent['gender']['participants'] = trim($participants);
 
         $posGenData = $this->getCrawler()->filter('#ctl00_Content_Main_lblResCPos')->text();
-        list ($posGen, $participants) = explode('/', $posGenData);
-        $this->returnContent['pos_category']             = trim($posGen);
+        list($posGen, $participants) = explode('/', $posGenData);
+        $this->returnContent['pos_category'] = trim($posGen);
         $this->returnContent['category']['participants'] = trim($participants);
     }
 
     protected function parseResultBio()
     {
         $table = $this->getCrawler()->filter('#ctl00_Content_Main_grdBio');
-        $rows  = $table->filter('tbody > tr');
+        $rows = $table->filter('tbody > tr');
 
         foreach ($rows as $row) {
             $column = $row->childNodes[0]->nodeValue;
-            $value  = $row->childNodes[2]->nodeValue;
+            $value = $row->childNodes[2]->nodeValue;
 
             switch ($column) {
                 case 'Race No':

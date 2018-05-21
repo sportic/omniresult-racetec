@@ -70,7 +70,7 @@ class EventPageTest extends TestCase
 
     public function testGenerateContentAll()
     {
-        self::assertEquals(self::$parameters, self::$parametersParsed);
+        self::assertEquals(self::$parameters, self::$parametersParsed->all());
     }
 
     public static function setUpBeforeClass()

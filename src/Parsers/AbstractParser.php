@@ -2,6 +2,10 @@
 
 namespace Sportic\Timing\RaceTecClient\Parsers;
 
+use Sportic\Timing\RaceTecClient\Content\AbstractContent;
+use Sportic\Timing\RaceTecClient\Content\ContentFactory;
+use Sportic\Timing\RaceTecClient\Content\GenericContent;
+use Sportic\Timing\RaceTecClient\Helper;
 use Sportic\Timing\RaceTecClient\Models\AbstractModel;
 use Sportic\Timing\RaceTecClient\Scrapers\AbstractScraper;
 use Symfony\Component\DomCrawler\Crawler;
@@ -29,7 +33,7 @@ abstract class AbstractParser
     protected $isValidContent = null;
 
     /**
-     * @var null|array
+     * @var null|AbstractContent
      */
     protected $contents = null;
 
@@ -40,7 +44,8 @@ abstract class AbstractParser
     {
         if ($this->contents === null) {
             if ($this->isValidContent()) {
-                $this->contents = $this->generateContent();
+                $contents = $this->generateContent();
+                $this->contents = ContentFactory::createFromArray($contents);
             } else {
                 $this->contents = false;
             }
@@ -116,9 +121,10 @@ abstract class AbstractParser
      */
     public function getModel()
     {
-        $model = $this->getNewModel();
+        $model      = $this->getNewModel();
         $parameters = $this->getContent();
         $model->setParameters($parameters);
+
         return $model;
     }
 
@@ -128,9 +134,18 @@ abstract class AbstractParser
     public function getNewModel()
     {
         $className = $this->getModelClassName();
-        $model = new $className();
+        $model     = new $className();
+
         return $model;
     }
 
     abstract public function getModelClassName();
+
+    /**
+     * @return string
+     */
+    protected function getContentClassName()
+    {
+        return GenericContent::class;
+    }
 }

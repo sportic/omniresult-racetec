@@ -2,12 +2,9 @@
 
 namespace Sportic\Timing\RaceTecClient\Tests\Parsers;
 
-use PHPUnit\Framework\TestCase;
-use Sportic\Timing\RaceTecClient\Content\GenericContent;
-use Sportic\Timing\RaceTecClient\Models\Result;
+use Sportic\Timing\CommonClient\Content\GenericContent;
 use Sportic\Timing\RaceTecClient\Scrapers\EventPage as EventPageScraper;
 use Sportic\Timing\RaceTecClient\Parsers\EventPage as EventPageParser;
-use Symfony\Component\DomCrawler\Crawler;
 
 /**
  * Class EventPageTest

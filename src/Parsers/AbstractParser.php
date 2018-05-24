@@ -2,10 +2,7 @@
 
 namespace Sportic\Timing\RaceTecClient\Parsers;
 
-use Sportic\Timing\RaceTecClient\Content\AbstractContent;
-use Sportic\Timing\RaceTecClient\Content\ContentFactory;
-use Sportic\Timing\RaceTecClient\Content\GenericContent;
-use Sportic\Timing\RaceTecClient\Helper;
+use Sportic\Timing\CommonClient\Content\ContentFactory;
 use Sportic\Timing\RaceTecClient\Models\AbstractModel;
 use Sportic\Timing\RaceTecClient\Scrapers\AbstractScraper;
 use Symfony\Component\DomCrawler\Crawler;

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d81da9ef8f12a7036ff94851e2382dd",
+    "content-hash": "86ba66a636117583e0ea0acf0e5dcd0c",
     "packages": [
         {
             "name": "bytic/goutte-phantomjs-bridge",
@@ -490,6 +490,48 @@
                 "response"
             ],
             "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "sportic/timing-common-client",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sportic/timing-common-client.git",
+                "reference": "ddb50fca5095cc479cc5ed1813de78aed2ad674d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sportic/timing-common-client/zipball/ddb50fca5095cc479cc5ed1813de78aed2ad674d",
+                "reference": "ddb50fca5095cc479cc5ed1813de78aed2ad674d",
+                "shasum": ""
+            },
+            "require": {
+                "bytic/goutte-phantomjs-bridge": "^1.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^6.2",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sportic\\Timing\\CommonClient\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Solomon",
+                    "email": "hello@gabrielsolomon.ro"
+                }
+            ],
+            "description": "a common client scraper for getting data from timing websites",
+            "time": "2018-05-24T18:42:56+00:00"
         },
         {
             "name": "symfony/browser-kit",

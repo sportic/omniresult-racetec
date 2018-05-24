@@ -2,13 +2,14 @@
 
 namespace Sportic\Timing\RaceTecClient;
 
+use Sportic\Timing\CommonClient\TimingClient;
 use Sportic\Timing\RaceTecClient\Scrapers\EventPage;
 
 /**
  * Class RaceTecClient
  * @package Sportic\Timing\RaceTecClient
  */
-class RaceTecClient
+class RaceTecClient extends TimingClient
 {
     /**
      * @param int $cId

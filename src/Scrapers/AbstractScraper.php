@@ -101,6 +101,7 @@ abstract class AbstractScraper
         /** @var AbstractParser $parser */
         $parser = new $class();
         $parser->setScraper($this);
+
         return $parser;
     }
 
@@ -115,7 +116,15 @@ abstract class AbstractScraper
         $classNamespacePath = implode('\\', $partsClassName);
         $classNamespacePath = str_replace('\Scrapers', '', $classNamespacePath);
 
-        return $classNamespacePath.'\Parsers\\'.$classFirstName;
+        return $classNamespacePath . '\Parsers\\' . $classFirstName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCrawlerUri()
+    {
+        return $this->getCrawlerUriHost();
     }
 
     /**

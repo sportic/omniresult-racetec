@@ -2,29 +2,16 @@
 
 namespace Sportic\Timing\RaceTecClient\Tests\Parsers;
 
-use PHPUnit\Framework\TestCase;
 use Sportic\Timing\RaceTecClient\Models\Split;
 use Sportic\Timing\RaceTecClient\Scrapers\ResultPage as PageScraper;
 use Sportic\Timing\RaceTecClient\Parsers\ResultPage as PageParser;
-use Symfony\Component\DomCrawler\Crawler;
 
 /**
  * Class ResultPageTest
  * @package Sportic\Timing\RaceTecClient\Tests\Scrapers
  */
-class ResultPageTest extends TestCase
+class ResultPageTest extends AbstractPageTest
 {
-    protected static $parameters;
-
-    /**
-     * @var PageParser
-     */
-    protected static $parser;
-
-    /**
-     * @var array
-     */
-    protected static $parametersParsed;
 
     public function testGenerateResultsBox()
     {
@@ -62,31 +49,35 @@ class ResultPageTest extends TestCase
         self::assertSame('00:08:50.52', $splits[8]->getTime());
     }
 
-    public static function setUpBeforeClass()
+    /**
+     * @inheritdoc
+     */
+    protected static function getNewScraper()
     {
-        self::$parameters = unserialize(
-            file_get_contents(TEST_FIXTURE_PATH . DS . 'Parsers' . DS . 'event_page.serialized')
-        );
+        return new PageScraper('16648-2091-1-29925');
+    }
 
-        $scrapper = new PageScraper('16648-2091-1-29925');
+    /**
+     * @inheritdoc
+     */
+    protected static function getNewParser()
+    {
+        return new PageParser();
+    }
 
-        $crawler = new Crawler(null, $scrapper->getCrawlerUri());
-        $crawler->addContent(
-            file_get_contents(
-                TEST_FIXTURE_PATH . DS . 'Parsers' . DS . 'result_page.html'
-            ),
-            'text/html;charset=utf-8'
-        );
+    /**
+     * @inheritdoc
+     */
+    protected static function getSerializedFile()
+    {
+        return 'result_page.serialized';
+    }
 
-        self::$parser = new PageParser();
-        self::$parser->setScraper($scrapper);
-        self::$parser->setCrawler($crawler);
-
-        self::$parametersParsed = self::$parser->getContent();
-
-//        file_put_contents(
-//            TEST_FIXTURE_PATH . DS . 'Parsers' . DS . 'result_page.serialized',
-//            serialize(self::$parametersParsed)
-//        );
+    /**
+     * @inheritdoc
+     */
+    protected static function getHtmlFile()
+    {
+        return 'result_page.html';
     }
 }

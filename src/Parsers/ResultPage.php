@@ -76,8 +76,9 @@ class ResultPage extends AbstractParser
         $rows = $table->filter('tbody > tr');
 
         foreach ($rows as $row) {
-            $column = $row->childNodes[1]->nodeValue;
-            $value = $row->childNodes[3]->nodeValue;
+            $indexCount = $row->childNodes->length;
+            $column = $row->childNodes->item($indexCount-4)->nodeValue;
+            $value = $row->childNodes->item($indexCount-2)->nodeValue;
 
             switch ($column) {
                 case 'Race No':

@@ -24,7 +24,6 @@ abstract class AbstractContent implements ArrayAccess
     public function __construct($parameters = [])
     {
         $this->setParameters($parameters);
-
     }
 
     /**
@@ -53,5 +52,4 @@ abstract class AbstractContent implements ArrayAccess
     {
         return Helper::objectToArray($this->data);
     }
-
 }

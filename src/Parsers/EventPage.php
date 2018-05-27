@@ -3,8 +3,8 @@
 namespace Sportic\Timing\RaceTecClient\Parsers;
 
 use DOMElement;
-use Sportic\Timing\RaceTecClient\Models\Race;
-use Sportic\Timing\RaceTecClient\Models\Result;
+use Sportic\Timing\CommonClient\Models\Race;
+use Sportic\Timing\CommonClient\Models\Result;
 
 /**
  * Class EventPage
@@ -86,7 +86,7 @@ class EventPage extends AbstractParser
         $fields   = $this->getCrawler()->filter(
             '#ctl00_Content_Main_grdNew_DXHeadersRow table td a'
         );
-        $fieldMap = Result::getLabelMaps();
+        $fieldMap = self::getLabelMaps();
         if ($fields->count() > 0) {
             $colNum = 0;
             foreach ($fields as $field) {
@@ -170,5 +170,22 @@ class EventPage extends AbstractParser
         }
 
         return $return;
+    }
+
+    /**
+     * @return array
+     */
+    public static function getLabelMaps()
+    {
+        return [
+            'posGen'      => 'Pos',
+            'bib'         => 'Race No',
+            'fullName'    => 'Name',
+            'time'        => 'Time',
+            'category'    => 'Category',
+            'posCategory' => 'Cat Pos',
+            'gender'      => 'Gender',
+            'posGender'   => 'Gen Pos'
+        ];
     }
 }

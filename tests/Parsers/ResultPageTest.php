@@ -2,7 +2,7 @@
 
 namespace Sportic\Timing\RaceTecClient\Tests\Parsers;
 
-use Sportic\Timing\RaceTecClient\Models\Split;
+use Sportic\Timing\CommonClient\Models\Split;
 use Sportic\Timing\RaceTecClient\Scrapers\ResultPage as PageScraper;
 use Sportic\Timing\RaceTecClient\Parsers\ResultPage as PageParser;
 

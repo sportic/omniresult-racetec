@@ -3,7 +3,7 @@
 namespace Sportic\Timing\RaceTecClient\Parsers;
 
 use Sportic\Timing\CommonClient\Content\ContentFactory;
-use Sportic\Timing\RaceTecClient\Models\AbstractModel;
+use Sportic\Timing\CommonClient\Models\AbstractModel;
 use Sportic\Timing\RaceTecClient\Scrapers\AbstractScraper;
 use Symfony\Component\DomCrawler\Crawler;
 

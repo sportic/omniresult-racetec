@@ -493,16 +493,16 @@
         },
         {
             "name": "sportic/timing-common-client",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sportic/timing-common-client.git",
-                "reference": "ddb50fca5095cc479cc5ed1813de78aed2ad674d"
+                "reference": "202470171b8c2684aacab806317cf2aa77c474af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sportic/timing-common-client/zipball/ddb50fca5095cc479cc5ed1813de78aed2ad674d",
-                "reference": "ddb50fca5095cc479cc5ed1813de78aed2ad674d",
+                "url": "https://api.github.com/repos/sportic/timing-common-client/zipball/202470171b8c2684aacab806317cf2aa77c474af",
+                "reference": "202470171b8c2684aacab806317cf2aa77c474af",
                 "shasum": ""
             },
             "require": {
@@ -531,11 +531,11 @@
                 }
             ],
             "description": "a common client scraper for getting data from timing websites",
-            "time": "2018-05-24T18:42:56+00:00"
+            "time": "2018-05-27T18:26:11+00:00"
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v4.0.10",
+            "version": "v4.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
@@ -592,7 +592,7 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.10",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -656,7 +656,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v4.0.10",
+            "version": "v4.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -779,7 +779,7 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v4.0.10",
+            "version": "v4.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
@@ -836,7 +836,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.10",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -1000,7 +1000,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.10",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",

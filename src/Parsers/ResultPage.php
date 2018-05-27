@@ -3,7 +3,7 @@
 namespace Sportic\Timing\RaceTecClient\Parsers;
 
 use DOMElement;
-use Sportic\Timing\RaceTecClient\Models\Split;
+use Sportic\Timing\CommonClient\Models\Split;
 
 /**
  * Class ResultPage
@@ -132,7 +132,7 @@ class ResultPage extends AbstractParser
     {
         $return = [];
 
-        $fieldMap = Split::getLabelMaps();
+        $fieldMap = self::getLabelMaps();
         $colNum   = 0;
         foreach ($row->childNodes as $node) {
             if ($node instanceof DOMElement) {
@@ -188,5 +188,16 @@ class ResultPage extends AbstractParser
         }
 
         return $parameters;
+    }
+    /**
+     * @return array
+     */
+    protected static function getLabelMaps()
+    {
+        return [
+            'name' => 'Split Name',
+            'timeFromStart' => 'Time',
+            'time' => 'Time From Previous Split',
+        ];
     }
 }

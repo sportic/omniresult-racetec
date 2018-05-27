@@ -2,7 +2,7 @@
 
 namespace Sportic\Timing\RaceTecClient\Tests\Parsers;
 
-use Sportic\Timing\RaceTecClient\Models\Result;
+use Sportic\Timing\CommonClient\Models\Result;
 use Sportic\Timing\RaceTecClient\Scrapers\EventPage as EventPageScraper;
 use Sportic\Timing\RaceTecClient\Parsers\EventPage as EventPageParser;
 

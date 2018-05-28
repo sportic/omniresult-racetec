@@ -2,7 +2,15 @@
 
 require '../vendor/autoload.php';
 
-$resultsParser = \Sportic\Timing\RaceTecClient\RaceTecClient::results(16648, 121, 3, 7);
+$parameters = [
+    'cId' => 16648,
+    'rId' => 121,
+    'eId' => 3,
+    'page' => 7,
+];
+
+$client = new \Sportic\Timing\RaceTecClient\RaceTecClient();
+$resultsParser = $client->results($parameters);
 $resultsData   = $resultsParser->getContent();
 
 var_dump($resultsData);

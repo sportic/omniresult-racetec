@@ -12,16 +12,11 @@ use Sportic\Timing\RaceTecClient\Scrapers\EventPage;
 class RaceTecClient extends TimingClient
 {
     /**
-     * @param int $cId
-     * @param int $rId
-     * @param int $eId
-     *
-     * @param int $page
-     *
-     * @return Parsers\EventPage
+     * @param $parameters
+     * @return \Sportic\Timing\CommonClient\Parsers\AbstractParser|Parsers\EventPage
      */
-    public static function results(int $cId, int $rId, int $eId, $page = 1)
+    public function results($parameters)
     {
-        return (new EventPage($cId, $rId, $eId, $page))->execute();
+        return $this->executeScrapper(EventPage::class, $parameters);
     }
 }

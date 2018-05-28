@@ -1,14 +1,14 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient\Tests\Parsers;
+namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
 
-use Sportic\Timing\CommonClient\Models\Split;
-use Sportic\Timing\RaceTecClient\Scrapers\ResultPage as PageScraper;
-use Sportic\Timing\RaceTecClient\Parsers\ResultPage as PageParser;
+use Sportic\Omniresult\Common\Models\Split;
+use Sportic\Omniresult\RaceTec\Scrapers\ResultPage as PageScraper;
+use Sportic\Omniresult\RaceTec\Parsers\ResultPage as PageParser;
 
 /**
  * Class ResultPageTest
- * @package Sportic\Timing\RaceTecClient\Tests\Scrapers
+ * @package Sportic\Omniresult\RaceTec\Tests\Scrapers
  */
 class ResultPageTest extends AbstractPageTest
 {

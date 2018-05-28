@@ -1,12 +1,12 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient\Scrapers;
+namespace Sportic\Omniresult\RaceTec\Scrapers;
 
 /**
  * Class AbstractScraper
- * @package Sportic\Timing\RaceTecClient\Scrapers
+ * @package Sportic\Omniresult\RaceTec\Scrapers
  */
-abstract class AbstractScraper extends \Sportic\Timing\CommonClient\Scrapers\AbstractScraper
+abstract class AbstractScraper extends \Sportic\Omniresult\Common\Scrapers\AbstractScraper
 {
 
     /**
@@ -22,6 +22,6 @@ abstract class AbstractScraper extends \Sportic\Timing\CommonClient\Scrapers\Abs
      */
     protected function getCrawlerUriHost()
     {
-        return 'http://cronometraj.racetecresults.com';
+        return 'http://racetecresults.com';
     }
 }

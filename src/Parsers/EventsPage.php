@@ -10,7 +10,7 @@ use Sportic\Omniresult\Common\Models\Result;
  * Class EventPage
  * @package Sportic\Omniresult\RaceTec\Parsers
  */
-class EventPage extends AbstractParser
+class EventsPage extends AbstractParser
 {
     protected $returnContent = [];
 

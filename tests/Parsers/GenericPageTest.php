@@ -1,14 +1,14 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient\Tests\Parsers;
+namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
 
-use Sportic\Timing\CommonClient\Content\GenericContent;
-use Sportic\Timing\RaceTecClient\Scrapers\EventPage as EventPageScraper;
-use Sportic\Timing\RaceTecClient\Parsers\EventPage as EventPageParser;
+use Sportic\Omniresult\Common\Content\GenericContent;
+use Sportic\Omniresult\RaceTec\Scrapers\EventPage as EventPageScraper;
+use Sportic\Omniresult\RaceTec\Parsers\EventPage as EventPageParser;
 
 /**
  * Class EventPageTest
- * @package Sportic\Timing\RaceTecClient\Tests\Scrapers
+ * @package Sportic\Omniresult\RaceTec\Tests\Scrapers
  */
 class GenericPageTest extends AbstractPageTest
 {

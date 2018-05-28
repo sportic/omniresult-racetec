@@ -1,12 +1,12 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient\Scrapers;
+namespace Sportic\Omniresult\RaceTec\Scrapers;
 
-use Sportic\Timing\RaceTecClient\Parsers\EventPage as Parser;
+use Sportic\Omniresult\RaceTec\Parsers\EventPage as Parser;
 
 /**
  * Class CompanyPage
- * @package Sportic\Timing\RaceTecClient\Scrapers
+ * @package Sportic\Omniresult\RaceTec\Scrapers
  *
  * @method Parser execute()
  */

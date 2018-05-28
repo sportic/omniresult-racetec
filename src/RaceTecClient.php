@@ -1,19 +1,29 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient;
+namespace Sportic\Omniresult\RaceTec;
 
-use Sportic\Timing\CommonClient\TimingClient;
-use Sportic\Timing\RaceTecClient\Scrapers\EventPage;
+use Sportic\Omniresult\Common\TimingClient;
+use Sportic\Omniresult\RaceTec\Scrapers\EventPage;
+use Sportic\Omniresult\RaceTec\Scrapers\EventsPage;
 
 /**
  * Class RaceTecClient
- * @package Sportic\Timing\RaceTecClient
+ * @package Sportic\Omniresult\RaceTec
  */
 class RaceTecClient extends TimingClient
 {
     /**
      * @param $parameters
-     * @return \Sportic\Timing\CommonClient\Parsers\AbstractParser|Parsers\EventPage
+     * @return \Sportic\Omniresult\Common\Parsers\AbstractParser|Parsers\EventsPage
+     */
+    public function events($parameters)
+    {
+        return $this->executeScrapper(EventsPage::class, $parameters);
+    }
+
+    /**
+     * @param $parameters
+     * @return \Sportic\Omniresult\Common\Parsers\AbstractParser|Parsers\EventPage
      */
     public function results($parameters)
     {

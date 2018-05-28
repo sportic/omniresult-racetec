@@ -1,15 +1,15 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient\Tests\Parsers;
+namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
 
 use PHPUnit\Framework\TestCase;
-use Sportic\Timing\RaceTecClient\Scrapers\AbstractScraper;
-use Sportic\Timing\RaceTecClient\Parsers\EventPage as EventPageParser;
+use Sportic\Omniresult\RaceTec\Scrapers\AbstractScraper;
+use Sportic\Omniresult\RaceTec\Parsers\EventPage as EventPageParser;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
  * Class AbstractPageTest
- * @package Sportic\Timing\RaceTecClient\Tests\Scrapers
+ * @package Sportic\Omniresult\RaceTec\Tests\Scrapers
  */
 abstract class AbstractPageTest extends TestCase
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient\Scrapers;
+namespace Sportic\Omniresult\RaceTec\Scrapers;
 
-use Sportic\Timing\RaceTecClient\Parsers\ResultPage as Parser;
+use Sportic\Omniresult\RaceTec\Parsers\ResultPage as Parser;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
  * Class CompanyPage
- * @package Sportic\Timing\RaceTecClient\Scrapers
+ * @package Sportic\Omniresult\RaceTec\Scrapers
  *
  * @method Parser execute()
  */

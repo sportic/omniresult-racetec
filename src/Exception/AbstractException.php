@@ -1,12 +1,12 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient\Exception;
+namespace Sportic\Omniresult\RaceTec\Exception;
 
 use Exception;
 
 /**
  * Class AbstractException
- * @package Sportic\Timing\RaceTecClient\Exception
+ * @package Sportic\Omniresult\RaceTec\Exception
  */
 abstract class AbstractException extends Exception
 {

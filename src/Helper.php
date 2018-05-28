@@ -1,11 +1,11 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient;
+namespace Sportic\Omniresult\RaceTec;
 
 /**
  * Class Helper
- * @package Sportic\Timing\RaceTecClient
+ * @package Sportic\Omniresult\RaceTec
  */
-class Helper extends \Sportic\Timing\CommonClient\Helper
+class Helper extends \Sportic\Omniresult\Common\Helper
 {
 }

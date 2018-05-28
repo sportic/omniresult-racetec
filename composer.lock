@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "86ba66a636117583e0ea0acf0e5dcd0c",
+    "content-hash": "50816f75c3b0a18899c50dfb482800a4",
     "packages": [
         {
             "name": "bytic/goutte-phantomjs-bridge",
@@ -492,17 +492,17 @@
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
-            "name": "sportic/timing-common-client",
-            "version": "1.0.2",
+            "name": "sportic/omniresult-common",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/sportic/timing-common-client.git",
-                "reference": "690993b51deebe3e6935091549c6e1be1b37f0b6"
+                "url": "https://github.com/sportic/omniresult-common.git",
+                "reference": "0cdc3359017878875f13042648a65872c9eea9a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sportic/timing-common-client/zipball/690993b51deebe3e6935091549c6e1be1b37f0b6",
-                "reference": "690993b51deebe3e6935091549c6e1be1b37f0b6",
+                "url": "https://api.github.com/repos/sportic/omniresult-common/zipball/0cdc3359017878875f13042648a65872c9eea9a7",
+                "reference": "0cdc3359017878875f13042648a65872c9eea9a7",
                 "shasum": ""
             },
             "require": {
@@ -518,7 +518,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Sportic\\Timing\\CommonClient\\": "src/"
+                    "Sportic\\Omniresult\\Common\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -532,7 +532,7 @@
                 }
             ],
             "description": "a common client scraper for getting data from timing websites",
-            "time": "2018-05-28T19:10:16+00:00"
+            "time": "2018-05-28T19:47:31+00:00"
         },
         {
             "name": "symfony/browser-kit",

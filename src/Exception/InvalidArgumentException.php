@@ -1,10 +1,10 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient\Exception;
+namespace Sportic\Omniresult\RaceTec\Exception;
 
 /**
  * Class InvalidCifException
- * @package Sportic\Timing\RaceTecClient\Exception
+ * @package Sportic\Omniresult\RaceTec\Exception
  */
 class InvalidArgumentException extends AbstractException
 {

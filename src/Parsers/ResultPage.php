@@ -1,13 +1,13 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient\Parsers;
+namespace Sportic\Omniresult\RaceTec\Parsers;
 
 use DOMElement;
-use Sportic\Timing\CommonClient\Models\Split;
+use Sportic\Omniresult\Common\Models\Split;
 
 /**
  * Class ResultPage
- * @package Sportic\Timing\RaceTecClient\Parsers
+ * @package Sportic\Omniresult\RaceTec\Parsers
  */
 class ResultPage extends AbstractParser
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient\Tests\Parsers;
+namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
 
-use Sportic\Timing\CommonClient\Models\Result;
-use Sportic\Timing\RaceTecClient\Scrapers\EventPage as EventPageScraper;
-use Sportic\Timing\RaceTecClient\Parsers\EventPage as EventPageParser;
+use Sportic\Omniresult\Common\Models\Result;
+use Sportic\Omniresult\RaceTec\Scrapers\EventPage as EventPageScraper;
+use Sportic\Omniresult\RaceTec\Parsers\EventPage as EventPageParser;
 
 /**
  * Class EventPageTest
- * @package Sportic\Timing\RaceTecClient\Tests\Scrapers
+ * @package Sportic\Omniresult\RaceTec\Tests\Scrapers
  */
 class EventPageTest extends AbstractPageTest
 {
@@ -38,6 +38,7 @@ class EventPageTest extends AbstractPageTest
                 'posCategory' => '3',
                 'gender'      => 'Male',
                 'posGender'   => '6',
+                'parameters'   => null,
             ],
             self::$parametersParsed['results']['list'][5]->__toArray()
         );

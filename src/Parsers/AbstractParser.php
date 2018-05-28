@@ -1,12 +1,12 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient\Parsers;
+namespace Sportic\Omniresult\RaceTec\Parsers;
 
 /**
  * Class AbstractParser
- * @package Sportic\Timing\RaceTecClient\Parsers
+ * @package Sportic\Omniresult\RaceTec\Parsers
  */
-abstract class AbstractParser extends \Sportic\Timing\CommonClient\Parsers\AbstractParser
+abstract class AbstractParser extends \Sportic\Omniresult\Common\Parsers\AbstractParser
 {
 
 }

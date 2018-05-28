@@ -1,14 +1,14 @@
 <?php
 
-namespace Sportic\Timing\RaceTecClient\Tests\Scrapers;
+namespace Sportic\Omniresult\RaceTec\Tests\Scrapers;
 
 use PHPUnit\Framework\TestCase;
-use Sportic\Timing\RaceTecClient\Scrapers\EventPage;
+use Sportic\Omniresult\RaceTec\Scrapers\EventPage;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
  * Class EventPageTest
- * @package Sportic\Timing\RaceTecClient\Tests\Scrapers
+ * @package Sportic\Omniresult\RaceTec\Tests\Scrapers
  */
 class EventPageTest extends TestCase
 {
@@ -19,7 +19,7 @@ class EventPageTest extends TestCase
         static::assertInstanceOf(Crawler::class, $crawler);
 
         static::assertSame(
-            'http://cronometraj.racetecresults.com/Results.aspx?CId=16648&RId=2091&EId=1',
+            'http://racetecresults.com/Results.aspx?CId=16648&RId=2091&EId=1',
             $crawler->getUri()
         );
     }

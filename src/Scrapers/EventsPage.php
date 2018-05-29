@@ -17,23 +17,11 @@ class EventsPage extends AbstractScraper
      */
     protected function generateCrawler()
     {
-        $client  = $this->getClient();
+        $client = $this->getClient();
         $crawler = $client->request(
             'GET',
             $this->getCrawlerUri()
         );
-
-        $cPage = $this->getPage();
-        if ($cPage > 1) {
-            $link        = $crawler->filter('#ctl00_Content_Main_grdTopPager')->selectLink($this->getPage())->first()->getNode(0);
-            $href        = $link->getAttribute('href');
-            $eventTarget = str_replace(["javascript:__doPostBack('", "','')"], '', $href);
-
-            $crawler->filter('#__EVENTTARGET')->getNode(0)->setAttribute('value', $eventTarget);
-
-            $form    = $crawler->filter('#aspnetForm')->form();
-            $crawler = $client->submit($form);
-        }
 
         return $crawler;
     }
@@ -43,9 +31,49 @@ class EventsPage extends AbstractScraper
      */
     public function getCrawlerUri()
     {
-        return $this->getCrawlerUriHost().'/Results.aspx?'
-               . 'CId=' . $this->getCId()
-               . '&RId=' . $this->getRId()
-               . '&EId=' . $this->getEId();
+        return $this->getCrawlerUriHost() . '/StartPage.aspx?'
+            . 'CId=' . $this->getCId()
+            . '&From=' . $this->getStartFrom();
+    }
+
+    /**
+     * @throws \Sportic\Omniresult\Common\Exception\InvalidRequestException
+     */
+    protected function doCallValidation()
+    {
+        $this->validate('cId');
+    }
+
+    /**
+     * @return string
+     */
+    protected function getCId()
+    {
+        return $this->getParameter('cId');
+    }
+
+    /**
+     * @return mixed
+     */
+    protected function getPage()
+    {
+        return $this->getParameter('page', 1);
+    }
+
+    /**
+     * @return float|int
+     */
+    protected function getStartFrom()
+    {
+        $page = $this->getPage();
+        return (($page - 1) * $this->getItemsPerPage()) + 1;
+    }
+
+    /**
+     * @return int
+     */
+    public function getItemsPerPage()
+    {
+        return 20;
     }
 }

@@ -493,16 +493,16 @@
         },
         {
             "name": "sportic/omniresult-common",
-            "version": "1.0.4",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sportic/omniresult-common.git",
-                "reference": "0cdc3359017878875f13042648a65872c9eea9a7"
+                "reference": "e7c8fd61830d65b52a4d1afa218b266e05d1ec43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sportic/omniresult-common/zipball/0cdc3359017878875f13042648a65872c9eea9a7",
-                "reference": "0cdc3359017878875f13042648a65872c9eea9a7",
+                "url": "https://api.github.com/repos/sportic/omniresult-common/zipball/e7c8fd61830d65b52a4d1afa218b266e05d1ec43",
+                "reference": "e7c8fd61830d65b52a4d1afa218b266e05d1ec43",
                 "shasum": ""
             },
             "require": {
@@ -532,7 +532,7 @@
                 }
             ],
             "description": "a common client scraper for getting data from timing websites",
-            "time": "2018-05-28T19:47:31+00:00"
+            "time": "2018-05-29T20:18:34+00:00"
         },
         {
             "name": "symfony/browser-kit",
@@ -1348,25 +1348,28 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e"
+                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
-                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/478465659fd987669df0bd8a9bf22a8710e5f1b6",
+                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0"
+                "php": "^7.1"
+            },
+            "replace": {
+                "myclabs/deep-copy": "self.version"
             },
             "require-dev": {
                 "doctrine/collections": "^1.0",
                 "doctrine/common": "^2.6",
-                "phpunit/phpunit": "^4.1"
+                "phpunit/phpunit": "^7.1"
             },
             "type": "library",
             "autoload": {
@@ -1389,7 +1392,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-10-19T19:58:43+00:00"
+            "time": "2018-05-29T17:25:09+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -2043,16 +2046,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "5.0.6",
+            "version": "5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "33fd41a76e746b8fa96d00b49a23dadfa8334cdf"
+                "reference": "3eaf040f20154d27d6da59ca2c6e28ac8fd56dce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/33fd41a76e746b8fa96d00b49a23dadfa8334cdf",
-                "reference": "33fd41a76e746b8fa96d00b49a23dadfa8334cdf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/3eaf040f20154d27d6da59ca2c6e28ac8fd56dce",
+                "reference": "3eaf040f20154d27d6da59ca2c6e28ac8fd56dce",
                 "shasum": ""
             },
             "require": {
@@ -2098,7 +2101,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2018-01-06T05:45:45+00:00"
+            "time": "2018-05-29T13:50:43+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

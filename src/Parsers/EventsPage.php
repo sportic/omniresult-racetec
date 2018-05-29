@@ -3,8 +3,9 @@
 namespace Sportic\Omniresult\RaceTec\Parsers;
 
 use DOMElement;
-use Sportic\Omniresult\Common\Models\Race;
-use Sportic\Omniresult\Common\Models\Result;
+use Sportic\Omniresult\Common\Content\ListContent;
+use Sportic\Omniresult\Common\Helper;
+use Sportic\Omniresult\Common\Models\Event;
 
 /**
  * Class EventPage
@@ -12,90 +13,38 @@ use Sportic\Omniresult\Common\Models\Result;
  */
 class EventsPage extends AbstractParser
 {
-    protected $returnContent = [];
 
     /**
      * @return array
      */
     protected function generateContent()
     {
-        $this->returnContent['races']                 = $this->parseRaces();
-        $this->returnContent['results']['header']     = $this->parseResultsHeader();
-        $this->returnContent['results']['list']       = $this->parseResultsTable();
-        $this->returnContent['results']['pagination'] = $this->parseResultsPagination();
+        $returnContent['records'] = $this->parseEventsTable();
+        $returnContent['pagination'] = $this->parseEventsPagination();
 
-        return $this->returnContent;
+        return $returnContent;
     }
 
-    public function getModelClassName()
+    protected function doCallValidation()
     {
-        // TODO: Implement getModelClassName() method.
     }
 
     /**
      * @return array
      */
-    protected function parseRaces()
-    {
-        $return    = [];
-        $eventMenu = $this->getCrawler()->filter('#ctl00_Content_Main_pnlEventMenu');
-        if ($eventMenu->count() > 0) {
-            $raceLinks = $eventMenu->filter('div.tab > a');
-            foreach ($raceLinks as $link) {
-                $parameters = [
-                    'name' => $link->nodeValue,
-                    'href' => $link->getAttribute('href')
-                ];
-                $return[]   = new Race($parameters);
-            }
-        }
-
-        return $return;
-    }
-
-    /**
-     * @return array
-     */
-    protected function parseResultsTable()
-    {
-        $return      = [];
-        $resultsRows = $this->getCrawler()->filter(
-            '#ctl00_Content_Main_grdNew_DXMainTable > tbody > tr'
-        );
-        if ($resultsRows->count() > 0) {
-            foreach ($resultsRows as $resultRow) {
-                if ($resultRow->getAttribute('id') !== 'ctl00_Content_Main_grdNew_DXHeadersRow') {
-                    $result = $this->parseResultsRow($resultRow);
-                    if ($result) {
-                        $return[] = $result;
-                    }
-                }
-            }
-        }
-
-        return $return;
-    }
-
-    /**
-     * @return array
-     */
-    protected function parseResultsHeader()
+    protected function parseEventsTable()
     {
         $return = [];
-
-        $fields   = $this->getCrawler()->filter(
-            '#ctl00_Content_Main_grdNew_DXHeadersRow table td a'
+        $resultsRows = $this->getCrawler()->filter(
+            '#tblAllRaces > tbody > tr'
         );
-        $fieldMap = self::getLabelMaps();
-        if ($fields->count() > 0) {
-            $colNum = 0;
-            foreach ($fields as $field) {
-                $fieldName = $field->nodeValue;
-                $labelFind = array_search($fieldName, $fieldMap);
-                if ($labelFind) {
-                    $return[$colNum] = $labelFind;
+
+        if ($resultsRows->count() > 0) {
+            foreach ($resultsRows as $resultRow) {
+                $result = $this->parseEventsRow($resultRow);
+                if ($result) {
+                    $return[] = $result;
                 }
-                $colNum++;
             }
         }
 
@@ -105,87 +54,53 @@ class EventsPage extends AbstractParser
     /**
      * @param DOMElement $row
      *
-     * @return bool|Result
+     * @return bool|Event
      */
-    protected function parseResultsRow(DOMElement $row)
+    protected function parseEventsRow(DOMElement $row)
     {
         $parameters = [];
-        $i          = 0;
-        foreach ($row->childNodes as $cell) {
-            if ($cell instanceof DOMElement) {
-                $parameters = $this->parseResultsRowCell($i, $cell, $parameters);
-                $i++;
-            }
-        }
+        $parameters['date'] = $row->childNodes[1]->nodeValue;
+        $parameters['href'] = $row->childNodes[2]->firstChild->getAttribute('href');
+        $parameters['id'] = $this->parseRIdFromHref($parameters['href']);
+        $parameters['name'] = $row->childNodes[2]->nodeValue;
         if (count($parameters)) {
-            return new Result($parameters);
+            return new Event($parameters);
         }
 
         return false;
     }
 
     /**
-     * @param int $colCount
-     * @param DOMElement $cell
-     *
-     * @param array $parameters
-     *
-     * @return array
+     * @param $href
+     * @return mixed
      */
-    protected function parseResultsRowCell($colCount, DOMElement $cell, $parameters = [])
+    protected function parseRIdFromHref($href)
     {
-        if (isset($this->returnContent['results']['header'][$colCount])) {
-            $field = $this->returnContent['results']['header'][$colCount];
-            if ($field == 'fullName') {
-                $parameters['href'] = $cell->firstChild->getAttribute('href');
-                $parameters[$field] = trim($cell->nodeValue);
-            } else {
-                $parameters[$field] = trim($cell->nodeValue);
-            }
-        }
-
-        return $parameters;
+        return Helper::parseParameterFromHref($href, 'RId');
     }
 
     /**
      * @return array
      */
-    protected function parseResultsPagination()
+    protected function parseEventsPagination()
     {
-        $return = [
-            'current' => 1,
-            'all'     => 1,
-            'items'   => 1,
-        ];
+        return [];
+    }
 
-        $paginationObject = $this->getCrawler()->filter(
-            '#ctl00_Content_Main_lblTopPager'
-        );
 
-        if ($paginationObject->count() > 0) {
-            $elements          = explode(' ', $paginationObject->html());
-            $return['current'] = intval($elements[1]);
-            $return['all']     = intval($elements[3]);
-            $return['items']   = intval(str_replace('(', '', $elements[4]));
-        }
-
-        return $return;
+    /** @noinspection PhpMissingParentCallCommonInspection
+     * @inheritdoc
+     */
+    protected function getContentClassName()
+    {
+        return ListContent::class;
     }
 
     /**
-     * @return array
+     * @inheritdoc
      */
-    public static function getLabelMaps()
+    public function getModelClassName()
     {
-        return [
-            'posGen'      => 'Pos',
-            'bib'         => 'Race No',
-            'fullName'    => 'Name',
-            'time'        => 'Time',
-            'category'    => 'Category',
-            'posCategory' => 'Cat Pos',
-            'gender'      => 'Gender',
-            'posGender'   => 'Gen Pos'
-        ];
+        return Event::class;
     }
 }

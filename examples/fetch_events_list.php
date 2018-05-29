@@ -6,7 +6,7 @@ $parameters = [
     'cId' => 16648
 ];
 
-$client = new \Sportic\Timing\RaceTecClient\RaceTecClient();
+$client = new \Sportic\Omniresult\RaceTec\RaceTecClient();
 $resultsParser = $client->events($parameters);
 $resultsData = $resultsParser->getContent();
 

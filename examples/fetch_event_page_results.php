@@ -9,7 +9,7 @@ $parameters = [
     'page' => 7,
 ];
 
-$client = new \Sportic\Timing\RaceTecClient\RaceTecClient();
+$client = new \Sportic\Omniresult\RaceTec\RaceTecClient();
 $resultsParser = $client->results($parameters);
 $resultsData   = $resultsParser->getContent();
 

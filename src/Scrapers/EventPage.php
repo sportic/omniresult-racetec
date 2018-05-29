@@ -18,23 +18,6 @@ class EventPage extends AbstractScraper
     protected $page = 1;
 
     /**
-     * EventPage constructor.
-     *
-     * @param $cId
-     * @param $rId
-     * @param int $eId
-     * @param int $page
-     */
-    public function __construct(int $cId, int $rId, int $eId = 1, int $page = 1)
-    {
-        $this->cId  = $cId;
-        $this->rId  = $rId;
-        $this->eId  = $eId;
-        $this->page = $page;
-    }
-
-
-    /**
      * @return mixed
      */
     public function getCId()

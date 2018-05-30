@@ -40,8 +40,9 @@ class ResultPageTest extends TestCase
      */
     protected function getCrawler()
     {
-        $scraper = new ResultPage('16648-2091-1-29925');
-
+        $params = ['uid' => '16648-2091-1-29925'];
+        $scraper = new ResultPage();
+        $scraper->initialize($params);
         return $scraper->getCrawler();
     }
 }

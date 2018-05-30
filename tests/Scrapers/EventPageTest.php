@@ -39,8 +39,13 @@ class EventPageTest extends TestCase
      */
     protected function getCrawler()
     {
-        $scraper = new EventPage('16648', '2091', '1');
-
+        $params = [
+            'cId' => 16648,
+            'rId' => 2091,
+            'eId' => 1
+        ];
+        $scraper = new EventPage();
+        $scraper->initialize($params);
         return $scraper->getCrawler();
     }
 }

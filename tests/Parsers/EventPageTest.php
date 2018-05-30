@@ -3,6 +3,7 @@
 namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
 
 use Sportic\Omniresult\Common\Models\Result;
+use Sportic\Omniresult\Common\Models\SplitCollection;
 use Sportic\Omniresult\RaceTec\Scrapers\EventPage as EventPageScraper;
 use Sportic\Omniresult\RaceTec\Parsers\EventPage as EventPageParser;
 
@@ -29,16 +30,19 @@ class EventPageTest extends AbstractPageTest
         self::assertInstanceOf(Result::class, self::$parametersParsed['results']['list'][5]);
         self::assertEquals(
             [
-                'posGen'      => '6',
-                'bib'         => '247',
-                'fullName'    => 'Sorin Boriceanu',
-                'href'        => 'MyResults.aspx?uid=16648-2091-1-29984',
-                'time'        => '02:04:16',
-                'category'    => 'Masculin 35-39',
+                'posGen' => '6',
+                'bib' => '247',
+                'fullName' => 'Sorin Boriceanu',
+                'href' => 'MyResults.aspx?uid=16648-2091-1-29984',
+                'time' => '02:04:16',
+                'category' => 'Masculin 35-39',
                 'posCategory' => '3',
-                'gender'      => 'Male',
-                'posGender'   => '6',
-                'parameters'   => null,
+                'gender' => 'Male',
+                'posGender' => '6',
+                'id' => null,
+                'parameters' => null,
+                'splits' => new SplitCollection(),
+                'status' => null,
             ],
             self::$parametersParsed['results']['list'][5]->__toArray()
         );
@@ -49,8 +53,8 @@ class EventPageTest extends AbstractPageTest
         self::assertEquals(
             [
                 'current' => 1,
-                'all'     => 5,
-                'items'   => 222,
+                'all' => 5,
+                'items' => 222,
             ],
             self::$parametersParsed['results']['pagination']
         );

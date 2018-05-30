@@ -3,9 +3,10 @@
 namespace Sportic\Omniresult\RaceTec\Parsers;
 
 use DOMElement;
-use Sportic\Omniresult\Common\Content\ItemContent;
+use Sportic\Omniresult\Common\Content\RecordContent;
 use Sportic\Omniresult\Common\Models\Result;
 use Sportic\Omniresult\Common\Models\Split;
+use Sportic\Omniresult\Common\Models\SplitCollection;
 
 /**
  * Class ResultPage
@@ -26,7 +27,8 @@ class ResultPage extends AbstractParser
         $this->parseResultBio();
         $this->returnContent['splits'] = $this->parseSplits();
 
-        return ['item' => new Result($this->returnContent)];
+        $params = ['record' => new Result($this->returnContent)];
+        return $params;
     }
 
     /**
@@ -101,11 +103,11 @@ class ResultPage extends AbstractParser
     }
 
     /**
-     * @return array
+     * @return SplitCollection
      */
     protected function parseSplits()
     {
-        $return = [];
+        $return = new SplitCollection();
         $headerData = [];
         $splitRows = $this->getCrawler()->filter(
             '#ctl00_Content_Main_grdSplits_DXMainTable > tbody > tr'
@@ -115,13 +117,14 @@ class ResultPage extends AbstractParser
                 if ($resultRow->getAttribute('id') === 'ctl00_Content_Main_grdSplits_DXHeadersRow') {
                     $headerData = $this->parseSplitsHeader($resultRow);
                 } else {
-                    $result = $this->parseSplitRow($resultRow, $headerData);
-                    if ($result) {
-                        $return[] = $result;
+                    $split = $this->parseSplitRow($resultRow, $headerData);
+                    if ($split) {
+                        $return[] = $split;
                     }
                 }
             }
         }
+
         return $return;
     }
 
@@ -210,7 +213,7 @@ class ResultPage extends AbstractParser
      */
     protected function getContentClassName()
     {
-        return ItemContent::class;
+        return RecordContent::class;
     }
 
     /**

@@ -2,6 +2,8 @@
 
 namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
 
+use Sportic\Omniresult\Common\Content\ItemContent;
+use Sportic\Omniresult\Common\Models\Result;
 use Sportic\Omniresult\Common\Models\Split;
 use Sportic\Omniresult\RaceTec\Scrapers\ResultPage as PageScraper;
 use Sportic\Omniresult\RaceTec\Parsers\ResultPage as PageParser;
@@ -15,28 +17,33 @@ class ResultPageTest extends AbstractPageTest
 
     public function testGenerateResultsBox()
     {
-        self::assertSame('Marius-Alexandru Dragu', self::$parametersParsed['full_name']);
+        $record = self::$parametersParsed->getRecord();
 
-        self::assertSame('02:12:11.38', self::$parametersParsed['time']);
-        self::assertSame('10', self::$parametersParsed['pos_gen']);
-        self::assertSame('211', self::$parametersParsed['race']['participants']);
+        self::assertInstanceOf(Result::class, $record);
+        self::assertSame('Marius-Alexandru Dragu', $record->getFullName());
 
-        self::assertSame('10', self::$parametersParsed['pos_gender']);
-        self::assertSame('194', self::$parametersParsed['gender']['participants']);
+        self::assertSame('02:12:11.38', $record->getTime());
 
-        self::assertSame('1', self::$parametersParsed['pos_category']);
-        self::assertSame('28', self::$parametersParsed['category']['participants']);
+        self::assertSame('10', $record->getPosGen());
+        self::assertSame('10', $record->getPosGender());
+        self::assertSame('1', $record->getPosCategory());
 
-        self::assertSame('188', self::$parametersParsed['bib']);
-        self::assertSame('male', self::$parametersParsed['gender']['name']);
-        self::assertSame('Masculin 45-49', self::$parametersParsed['category']['name']);
-        self::assertSame('Finished', self::$parametersParsed['status']['name']);
+        $participants = $record->getParameter('participants');
+        self::assertSame('211', $participants['race']);
+        self::assertSame('194', $participants['gender']);
+        self::assertSame('28', $participants['category']);
+
+        self::assertSame('188', $record->getBib());
+        self::assertSame('male', $record->getgender());
+        self::assertSame('Masculin 45-49', $record->getCategory());
+        self::assertSame('Finished', $record->getStatus());
     }
 
     public function testSplits()
     {
+        $record = self::$parametersParsed->getRecord();
         /** @var Split[] $splits */
-        $splits = self::$parametersParsed['splits'];
+        $splits = $record->getSplits();
         self::assertEquals(12, count($splits));
 
         self::assertInstanceOf(Split::class, $splits[0]);
@@ -54,7 +61,10 @@ class ResultPageTest extends AbstractPageTest
      */
     protected static function getNewScraper()
     {
-        return new PageScraper('16648-2091-1-29925');
+        $parameters = ['uid' => '16648-2091-1-29925'];
+        $scraper = new PageScraper();
+        $scraper->initialize($parameters);
+        return $scraper;
     }
 
     /**

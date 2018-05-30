@@ -3,6 +3,9 @@
 namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
 
 use PHPUnit\Framework\TestCase;
+use Sportic\Omniresult\Common\Content\GenericContent;
+use Sportic\Omniresult\Common\Content\ListContent;
+use Sportic\Omniresult\Common\Content\RecordContent;
 use Sportic\Omniresult\RaceTec\Scrapers\AbstractScraper;
 use Sportic\Omniresult\RaceTec\Parsers\EventPage as EventPageParser;
 use Symfony\Component\DomCrawler\Crawler;
@@ -21,7 +24,7 @@ abstract class AbstractPageTest extends TestCase
     protected static $parser;
 
     /**
-     * @var array
+     * @var GenericContent|ListContent|RecordContent
      */
     protected static $parametersParsed;
 

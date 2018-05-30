@@ -3,6 +3,8 @@
 namespace Sportic\Omniresult\RaceTec\Parsers;
 
 use DOMElement;
+use Sportic\Omniresult\Common\Content\ItemContent;
+use Sportic\Omniresult\Common\Models\Result;
 use Sportic\Omniresult\Common\Models\Split;
 
 /**
@@ -18,18 +20,13 @@ class ResultPage extends AbstractParser
      */
     protected function generateContent()
     {
-        $this->returnContent['full_name'] = $this->parseFullName();
-        $this->returnContent['time']      = $this->parseFinishTime();
+        $this->returnContent['fullName'] = $this->parseFullName();
+        $this->returnContent['time'] = $this->parseFinishTime();
         $this->parsePositions();
         $this->parseResultBio();
         $this->returnContent['splits'] = $this->parseSplits();
 
-        return $this->returnContent;
-    }
-
-    public function getModelClassName()
-    {
-        // TODO: Implement getModelClassName() method.
+        return ['item' => new Result($this->returnContent)];
     }
 
     /**
@@ -56,18 +53,18 @@ class ResultPage extends AbstractParser
     {
         $posGenData = $this->getCrawler()->filter('#ctl00_Content_Main_lblResOPos')->text();
         list($posGen, $participants) = explode('/', $posGenData);
-        $this->returnContent['pos_gen'] = trim($posGen);
-        $this->returnContent['race']['participants'] = trim($participants);
+        $this->returnContent['posGen'] = trim($posGen);
+        $this->returnContent['participants']['race'] = trim($participants);
 
         $posGenData = $this->getCrawler()->filter('#ctl00_Content_Main_lblResGPos')->text();
         list($posGen, $participants) = explode('/', $posGenData);
-        $this->returnContent['pos_gender'] = trim($posGen);
-        $this->returnContent['gender']['participants'] = trim($participants);
+        $this->returnContent['posGender'] = trim($posGen);
+        $this->returnContent['participants']['gender'] = trim($participants);
 
         $posGenData = $this->getCrawler()->filter('#ctl00_Content_Main_lblResCPos')->text();
         list($posGen, $participants) = explode('/', $posGenData);
-        $this->returnContent['pos_category'] = trim($posGen);
-        $this->returnContent['category']['participants'] = trim($participants);
+        $this->returnContent['posCategory'] = trim($posGen);
+        $this->returnContent['participants']['category'] = trim($participants);
     }
 
     protected function parseResultBio()
@@ -76,22 +73,28 @@ class ResultPage extends AbstractParser
         $rows = $table->filter('tbody > tr');
 
         foreach ($rows as $row) {
-            $indexCount = $row->childNodes->length;
-            $column = $row->childNodes->item($indexCount-4)->nodeValue;
-            $value = $row->childNodes->item($indexCount-2)->nodeValue;
+            $values = [];
+            foreach ($row->childNodes as $childNode) {
+                $value = trim($childNode->nodeValue);
+                if (!empty($value)) {
+                    $values[] = $value;
+                }
+            }
+            $column = $values[0];
+            $value = $values[1];
 
             switch ($column) {
                 case 'Race No':
                     $this->returnContent['bib'] = $value;
                     break;
                 case 'Gender':
-                    $this->returnContent['gender']['name'] = ($value == 'Female' ? 'female' : 'male');
+                    $this->returnContent['gender'] = ($value == 'Female' ? 'female' : 'male');
                     break;
                 case 'Category':
-                    $this->returnContent['category']['name'] = $value;
+                    $this->returnContent['category'] = $value;
                     break;
                 case 'Status':
-                    $this->returnContent['status']['name'] = $value;
+                    $this->returnContent['status'] = $value;
                     break;
             }
         }
@@ -102,9 +105,9 @@ class ResultPage extends AbstractParser
      */
     protected function parseSplits()
     {
-        $return     = [];
+        $return = [];
         $headerData = [];
-        $splitRows  = $this->getCrawler()->filter(
+        $splitRows = $this->getCrawler()->filter(
             '#ctl00_Content_Main_grdSplits_DXMainTable > tbody > tr'
         );
         if ($splitRows->count() > 0) {
@@ -116,7 +119,6 @@ class ResultPage extends AbstractParser
                     if ($result) {
                         $return[] = $result;
                     }
-
                 }
             }
         }
@@ -133,7 +135,7 @@ class ResultPage extends AbstractParser
         $return = [];
 
         $fieldMap = self::getLabelMaps();
-        $colNum   = 0;
+        $colNum = 0;
         foreach ($row->childNodes as $node) {
             if ($node instanceof DOMElement) {
                 $fieldName = trim($node->nodeValue);
@@ -157,11 +159,11 @@ class ResultPage extends AbstractParser
     protected function parseSplitRow($row, $headerData)
     {
         $parameters = [];
-        $i          = 0;
+        $rowNum = 0;
         foreach ($row->childNodes as $cell) {
             if ($cell instanceof DOMElement) {
-                $parameters = $this->parseSplitCell($i, $cell, $headerData, $parameters);
-                $i++;
+                $parameters = $this->parseSplitCell($rowNum, $cell, $headerData, $parameters);
+                $rowNum++;
             }
         }
         if (count($parameters)) {
@@ -183,12 +185,13 @@ class ResultPage extends AbstractParser
     protected function parseSplitCell($colCount, $cell, $headerData, $parameters)
     {
         if (isset($headerData[$colCount])) {
-            $field              = $headerData[$colCount];
+            $field = $headerData[$colCount];
             $parameters[$field] = trim($cell->nodeValue);
         }
 
         return $parameters;
     }
+
     /**
      * @return array
      */
@@ -199,5 +202,22 @@ class ResultPage extends AbstractParser
             'timeFromStart' => 'Time',
             'time' => 'Time From Previous Split',
         ];
+    }
+
+
+    /** @noinspection PhpMissingParentCallCommonInspection
+     * @inheritdoc
+     */
+    protected function getContentClassName()
+    {
+        return ItemContent::class;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getModelClassName()
+    {
+        return Result::class;
     }
 }

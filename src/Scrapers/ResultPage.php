@@ -13,16 +13,12 @@ use Symfony\Component\DomCrawler\Crawler;
  */
 class ResultPage extends AbstractScraper
 {
-    protected $uid;
-
     /**
-     * ResultPage constructor.
-     *
-     * @param $uid
+     * @throws \Sportic\Omniresult\Common\Exception\InvalidRequestException
      */
-    public function __construct($uid)
+    protected function doCallValidation()
     {
-        $this->uid = $uid;
+        $this->validate('uid');
     }
 
     /**
@@ -30,15 +26,7 @@ class ResultPage extends AbstractScraper
      */
     public function getUid()
     {
-        return $this->uid;
-    }
-
-    /**
-     * @param mixed $uid
-     */
-    public function setUid($uid)
-    {
-        $this->uid = $uid;
+        return $this->getParameter('uid');
     }
 
     /**
@@ -46,7 +34,7 @@ class ResultPage extends AbstractScraper
      */
     protected function generateCrawler()
     {
-        $client  = $this->getClient();
+        $client = $this->getClient();
         $crawler = $client->request(
             'GET',
             $this->getCrawlerUri()
@@ -55,12 +43,13 @@ class ResultPage extends AbstractScraper
         return $crawler;
     }
 
-    /**
-     * @return Crawler
+    /** @noinspection PhpMissingParentCallCommonInspection
+     * @inheritdoc
      */
     public function getCrawlerUri()
     {
-        return $this->getCrawlerUriHost().'/MyResults.aspx?'
-               . 'uid=' . $this->getUid();
+        return $this->getCrawlerUriHost()
+            . '/MyResults.aspx?'
+            . 'uid=' . $this->getUid();
     }
 }

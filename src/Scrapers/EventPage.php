@@ -12,25 +12,12 @@ use Sportic\Omniresult\RaceTec\Parsers\EventPage as Parser;
  */
 class EventPage extends AbstractScraper
 {
-    protected $cId;
-    protected $rId;
-    protected $eId = 1;
-    protected $page = 1;
-
     /**
      * @return mixed
      */
     public function getCId()
     {
-        return $this->cId;
-    }
-
-    /**
-     * @param mixed $cId
-     */
-    public function setCId($cId)
-    {
-        $this->cId = $cId;
+        return $this->getParameter('cId');
     }
 
     /**
@@ -38,47 +25,23 @@ class EventPage extends AbstractScraper
      */
     public function getRId()
     {
-        return $this->rId;
-    }
-
-    /**
-     * @param mixed $rId
-     */
-    public function setRId($rId)
-    {
-        $this->rId = $rId;
+        return $this->getParameter('rId');
     }
 
     /**
      * @return int
      */
-    public function getEId(): int
+    public function getEId()
     {
-        return $this->eId;
-    }
-
-    /**
-     * @param int $eId
-     */
-    public function setEId(int $eId)
-    {
-        $this->eId = $eId;
+        return $this->getParameter('eId');
     }
 
     /**
      * @return int
      */
-    public function getPage(): int
+    public function getPage()
     {
-        return $this->page;
-    }
-
-    /**
-     * @param int $page
-     */
-    public function setPage(int $page)
-    {
-        $this->page = $page;
+        return $this->getParameter('page', 1);
     }
 
     /**

@@ -2,7 +2,7 @@
 
 namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
 
-use Sportic\Omniresult\Common\Content\GenericContent;
+use Sportic\Omniresult\Common\Content\AbstractContent;
 use Sportic\Omniresult\RaceTec\Scrapers\EventPage as EventPageScraper;
 use Sportic\Omniresult\RaceTec\Parsers\EventPage as EventPageParser;
 
@@ -15,7 +15,7 @@ class GenericPageTest extends AbstractPageTest
 
     public function testGenerateContentRaces()
     {
-        self::assertInstanceOf(GenericContent::class, self::$parametersParsed);
+        self::assertInstanceOf(AbstractContent::class, self::$parametersParsed);
     }
 
     /**

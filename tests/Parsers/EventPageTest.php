@@ -16,53 +16,7 @@ class EventPageTest extends AbstractPageTest
 
     public function testGenerateContentRaces()
     {
-        self::assertCount(5, self::$parametersParsed['races']);
-    }
-
-    public function testGenerateContentResultHeader()
-    {
-        self::assertCount(8, self::$parametersParsed['results']['header']);
-    }
-
-    public function testGenerateContentResultList()
-    {
-        self::assertCount(50, self::$parametersParsed['results']['list']);
-        self::assertInstanceOf(Result::class, self::$parametersParsed['results']['list'][5]);
-        self::assertEquals(
-            [
-                'posGen' => '6',
-                'bib' => '247',
-                'fullName' => 'Sorin Boriceanu',
-                'href' => 'MyResults.aspx?uid=16648-2091-1-29984',
-                'time' => '02:04:16',
-                'category' => 'Masculin 35-39',
-                'posCategory' => '3',
-                'gender' => 'Male',
-                'posGender' => '6',
-                'id' => null,
-                'parameters' => null,
-                'splits' => new SplitCollection(),
-                'status' => null,
-            ],
-            self::$parametersParsed['results']['list'][5]->__toArray()
-        );
-    }
-
-    public function testGenerateContentResultPagination()
-    {
-        self::assertEquals(
-            [
-                'current' => 1,
-                'all' => 5,
-                'items' => 222,
-            ],
-            self::$parametersParsed['results']['pagination']
-        );
-    }
-
-    public function testGenerateContentAll()
-    {
-        self::assertEquals(self::$parameters, self::$parametersParsed->all());
+        self::assertCount(5, self::$parametersParsed['records']);
     }
 
     /**

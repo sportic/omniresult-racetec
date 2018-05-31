@@ -49,6 +49,11 @@ abstract class AbstractPageTest extends TestCase
         self::$parser->setCrawler($crawler);
 
         self::$parametersParsed = self::$parser->getContent();
+
+//        file_put_contents(
+//            TEST_FIXTURE_PATH . DS . 'Parsers' . DS . static::getSerializedFile(),
+//            serialize(self::$parser->getContent()->all())
+//        );
     }
 
     /**

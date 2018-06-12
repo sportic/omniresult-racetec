@@ -2,6 +2,7 @@
 
 namespace Sportic\Omniresult\RaceTec;
 
+use Sportic\Omniresult\Common\RequestDetector\HasDetectorTrait;
 use Sportic\Omniresult\Common\TimingClient;
 use Sportic\Omniresult\RaceTec\Scrapers\EventsPage;
 use Sportic\Omniresult\RaceTec\Scrapers\EventPage;
@@ -14,6 +15,8 @@ use Sportic\Omniresult\RaceTec\Scrapers\ResultPage;
  */
 class RaceTecClient extends TimingClient
 {
+    use HasDetectorTrait;
+
     /**
      * @param $parameters
      * @return \Sportic\Omniresult\Common\Parsers\AbstractParser|Parsers\EventsPage

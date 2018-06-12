@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "50816f75c3b0a18899c50dfb482800a4",
+    "content-hash": "6394eaf718ba3167bb63fea41e8ac64e",
     "packages": [
         {
             "name": "bytic/goutte-phantomjs-bridge",
@@ -493,16 +493,16 @@
         },
         {
             "name": "sportic/omniresult-common",
-            "version": "1.0.13",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sportic/omniresult-common.git",
-                "reference": "882bbee64761f8228011de188cf6e422b937d84b"
+                "reference": "03fe290e90a646eac94341ab6404f876ef764b0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sportic/omniresult-common/zipball/882bbee64761f8228011de188cf6e422b937d84b",
-                "reference": "882bbee64761f8228011de188cf6e422b937d84b",
+                "url": "https://api.github.com/repos/sportic/omniresult-common/zipball/03fe290e90a646eac94341ab6404f876ef764b0c",
+                "reference": "03fe290e90a646eac94341ab6404f876ef764b0c",
                 "shasum": ""
             },
             "require": {
@@ -518,7 +518,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Sportic\\Omniresult\\Common\\": "src/"
+                    "Sportic\\Omniresult\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -532,7 +532,7 @@
                 }
             ],
             "description": "a common client scraper for getting data from timing websites",
-            "time": "2018-05-30T12:57:38+00:00"
+            "time": "2018-06-12T20:24:25+00:00"
         },
         {
             "name": "symfony/browser-kit",
@@ -1349,16 +1349,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.8.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6"
+                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/478465659fd987669df0bd8a9bf22a8710e5f1b6",
-                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
+                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
                 "shasum": ""
             },
             "require": {
@@ -1393,7 +1393,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2018-05-29T17:25:09+00:00"
+            "time": "2018-06-11T23:09:50+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -2665,16 +2665,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.2.3",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "4842476c434e375f9d3182ff7b89059583aa8b27"
+                "reference": "d86873af43b4aa9d1f39a3601cc0cfcf02b25266"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/4842476c434e375f9d3182ff7b89059583aa8b27",
-                "reference": "4842476c434e375f9d3182ff7b89059583aa8b27",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d86873af43b4aa9d1f39a3601cc0cfcf02b25266",
+                "reference": "d86873af43b4aa9d1f39a3601cc0cfcf02b25266",
                 "shasum": ""
             },
             "require": {
@@ -2712,7 +2712,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-02-20T21:35:23+00:00"
+            "time": "2018-06-06T23:58:19+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -2807,7 +2807,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "sportic/omniresult-common": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -23,7 +23,7 @@ class RaceTecClientTest extends AbstractTest
 //        self::assertInstanceOf(RaceTecClient::class, $result->getClient());
         self::assertSame('results', $result->getAction());
         self::assertSame(
-            [],
+            ['cId' => '16648', 'rId' => '2111', 'eId' => '1'],
             $result->getParams()
         );
     }

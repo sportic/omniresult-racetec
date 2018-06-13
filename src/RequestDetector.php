@@ -41,6 +41,18 @@ class RequestDetector extends AbstractRequestDetector
      */
     protected function detectParams()
     {
-        // TODO: Implement detectParams() method.
+        parse_str($this->getUrlComponent('query'), $query);
+
+        $return = [];
+
+        $params = ['CId', 'RId', 'EId'];
+        foreach ($params as $queryParam) {
+            if (isset($query[$queryParam])) {
+                $param = str_replace('i', 'I', strtolower($queryParam));
+                $return[$param] = $query[$queryParam];
+            }
+        }
+
+        return $return;
     }
 }

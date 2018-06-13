@@ -10,7 +10,7 @@
   ],
   "require": {
     "php": "^7.0",
-    "sportic/omniresult-common": "dev-develop"
+    "sportic/omniresult-common": "^1.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0",

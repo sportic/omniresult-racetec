@@ -8,5 +8,4 @@ namespace Sportic\Omniresult\RaceTec\Parsers;
  */
 abstract class AbstractParser extends \Sportic\Omniresult\Common\Parsers\AbstractParser
 {
-
 }

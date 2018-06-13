@@ -12,7 +12,6 @@ use Sportic\Omniresult\RaceTec\Parsers\EventPage as EventPageParser;
  */
 class GenericPageTest extends AbstractPageTest
 {
-
     public function testGenerateContentRaces()
     {
         self::assertInstanceOf(GenericContent::class, self::$parametersParsed);

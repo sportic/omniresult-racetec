@@ -13,7 +13,6 @@ use Sportic\Omniresult\RaceTec\Parsers\EventPage as EventPageParser;
  */
 class EventPageTest extends AbstractPageTest
 {
-
     public function testGenerateContentRaces()
     {
         self::assertCount(5, self::$parametersParsed['races']);

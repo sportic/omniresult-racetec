@@ -14,7 +14,6 @@ use Sportic\Omniresult\RaceTec\Parsers\ResultPage as PageParser;
  */
 class ResultPageTest extends AbstractPageTest
 {
-
     public function testGenerateResultsBox()
     {
         $record = self::$parametersParsed->getRecord();

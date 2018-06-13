@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6394eaf718ba3167bb63fea41e8ac64e",
+    "content-hash": "50816f75c3b0a18899c50dfb482800a4",
     "packages": [
         {
             "name": "bytic/goutte-phantomjs-bridge",
@@ -493,7 +493,7 @@
         },
         {
             "name": "sportic/omniresult-common",
-            "version": "dev-develop",
+            "version": "1.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sportic/omniresult-common.git",
@@ -2807,9 +2807,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "sportic/omniresult-common": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -30,7 +30,8 @@ class RequestDetector extends AbstractRequestDetector
      */
     protected function detectAction()
     {
-        if ($this->getUrlComponent('path') == '/Results.aspx') {
+        $path = strtolower($this->getUrlComponent('path'));
+        if ($path == '/results.aspx') {
             return 'results';
         }
         return '';

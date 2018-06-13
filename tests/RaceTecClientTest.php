@@ -11,7 +11,6 @@ use Sportic\Omniresult\RaceTec\RaceTecClient;
  */
 class RaceTecClientTest extends AbstractTest
 {
-
     public function testDetectorValidUrl()
     {
         $client = new RaceTecClient();

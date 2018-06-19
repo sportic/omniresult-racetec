@@ -34,7 +34,7 @@ class ResultsPageTest extends AbstractPageTest
                 'posCategory' => '3',
                 'gender' => 'Male',
                 'posGender' => '6',
-                'id' => null,
+                'id' => '16648-2091-1-29984',
                 'parameters' => null,
                 'splits' => new SplitCollection(),
                 'status' => null,

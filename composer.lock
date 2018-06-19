@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "50816f75c3b0a18899c50dfb482800a4",
@@ -493,16 +493,16 @@
         },
         {
             "name": "sportic/omniresult-common",
-            "version": "1.0.15",
+            "version": "1.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sportic/omniresult-common.git",
-                "reference": "03fe290e90a646eac94341ab6404f876ef764b0c"
+                "reference": "0710c5be99f6712c3870424ac32f0315a31623bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sportic/omniresult-common/zipball/03fe290e90a646eac94341ab6404f876ef764b0c",
-                "reference": "03fe290e90a646eac94341ab6404f876ef764b0c",
+                "url": "https://api.github.com/repos/sportic/omniresult-common/zipball/0710c5be99f6712c3870424ac32f0315a31623bf",
+                "reference": "0710c5be99f6712c3870424ac32f0315a31623bf",
                 "shasum": ""
             },
             "require": {
@@ -532,7 +532,7 @@
                 }
             ],
             "description": "a common client scraper for getting data from timing websites",
-            "time": "2018-06-12T20:24:25+00:00"
+            "time": "2018-06-13T14:50:19+00:00"
         },
         {
             "name": "symfony/browser-kit",

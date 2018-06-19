@@ -20,9 +20,9 @@ class ResultsPage extends AbstractParser
      */
     protected function generateContent()
     {
-        $this->returnContent['races']                 = $this->parseRaces();
-        $this->returnContent['results']['header']     = $this->parseResultsHeader();
-        $this->returnContent['records']       = $this->parseResultsTable();
+        $this->returnContent['races'] = $this->parseRaces();
+        $this->returnContent['results']['header'] = $this->parseResultsHeader();
+        $this->returnContent['records'] = $this->parseResultsTable();
         $this->returnContent['pagination'] = $this->parseResultsPagination();
 
         return $this->returnContent;
@@ -33,7 +33,7 @@ class ResultsPage extends AbstractParser
      */
     protected function parseRaces()
     {
-        $return    = [];
+        $return = [];
         $eventMenu = $this->getCrawler()->filter('#ctl00_Content_Main_pnlEventMenu');
         if ($eventMenu->count() > 0) {
             $raceLinks = $eventMenu->filter('div.tab > a');
@@ -42,7 +42,7 @@ class ResultsPage extends AbstractParser
                     'name' => $link->nodeValue,
                     'href' => $link->getAttribute('href')
                 ];
-                $return[]   = new Race($parameters);
+                $return[] = new Race($parameters);
             }
         }
 
@@ -54,7 +54,7 @@ class ResultsPage extends AbstractParser
      */
     protected function parseResultsTable()
     {
-        $return      = [];
+        $return = [];
         $resultsRows = $this->getCrawler()->filter(
             '#ctl00_Content_Main_grdNew_DXMainTable > tbody > tr'
         );
@@ -79,7 +79,7 @@ class ResultsPage extends AbstractParser
     {
         $return = [];
 
-        $fields   = $this->getCrawler()->filter(
+        $fields = $this->getCrawler()->filter(
             '#ctl00_Content_Main_grdNew_DXHeadersRow table td a'
         );
         $fieldMap = self::getLabelMaps();
@@ -106,7 +106,7 @@ class ResultsPage extends AbstractParser
     protected function parseResultsRow(DOMElement $row)
     {
         $parameters = [];
-        $i          = 0;
+        $i = 0;
         foreach ($row->childNodes as $cell) {
             if ($cell instanceof DOMElement) {
                 $parameters = $this->parseResultsRowCell($i, $cell, $parameters);
@@ -134,6 +134,9 @@ class ResultsPage extends AbstractParser
             $field = $this->returnContent['results']['header'][$colCount];
             if ($field == 'fullName') {
                 $parameters['href'] = $cell->firstChild->getAttribute('href');
+
+                parse_str(parse_url($parameters['href'], PHP_URL_QUERY), $urlParameters);
+                $parameters['id'] = isset($urlParameters['uid']) ? $urlParameters['uid'] : '';
                 $parameters[$field] = trim($cell->nodeValue);
             } else {
                 $parameters[$field] = trim($cell->nodeValue);
@@ -150,8 +153,8 @@ class ResultsPage extends AbstractParser
     {
         $return = [
             'current' => 1,
-            'all'     => 1,
-            'items'   => 1,
+            'all' => 1,
+            'items' => 1,
         ];
 
         $paginationObject = $this->getCrawler()->filter(
@@ -159,10 +162,10 @@ class ResultsPage extends AbstractParser
         );
 
         if ($paginationObject->count() > 0) {
-            $elements          = explode(' ', $paginationObject->html());
+            $elements = explode(' ', $paginationObject->html());
             $return['current'] = intval($elements[1]);
-            $return['all']     = intval($elements[3]);
-            $return['items']   = intval(str_replace('(', '', $elements[4]));
+            $return['all'] = intval($elements[3]);
+            $return['items'] = intval(str_replace('(', '', $elements[4]));
         }
 
         return $return;
@@ -174,14 +177,14 @@ class ResultsPage extends AbstractParser
     public static function getLabelMaps()
     {
         return [
-            'posGen'      => 'Pos',
-            'bib'         => 'Race No',
-            'fullName'    => 'Name',
-            'time'        => 'Time',
-            'category'    => 'Category',
+            'posGen' => 'Pos',
+            'bib' => 'Race No',
+            'fullName' => 'Name',
+            'time' => 'Time',
+            'category' => 'Category',
             'posCategory' => 'Cat Pos',
-            'gender'      => 'Gender',
-            'posGender'   => 'Gen Pos'
+            'gender' => 'Gender',
+            'posGender' => 'Gen Pos'
         ];
     }
 

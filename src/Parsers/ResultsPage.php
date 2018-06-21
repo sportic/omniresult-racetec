@@ -133,7 +133,7 @@ class ResultsPage extends AbstractParser
         if (isset($this->returnContent['results']['header'][$colCount])) {
             $field = $this->returnContent['results']['header'][$colCount];
             if ($field == 'fullName') {
-                $parameters['href'] = $cell->firstChild->getAttribute('href');
+                $parameters['href'] = $cell->lastChild->getAttribute('href');
 
                 parse_str(parse_url($parameters['href'], PHP_URL_QUERY), $urlParameters);
                 $parameters['id'] = isset($urlParameters['uid']) ? $urlParameters['uid'] : '';

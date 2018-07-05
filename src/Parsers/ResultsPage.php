@@ -10,6 +10,8 @@ use Sportic\Omniresult\Common\Models\Result;
 /**
  * Class ResultsPage
  * @package Sportic\Omniresult\RaceTec\Parsers
+ *
+ * @method \Sportic\Omniresult\RaceTec\Scrapers\ResultsPage getScraper()
  */
 class ResultsPage extends AbstractParser
 {
@@ -56,7 +58,7 @@ class ResultsPage extends AbstractParser
     {
         $return = [];
         $resultsRows = $this->getCrawler()->filter(
-            '#ctl00_Content_Main_grdNew_DXMainTable > tbody > tr'
+            '#ctl00_Content_Main_grdNew_DXMainTable > tr'
         );
         if ($resultsRows->count() > 0) {
             foreach ($resultsRows as $resultRow) {
@@ -114,6 +116,11 @@ class ResultsPage extends AbstractParser
             }
         }
         if (count($parameters)) {
+            if ($this->getScraper()->isGenderCategoryMerge()) {
+                $gender = isset($parameters['gender']) ? $parameters['gender'] : '';
+                $category = isset($parameters['category']) ? $parameters['category'] : '';
+                $parameters['category'] = trim($gender . ' ' . $category);
+            }
             return new Result($parameters);
         }
 

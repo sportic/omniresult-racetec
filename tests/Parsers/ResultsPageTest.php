@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpMethodNamingConventionInspection */
 
 namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
 
@@ -76,5 +77,61 @@ class ResultsPageTest extends AbstractPageTest
         );
         $parametersSerialized = static::getParametersFixtures('event_page');
         self::assertEquals($parametersSerialized, $parametersParsed->all());
+    }
+
+    public function testForResultsWithNoCategory()
+    {
+        $parametersParsed = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper()),
+            'ResultsPage/no_category'
+        );
+
+        /** @var Result[] $records */
+        $records = $parametersParsed['records'];
+
+        self::assertCount(50, $records);
+        self::assertInstanceOf(Result::class, $records[5]);
+        self::assertEquals(
+            [
+                'posGen' => '6',
+                'bib' => '589',
+                'fullName' => 'Branzoi Dorin',
+                'href' => 'MyResults.aspx?uid=16648-175-1-64191',
+                'time' => '00:42:58',
+                'category' => null,
+                'posCategory' => null,
+                'gender' => 'Male',
+                'posGender' => '6',
+                'id' => '16648-175-1-64191',
+                'parameters' => null,
+                'splits' => [],
+                'status' => null,
+            ],
+            $records[5]->__toArray()
+        );
+    }
+
+    public function testForResultsWithNoCategoryWithFlag()
+    {
+        $parametersParsed = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper())->initialize(['genderCategoryMerge' => '1']),
+            'ResultsPage/no_category'
+        );
+
+        /** @var Result[] $records */
+        $records = $parametersParsed['records'];
+
+        self::assertCount(50, $records);
+        self::assertInstanceOf(Result::class, $records[5]);
+        self::assertArraySubset(
+            [
+                'fullName' => 'Branzoi Dorin',
+                'category' => 'Male',
+                'gender' => 'Male',
+            ],
+            $records[5]->__toArray()
+        );
     }
 }

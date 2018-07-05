@@ -37,6 +37,22 @@ class ResultsPage extends AbstractScraper
     }
 
     /**
+     * @return boolean
+     */
+    public function getGenderCategoryMerge()
+    {
+        return $this->getParameter('genderCategoryMerge', false);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isGenderCategoryMerge()
+    {
+        return $this->getGenderCategoryMerge() === true || $this->getGenderCategoryMerge() == 1;
+    }
+
+    /**
      * @return int
      */
     public function getPage()
@@ -49,7 +65,7 @@ class ResultsPage extends AbstractScraper
      */
     protected function generateCrawler()
     {
-        $client  = $this->getClient();
+        $client = $this->getClient();
         $crawler = $client->request(
             'GET',
             $this->getCrawlerUri()
@@ -57,13 +73,13 @@ class ResultsPage extends AbstractScraper
 
         $cPage = $this->getPage();
         if ($cPage > 1) {
-            $link        = $crawler->filter('#ctl00_Content_Main_grdTopPager')->selectLink($this->getPage())->first()->getNode(0);
-            $href        = $link->getAttribute('href');
+            $link = $crawler->filter('#ctl00_Content_Main_grdTopPager')->selectLink($this->getPage())->first()->getNode(0);
+            $href = $link->getAttribute('href');
             $eventTarget = str_replace(["javascript:__doPostBack('", "','')"], '', $href);
 
             $crawler->filter('#__EVENTTARGET')->getNode(0)->setAttribute('value', $eventTarget);
 
-            $form    = $crawler->filter('#aspnetForm')->form();
+            $form = $crawler->filter('#aspnetForm')->form();
             $crawler = $client->submit($form);
         }
 
@@ -75,9 +91,9 @@ class ResultsPage extends AbstractScraper
      */
     public function getCrawlerUri()
     {
-        return $this->getCrawlerUriHost().'/Results.aspx?'
-               . 'CId=' . $this->getCId()
-               . '&RId=' . $this->getRId()
-               . '&EId=' . $this->getEId();
+        return $this->getCrawlerUriHost() . '/Results.aspx?'
+            . 'CId=' . $this->getCId()
+            . '&RId=' . $this->getRId()
+            . '&EId=' . $this->getEId();
     }
 }

@@ -21,8 +21,14 @@ class ResultsPageTest extends AbstractPageTest
 
     public function testGenerateContentResultList()
     {
-        self::assertCount(50, self::$parametersParsed['records']);
-        self::assertInstanceOf(Result::class, self::$parametersParsed['records'][5]);
+        $parametersParsed = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper()),
+            'event_page'
+        );
+
+        self::assertCount(50, $parametersParsed['records']);
+        self::assertInstanceOf(Result::class, $parametersParsed['records'][5]);
         self::assertEquals(
             [
                 'posGen' => '6',
@@ -39,56 +45,36 @@ class ResultsPageTest extends AbstractPageTest
                 'splits' => new SplitCollection(),
                 'status' => null,
             ],
-            self::$parametersParsed['records'][5]->__toArray()
+            $parametersParsed['records'][5]->__toArray()
         );
     }
 
     public function testGenerateContentResultPagination()
     {
+        $parametersParsed = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper()),
+            'event_page'
+        );
+
         self::assertEquals(
             [
                 'current' => 1,
                 'all' => 5,
                 'items' => 222,
             ],
-            self::$parametersParsed['pagination']
+            $parametersParsed['pagination']
         );
     }
 
     public function testGenerateContentAll()
     {
-        self::assertEquals(self::$parameters, self::$parametersParsed->all());
-    }
-
-    /**
-     * @inheritdoc
-     */
-    protected static function getNewScraper()
-    {
-        return new PageScraper('16648', '2091', '1');
-    }
-
-    /**
-     * @inheritdoc
-     */
-    protected static function getNewParser()
-    {
-        return new PageParser();
-    }
-
-    /**
-     * @inheritdoc
-     */
-    protected static function getSerializedFile()
-    {
-        return 'event_page.serialized';
-    }
-
-    /**
-     * @inheritdoc
-     */
-    protected static function getHtmlFile()
-    {
-        return 'event_page.html';
+        $parametersParsed = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper()),
+            'event_page'
+        );
+        $parametersSerialized = static::getParametersFixtures('event_page');
+        self::assertEquals($parametersSerialized, $parametersParsed->all());
     }
 }

@@ -16,7 +16,14 @@ class ResultPageTest extends AbstractPageTest
 {
     public function testGenerateResultsBox()
     {
-        $record = self::$parametersParsed->getRecord();
+        $parsedParameters = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper())->initialize(['uid' => '16648-2091-1-29925']),
+            'result_page'
+        );
+
+        /** @var Result $record */
+        $record = $parsedParameters->getRecord();
 
         self::assertInstanceOf(Result::class, $record);
         self::assertSame('Marius-Alexandru Dragu', $record->getFullName());
@@ -33,14 +40,20 @@ class ResultPageTest extends AbstractPageTest
         self::assertSame('28', $participants['category']);
 
         self::assertSame('188', $record->getBib());
-        self::assertSame('male', $record->getgender());
+        self::assertSame('male', $record->getGender());
         self::assertSame('Masculin 45-49', $record->getCategory());
         self::assertSame('Finished', $record->getStatus());
     }
 
     public function testSplits()
     {
-        $record = self::$parametersParsed->getRecord();
+        $parsedParameters = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper())->initialize(['uid' => '16648-2091-1-29925']),
+            'result_page'
+        );
+
+        $record = $parsedParameters->getRecord();
         /** @var Split[] $splits */
         $splits = $record->getSplits();
         self::assertEquals(12, count($splits));
@@ -53,40 +66,5 @@ class ResultPageTest extends AbstractPageTest
         self::assertSame('Ciclism 7', $splits[8]->getName());
         self::assertSame('01:17:11.19', $splits[8]->getTimeFromStart());
         self::assertSame('00:08:50.52', $splits[8]->getTime());
-    }
-
-    /**
-     * @inheritdoc
-     */
-    protected static function getNewScraper()
-    {
-        $parameters = ['uid' => '16648-2091-1-29925'];
-        $scraper = new PageScraper();
-        $scraper->initialize($parameters);
-        return $scraper;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    protected static function getNewParser()
-    {
-        return new PageParser();
-    }
-
-    /**
-     * @inheritdoc
-     */
-    protected static function getSerializedFile()
-    {
-        return 'result_page.serialized';
-    }
-
-    /**
-     * @inheritdoc
-     */
-    protected static function getHtmlFile()
-    {
-        return 'result_page.html';
     }
 }

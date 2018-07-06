@@ -28,8 +28,11 @@ class ResultsPageTest extends AbstractPageTest
             'event_page'
         );
 
-        self::assertCount(50, $parametersParsed['records']);
-        self::assertInstanceOf(Result::class, $parametersParsed['records'][5]);
+        /** @var array|Result[] $results */
+        $results = $parametersParsed['records'];
+
+        self::assertCount(50, $results);
+        self::assertInstanceOf(Result::class, $results[5]);
         self::assertEquals(
             [
                 'posGen' => '6',
@@ -43,10 +46,10 @@ class ResultsPageTest extends AbstractPageTest
                 'posGender' => '6',
                 'id' => '16648-2091-1-29984',
                 'parameters' => null,
-                'splits' => new SplitCollection(),
+                'splits' => [],
                 'status' => null,
             ],
-            $parametersParsed['records'][5]->__toArray()
+            $results[5]->__toArray()
         );
     }
 
@@ -87,7 +90,7 @@ class ResultsPageTest extends AbstractPageTest
             'ResultsPage/no_category'
         );
 
-        /** @var Result[] $records */
+        /** @var array|Result[] $records */
         $records = $parametersParsed['records'];
 
         self::assertCount(50, $records);
@@ -120,7 +123,7 @@ class ResultsPageTest extends AbstractPageTest
             'ResultsPage/no_category'
         );
 
-        /** @var Result[] $records */
+        /** @var array|Result[] $records */
         $records = $parametersParsed['records'];
 
         self::assertCount(50, $records);

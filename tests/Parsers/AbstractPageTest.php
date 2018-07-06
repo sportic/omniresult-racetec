@@ -45,12 +45,12 @@ abstract class AbstractPageTest extends TestCase
 
         $parametersParsed = $parser->getContent();
 
-        return $parametersParsed;
-
 //        file_put_contents(
-//            TEST_FIXTURE_PATH . DS . 'Parsers' . DS . static::getSerializedFile(),
-//            serialize(self::$parser->getContent()->all())
+//            TEST_FIXTURE_PATH . DS . 'Parsers' . DS . $fixturePath . '.serialized',
+//            serialize($parser->getContent()->all())
 //        );
+
+        return $parametersParsed;
     }
 
     /**

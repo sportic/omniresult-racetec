@@ -57,9 +57,7 @@ class ResultsPage extends AbstractParser
     protected function parseResultsTable()
     {
         $return = [];
-        $resultsRows = $this->getCrawler()->filter(
-            '#ctl00_Content_Main_grdNew_DXMainTable > tr'
-        );
+        $resultsRows = $this->getResultsRows();
         if ($resultsRows->count() > 0) {
             foreach ($resultsRows as $resultRow) {
                 if ($resultRow->getAttribute('id') !== 'ctl00_Content_Main_grdNew_DXHeadersRow') {
@@ -72,6 +70,20 @@ class ResultsPage extends AbstractParser
         }
 
         return $return;
+    }
+
+    /**
+     * @return \Symfony\Component\DomCrawler\Crawler
+     */
+    protected function getResultsRows()
+    {
+        $resultsTable = $this->getCrawler()->filter(
+            '#ctl00_Content_Main_grdNew_DXMainTable'
+        )->children();
+        $resultsRows = $resultsTable->nodeName() == 'tbody' ?
+            $resultsTable->children()
+            : $resultsTable;
+        return $resultsRows;
     }
 
     /**
@@ -108,11 +120,11 @@ class ResultsPage extends AbstractParser
     protected function parseResultsRow(DOMElement $row)
     {
         $parameters = [];
-        $i = 0;
+        $colNum = 0;
         foreach ($row->childNodes as $cell) {
             if ($cell instanceof DOMElement) {
-                $parameters = $this->parseResultsRowCell($i, $cell, $parameters);
-                $i++;
+                $parameters = $this->parseResultsRowCell($colNum, $cell, $parameters);
+                $colNum++;
             }
         }
         if (count($parameters)) {

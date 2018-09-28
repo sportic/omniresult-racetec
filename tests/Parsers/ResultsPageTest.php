@@ -42,12 +42,13 @@ class ResultsPageTest extends AbstractPageTest
                 'time' => '02:04:16',
                 'category' => 'Masculin 35-39',
                 'posCategory' => '3',
-                'gender' => 'Male',
+                'gender' => 'male',
                 'posGender' => '6',
                 'id' => '16648-2091-1-29984',
                 'parameters' => null,
                 'splits' => [],
                 'status' => null,
+                'country' => null
             ],
             $results[5]->__toArray()
         );
@@ -104,12 +105,13 @@ class ResultsPageTest extends AbstractPageTest
                 'time' => '00:42:58',
                 'category' => null,
                 'posCategory' => null,
-                'gender' => 'Male',
+                'gender' => 'male',
                 'posGender' => '6',
                 'id' => '16648-175-1-64191',
                 'parameters' => null,
                 'splits' => [],
                 'status' => null,
+                'country' => null
             ],
             $records[5]->__toArray()
         );
@@ -132,7 +134,7 @@ class ResultsPageTest extends AbstractPageTest
             [
                 'fullName' => 'Branzoi Dorin',
                 'category' => 'Male',
-                'gender' => 'Male',
+                'gender' => 'male',
             ],
             $records[5]->__toArray()
         );

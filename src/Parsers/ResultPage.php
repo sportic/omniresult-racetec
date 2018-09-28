@@ -82,8 +82,9 @@ class ResultPage extends AbstractParser
                     $values[] = $value;
                 }
             }
+
             $column = $values[0];
-            $value = $values[1];
+            $value = isset($values[1]) ? $values[1] : '';
 
             switch ($column) {
                 case 'Race No':
@@ -97,6 +98,9 @@ class ResultPage extends AbstractParser
                     break;
                 case 'Status':
                     $this->returnContent['status'] = $value;
+                    break;
+                case 'Team':
+                    $this->returnContent['club'] = $value;
                     break;
             }
         }
@@ -142,7 +146,7 @@ class ResultPage extends AbstractParser
         foreach ($row->childNodes as $node) {
             if ($node instanceof DOMElement) {
                 $fieldName = trim($node->nodeValue);
-                $labelFind = array_search($fieldName, $fieldMap);
+                $labelFind = isset($fieldMap[$fieldName]) ? $fieldMap[$fieldName] : null;
                 if ($labelFind) {
                     $return[$colNum] = $labelFind;
                 }
@@ -206,9 +210,14 @@ class ResultPage extends AbstractParser
     protected static function getLabelMaps()
     {
         return [
-            'name' => 'Split Name',
-            'timeFromStart' => 'Time',
-            'time' => 'Time From Previous Split',
+            'Split Name' => 'name',
+            'Time' => 'timeFromStart',
+            'Time From Prev Leg' => 'time',
+            'Time From Previous Split' => 'time',
+            'TOD' => 'timeOfDay',
+            'O Pos' => 'posGender',
+            'C Pos' => 'posCategory',
+            'G Pos' => 'posGen',
         ];
     }
 

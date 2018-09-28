@@ -48,7 +48,8 @@ class ResultsPageTest extends AbstractPageTest
                 'parameters' => null,
                 'splits' => [],
                 'status' => null,
-                'country' => null
+                'country' => null,
+                'club' => null
             ],
             $results[5]->__toArray()
         );
@@ -111,7 +112,8 @@ class ResultsPageTest extends AbstractPageTest
                 'parameters' => null,
                 'splits' => [],
                 'status' => null,
-                'country' => null
+                'country' => null,
+                'club' => null
             ],
             $records[5]->__toArray()
         );

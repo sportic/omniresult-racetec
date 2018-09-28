@@ -82,4 +82,32 @@ class ResultPageTest extends AbstractPageTest
         $splits = $record->getSplits();
         self::assertEquals(0, count($splits));
     }
+
+    public function testSplitsWithDetails()
+    {
+        $parsedParameters = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper())->initialize(['uid' => '16648-117-1-42147']),
+            'ResultPage/detailed_splits'
+        );
+
+        $record = $parsedParameters->getRecord();
+
+        /** @var Split[] $splits */
+        $splits = $record->getSplits();
+        self::assertEquals(3, count($splits));
+
+        $split = $splits[1];
+
+        self::assertInstanceOf(Split::class, $split);
+        self::assertSame('KM 28,7', $split->getName());
+
+        self::assertSame('01:28:31', $split->getTime());
+        self::assertSame('02:46:52', $split->getTimeFromStart());
+        self::assertSame('11:47:57', $split->getTimeOfDay());
+
+        self::assertSame('15', $split->getPosGen());
+        self::assertSame('2', $split->getPosCategory());
+        self::assertSame('17', $split->getPosGender());
+    }
 }

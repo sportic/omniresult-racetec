@@ -73,7 +73,7 @@ class ResultPageTest extends AbstractPageTest
         $parsedParameters = static::initParserFromFixtures(
             new PageParser(),
             (new PageScraper())->initialize(['uid' => '16648-134-2-8533']),
-            'ResultPage\no_splits'
+            'ResultPage/no_splits'
         );
 
         $record = $parsedParameters->getRecord();

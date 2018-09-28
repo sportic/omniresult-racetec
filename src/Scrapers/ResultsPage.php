@@ -71,18 +71,51 @@ class ResultsPage extends AbstractScraper
             $this->getCrawlerUri()
         );
 
-        $cPage = $this->getPage();
-        if ($cPage > 1) {
-            $link = $crawler->filter('#ctl00_Content_Main_grdTopPager')->selectLink($this->getPage())->first()->getNode(0);
-            $href = $link->getAttribute('href');
-            $eventTarget = str_replace(["javascript:__doPostBack('", "','')"], '', $href);
-
-            $crawler->filter('#__EVENTTARGET')->getNode(0)->setAttribute('value', $eventTarget);
-
-            $form = $crawler->filter('#aspnetForm')->form();
-            $crawler = $client->submit($form);
+        if ($this->getPage() > 1) {
+            $crawler = $this->goToPage($client, $crawler);
         }
 
+        return $crawler;
+    }
+
+    /**
+     * @param $client
+     * @param $crawler
+     * @return mixed
+     */
+    protected function goToPage($client, $crawler)
+    {
+        $rPage = $this->getPage();
+        if ($rPage <= 7) {
+            return $this->clickPageLink($client, $crawler, $rPage);
+        }
+        $cPage = 7;
+        while ($cPage <= $rPage) {
+            $crawler = $this->clickPageLink($client, $crawler, $cPage);
+            if (($rPage - $cPage) <= 2) {
+                return $this->clickPageLink($client, $crawler, $rPage);
+            } else {
+                $cPage = $cPage + 2;
+            }
+        }
+        return $crawler;
+    }
+
+    /**
+     * @param $client
+     * @param $crawler
+     * @return mixed
+     */
+    protected function clickPageLink($client, $crawler, $page)
+    {
+        $link = $crawler->filter('#ctl00_Content_Main_grdTopPager')->selectLink($page)->first()->getNode(0);
+        $href = $link->getAttribute('href');
+        $eventTarget = str_replace(["javascript:__doPostBack('", "','')"], '', $href);
+
+        $crawler->filter('#__EVENTTARGET')->getNode(0)->setAttribute('value', $eventTarget);
+
+        $form = $crawler->filter('#aspnetForm')->form();
+        $crawler = $client->submit($form);
         return $crawler;
     }
 

@@ -161,6 +161,11 @@ class ResultPage extends AbstractParser
      */
     protected function parseSplitRow($row, $headerData)
     {
+        $textContent = trim($row->textContent);
+        if (strpos($textContent, 'No data to display') !== false) {
+            return null;
+        }
+
         $parameters = [];
         $rowNum = 0;
         foreach ($row->childNodes as $cell) {

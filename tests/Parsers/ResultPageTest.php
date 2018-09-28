@@ -67,4 +67,19 @@ class ResultPageTest extends AbstractPageTest
         self::assertSame('01:17:11.19', $splits[8]->getTimeFromStart());
         self::assertSame('00:08:50.52', $splits[8]->getTime());
     }
+
+    public function testSplitsNoDataToDisplay()
+    {
+        $parsedParameters = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper())->initialize(['uid' => '16648-134-2-8533']),
+            'ResultPage\no_splits'
+        );
+
+        $record = $parsedParameters->getRecord();
+
+        /** @var Split[] $splits */
+        $splits = $record->getSplits();
+        self::assertEquals(0, count($splits));
+    }
 }

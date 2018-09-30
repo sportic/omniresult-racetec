@@ -6,6 +6,7 @@ use DOMElement;
 use Sportic\Omniresult\Common\Content\ListContent;
 use Sportic\Omniresult\Common\Models\Race;
 use Sportic\Omniresult\Common\Models\Result;
+use Sportic\Omniresult\Common\Models\Split;
 
 /**
  * Class ResultsPage
@@ -96,20 +97,54 @@ class ResultsPage extends AbstractParser
         $fields = $this->getCrawler()->filter(
             '#ctl00_Content_Main_grdNew_DXHeadersRow table td a'
         );
-        $fieldMap = self::getLabelMaps();
         if ($fields->count() > 0) {
             $colNum = 0;
             foreach ($fields as $field) {
-                $fieldName = $field->nodeValue;
-                $labelFind = array_search($fieldName, $fieldMap);
-                if ($labelFind) {
-                    $return[$colNum] = $labelFind;
+                $headerFind = $this->parseResultsHeaderRow($field);
+                if ($headerFind) {
+                    $return[$colNum] = $headerFind;
                 }
                 $colNum++;
             }
         }
 
         return $return;
+    }
+
+    /**
+     * @param $field
+     * @return array|bool|Split
+     */
+    protected function parseResultsHeaderRow($field)
+    {
+        $fieldMap = self::getLabelMaps();
+        $fieldName = $field->nodeValue;
+        $labelFind = array_search($fieldName, $fieldMap);
+        if ($labelFind) {
+            return $labelFind;
+        } else {
+            $splitSearch = $this->parseResultsHeaderRowSplit($fieldName);
+            if ($splitSearch) {
+                return $splitSearch;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * @param $fieldName
+     * @return bool|Split
+     */
+    protected function parseResultsHeaderRowSplit($fieldName)
+    {
+        $needles = ['lap'];
+        $haystack = strtolower($fieldName);
+        foreach ($needles as $needle) {
+            if (strpos($haystack, $needle) !== false) {
+                return new Split(['name' => $fieldName]);
+            }
+        }
+        return false;
     }
 
     /**
@@ -151,7 +186,11 @@ class ResultsPage extends AbstractParser
     {
         if (isset($this->returnContent['results']['header'][$colCount])) {
             $field = $this->returnContent['results']['header'][$colCount];
-            if ($field == 'fullName') {
+            if ($field instanceof Split) {
+                $split = clone $field;
+                $split->setParameters(['time' => trim($cell->nodeValue)]);
+                $parameters['splits'][] = $split;
+            } elseif ($field == 'fullName') {
                 $parameters['href'] = $cell->lastChild->getAttribute('href');
 
                 parse_str(parse_url($parameters['href'], PHP_URL_QUERY), $urlParameters);

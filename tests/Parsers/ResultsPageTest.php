@@ -110,7 +110,28 @@ class ResultsPageTest extends AbstractPageTest
                 'posGender' => '6',
                 'id' => '16648-175-1-64191',
                 'parameters' => null,
-                'splits' => [],
+                'splits' => [
+                    0 => [
+                        'name' => 'Lap1',
+                        'time' => '00:20:27',
+                        'timeFromStart' => null,
+                        'timeOfDay' => null,
+                        'posGen' => null,
+                        'posCategory' => null,
+                        'posGender' => null,
+                        'parameters' => null
+                    ],
+                    1 => [
+                        'name' => 'Lap2',
+                        'time' => '00:22:30',
+                        'timeFromStart' => null,
+                        'timeOfDay' => null,
+                        'posGen' => null,
+                        'posCategory' => null,
+                        'posGender' => null,
+                        'parameters' => null
+                    ],
+                ],
                 'status' => null,
                 'country' => null,
                 'club' => null
@@ -137,6 +158,62 @@ class ResultsPageTest extends AbstractPageTest
                 'fullName' => 'Branzoi Dorin',
                 'category' => 'Male',
                 'gender' => 'male',
+            ],
+            $records[5]->__toArray()
+        );
+    }
+
+    public function testForSplitsColumns()
+    {
+        $parametersParsed = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper()),
+            'ResultsPage/has_splits'
+        );
+
+        /** @var array|Result[] $records */
+        $records = $parametersParsed['records'];
+
+        self::assertCount(50, $records);
+        self::assertInstanceOf(Result::class, $records[5]);
+        self::assertEquals(
+            [
+                'posGen' => '6',
+                'bib' => '201',
+                'fullName' => 'David Mihai',
+                'href' => 'MyResults.aspx?uid=16648-168-2-10993',
+                'time' => '01:41:38',
+                'category' => 'Masculin 30-39',
+                'posCategory' => '1',
+                'gender' => 'male',
+                'posGender' => '6',
+                'id' => '16648-168-2-10993',
+                'splits' => [
+                    0 => [
+                        'name' => 'Lap 1',
+                        'time' => '00:49:47',
+                        'timeFromStart' => null,
+                        'timeOfDay' => null,
+                        'posGen' => null,
+                        'posCategory' => null,
+                        'posGender' => null,
+                        'parameters' => null
+                    ],
+                    1 => [
+                        'name' => 'Lap 2',
+                        'time' => '01:41:38',
+                        'timeFromStart' => null,
+                        'timeOfDay' => null,
+                        'posGen' => null,
+                        'posCategory' => null,
+                        'posGender' => null,
+                        'parameters' => null
+                    ],
+                ],
+                'status' => null,
+                'country' => null,
+                'club' => null,
+                'parameters' => null
             ],
             $records[5]->__toArray()
         );

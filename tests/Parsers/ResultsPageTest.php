@@ -163,6 +163,32 @@ class ResultsPageTest extends AbstractPageTest
         );
     }
 
+    public function testForNetTimeColumns()
+    {
+        $parametersParsed = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper()),
+            'ResultsPage/net_time'
+        );
+
+        /** @var array|Result[] $records */
+        $records = $parametersParsed['records'];
+
+        self::assertCount(50, $records);
+        self::assertInstanceOf(Result::class, $records[5]);
+
+        $result = $records[5];
+        self::assertEquals('Razvan Farkas', $result->getFullName());
+        self::assertEquals('01:24:40', $result->getTime());
+
+        $splits = $result->getSplits();
+        self::assertCount(3, $splits);
+
+        $split = $splits[1];
+        self::assertEquals('KM 10,5', $split->getName());
+        self::assertEquals('00:25:00', $split->getTime());
+    }
+
     public function testForSplitsColumns()
     {
         $parametersParsed = static::initParserFromFixtures(

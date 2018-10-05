@@ -22,6 +22,7 @@ class ResultsPageTest extends TestCase
             'http://racetecresults.com/Results.aspx?CId=16648&RId=163&EId=1',
             $crawler->getUri()
         );
+        file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultsPage/netTime.html', $crawler->html());
     }
 
     public function testGetCrawlerHtml()

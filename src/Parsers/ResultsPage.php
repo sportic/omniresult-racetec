@@ -119,7 +119,7 @@ class ResultsPage extends AbstractParser
     {
         $fieldMap = self::getLabelMaps();
         $fieldName = $field->nodeValue;
-        $labelFind = array_search($fieldName, $fieldMap);
+        $labelFind = isset($fieldMap[$fieldName]) ? $fieldMap[$fieldName] : null;
         if ($labelFind) {
             return $labelFind;
         } else {
@@ -137,7 +137,7 @@ class ResultsPage extends AbstractParser
      */
     protected function parseResultsHeaderRowSplit($fieldName)
     {
-        $needles = ['lap'];
+        $needles = ['lap','km'];
         $haystack = strtolower($fieldName);
         foreach ($needles as $needle) {
             if (strpos($haystack, $needle) !== false) {
@@ -235,14 +235,15 @@ class ResultsPage extends AbstractParser
     public static function getLabelMaps()
     {
         return [
-            'posGen' => 'Pos',
-            'bib' => 'Race No',
-            'fullName' => 'Name',
-            'time' => 'Time',
-            'category' => 'Category',
-            'posCategory' => 'Cat Pos',
-            'gender' => 'Gender',
-            'posGender' => 'Gen Pos'
+            'Pos' => 'posGen',
+            'Race No' => 'bib',
+            'Name' => 'fullName',
+            'Time' => 'time',
+            'Net Time' => 'time',
+            'Category' => 'category',
+            'Cat Pos' => 'posCategory',
+            'Gender' => 'gender',
+            'Gen Pos' => 'posGender'
         ];
     }
 

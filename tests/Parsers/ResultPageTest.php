@@ -44,6 +44,26 @@ class ResultPageTest extends AbstractPageTest
         self::assertSame('Masculin 45-49', $record->getCategory());
         self::assertSame('Finished', $record->getStatus());
     }
+    public function testNetTimeBox()
+    {
+        $parsedParameters = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper())->initialize(['uid' => '16648-116-1-40995']),
+            'ResultPage\net_time_details'
+        );
+
+        /** @var Result $record */
+        $record = $parsedParameters->getRecord();
+
+        self::assertInstanceOf(Result::class, $record);
+        self::assertSame('Alin Bugari', $record->getFullName());
+
+        self::assertSame('01:15:38', $record->getTime());
+        self::assertSame('2', $record->getBib());
+        self::assertSame('1', $record->getPosGen());
+        self::assertSame('Masculin', $record->getCategory());
+        self::assertSame('Finished', $record->getStatus());
+    }
 
     public function testSplits()
     {

@@ -46,27 +46,49 @@ class ResultPage extends AbstractParser
      */
     protected function parseFinishTime()
     {
-        return trim(
-            $this->getCrawler()->filter('#ctl00_Content_Main_lblResFinishTime')->text()
-        );
+        $timeContainers = ['ctl00_Content_Main_lblResFinishTime', 'ctl00_Content_Main_lblNetTime'];
+        foreach ($timeContainers as $timeContainer) {
+            $finishTime = $this->getCrawler()->filter('#' . $timeContainer);
+            if ($finishTime->count() > 0) {
+                return trim($finishTime->text());
+            }
+        }
+        return null;
     }
 
     protected function parsePositions()
     {
-        $posGenData = $this->getCrawler()->filter('#ctl00_Content_Main_lblResOPos')->text();
-        list($posGen, $participants) = explode('/', $posGenData);
-        $this->returnContent['posGen'] = trim($posGen);
-        $this->returnContent['participants']['race'] = trim($participants);
+        $this->parsePosition('gen');
+        $this->parsePosition('gender');
+        $this->parsePosition('category');
+    }
 
-        $posGenData = $this->getCrawler()->filter('#ctl00_Content_Main_lblResGPos')->text();
-        list($posGen, $participants) = explode('/', $posGenData);
-        $this->returnContent['posGender'] = trim($posGen);
-        $this->returnContent['participants']['gender'] = trim($participants);
-
-        $posGenData = $this->getCrawler()->filter('#ctl00_Content_Main_lblResCPos')->text();
-        list($posGen, $participants) = explode('/', $posGenData);
-        $this->returnContent['posCategory'] = trim($posGen);
-        $this->returnContent['participants']['category'] = trim($participants);
+    /**
+     * @param $type
+     */
+    protected function parsePosition($type)
+    {
+        $typeValues = [
+            'gen' => ['O', 'race'],
+            'gender' => ['G', 'gender'],
+            'category' => ['C', 'category'],
+        ];
+        $typeValue = $typeValues[$type];
+        $positionContainers = [
+            '#ctl00_Content_Main_lblRes' . $typeValue[0] . 'Pos',
+            '#ctl00_Content_Main_lblNet' . $typeValue[0] . 'Pos'
+        ];
+        foreach ($positionContainers as $positionContainer) {
+            $posNodes = $this->getCrawler()->filter($positionContainer);
+            if ($posNodes->count() > 0) {
+                $positionData = $posNodes->text();
+                list($position, $participants) = explode('/', $positionData);
+                $this->returnContent['pos' . ucfirst($type)] = trim($position);
+                $this->returnContent['participants'][$typeValue[1]] = trim($participants);
+                return;
+            }
+        }
+        return;
     }
 
     protected function parseResultBio()

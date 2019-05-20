@@ -24,6 +24,7 @@ class ResultPage extends AbstractParser
         $this->returnContent['fullName'] = $this->parseFullName();
         $this->returnContent['time'] = $this->parseFinishTime();
         $this->parsePositions();
+        $this->parseResultBib();
         $this->parseResultBio();
         $this->returnContent['splits'] = $this->parseSplits();
 
@@ -46,7 +47,7 @@ class ResultPage extends AbstractParser
      */
     protected function parseFinishTime()
     {
-        $timeContainers = ['ctl00_Content_Main_lblResFinishTime', 'ctl00_Content_Main_lblNetTime'];
+        $timeContainers = ['ctl00_Content_Main_lblTime1Large', 'ctl00_Content_Main_lblTime2Large'];
         foreach ($timeContainers as $timeContainer) {
             $finishTime = $this->getCrawler()->filter('#' . $timeContainer);
             if ($finishTime->count() > 0) {
@@ -75,8 +76,8 @@ class ResultPage extends AbstractParser
         ];
         $typeValue = $typeValues[$type];
         $positionContainers = [
-            '#ctl00_Content_Main_lblRes' . $typeValue[0] . 'Pos',
-            '#ctl00_Content_Main_lblNet' . $typeValue[0] . 'Pos'
+            '#ctl00_Content_Main_lbl' . $typeValue[0] . 'Pos1',
+            '#ctl00_Content_Main_lbl' . $typeValue[0] . 'Pos2'
         ];
         foreach ($positionContainers as $positionContainer) {
             $posNodes = $this->getCrawler()->filter($positionContainer);
@@ -89,6 +90,14 @@ class ResultPage extends AbstractParser
             }
         }
         return;
+    }
+
+    protected function parseResultBib()
+    {
+        $bibContainer = $this->getCrawler()->filter('#ctl00_Content_Main_lblRaceNo');
+        if ($bibContainer->count() > 0) {
+            $this->returnContent['bib'] = trim($bibContainer->text());
+        }
     }
 
     protected function parseResultBio()
@@ -106,6 +115,7 @@ class ResultPage extends AbstractParser
             }
 
             $column = $values[0];
+            $column = trim(str_replace([':'], '', $column));
             $value = isset($values[1]) ? $values[1] : '';
 
             switch ($column) {
@@ -136,11 +146,12 @@ class ResultPage extends AbstractParser
         $return = new SplitCollection();
         $headerData = [];
         $splitRows = $this->getCrawler()->filter(
-            '#ctl00_Content_Main_grdSplits_DXMainTable > tbody > tr'
+            '#ctl00_Content_Main_divSplitGrid >table > tbody > tr'
         );
         if ($splitRows->count() > 0) {
             foreach ($splitRows as $resultRow) {
-                if ($resultRow->getAttribute('id') === 'ctl00_Content_Main_grdSplits_DXHeadersRow') {
+                $firstCell = $resultRow->childNodes->item(1);
+                if ($firstCell->tagName == 'th') {
                     $headerData = $this->parseSplitsHeader($resultRow);
                 } else {
                     $split = $this->parseSplitRow($resultRow, $headerData);
@@ -232,14 +243,21 @@ class ResultPage extends AbstractParser
     protected static function getLabelMaps()
     {
         return [
+            'Name' => 'name',
             'Split Name' => 'name',
             'Time' => 'timeFromStart',
             'Time From Prev Leg' => 'time',
+            'Leg Time' => 'time',
+            'Split Time' => 'time',
             'Time From Previous Split' => 'time',
+            'Time of Day' => 'timeOfDay',
             'TOD' => 'timeOfDay',
             'O Pos' => 'posGender',
+            'G/Pos' => 'posGender',
             'C Pos' => 'posCategory',
+            'C/Pos' => 'posCategory',
             'G Pos' => 'posGen',
+            'Pos' => 'posGen',
         ];
     }
 

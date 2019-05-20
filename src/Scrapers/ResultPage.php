@@ -49,7 +49,7 @@ class ResultPage extends AbstractScraper
     public function getCrawlerUri()
     {
         return $this->getCrawlerUriHost()
-            . '/MyResults.aspx?'
+            . '/myresults.aspx?'
             . 'uid=' . $this->getUid();
     }
 }

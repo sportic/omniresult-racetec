@@ -4,9 +4,8 @@
 namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
 
 use Sportic\Omniresult\Common\Models\Result;
-use Sportic\Omniresult\Common\Models\SplitCollection;
-use Sportic\Omniresult\RaceTec\Scrapers\ResultsPage as PageScraper;
 use Sportic\Omniresult\RaceTec\Parsers\ResultsPage as PageParser;
+use Sportic\Omniresult\RaceTec\Scrapers\ResultsPage as PageScraper;
 
 /**
  * Class EventPageTest
@@ -38,7 +37,7 @@ class ResultsPageTest extends AbstractPageTest
                 'posGen' => '6',
                 'bib' => '247',
                 'fullName' => 'Sorin Boriceanu',
-                'href' => 'MyResults.aspx?uid=16648-2091-1-29984',
+                'href' => 'myresults.aspx?uid=16648-2091-1-29984',
                 'time' => '02:04:16',
                 'category' => 'Masculin 35-39',
                 'posCategory' => '3',
@@ -49,7 +48,10 @@ class ResultsPageTest extends AbstractPageTest
                 'splits' => [],
                 'status' => null,
                 'country' => null,
-                'club' => null
+                'club' => null,
+                'firstName' => null,
+                'lastName' => null,
+                'timeGross' => null
             ],
             $results[5]->__toArray()
         );
@@ -102,7 +104,7 @@ class ResultsPageTest extends AbstractPageTest
                 'posGen' => '6',
                 'bib' => '589',
                 'fullName' => 'Branzoi Dorin',
-                'href' => 'MyResults.aspx?uid=16648-175-1-64191',
+                'href' => 'myresults.aspx?uid=16648-175-1-64191',
                 'time' => '00:42:58',
                 'category' => null,
                 'posCategory' => null,
@@ -134,7 +136,10 @@ class ResultsPageTest extends AbstractPageTest
                 ],
                 'status' => null,
                 'country' => null,
-                'club' => null
+                'club' => null,
+                'firstName' => null,
+                'lastName' => null,
+                'timeGross' => null
             ],
             $records[5]->__toArray()
         );
@@ -142,9 +147,8 @@ class ResultsPageTest extends AbstractPageTest
 
     public function testForResultsWithNoCategoryWithFlag()
     {
-        $parametersParsed = static::initParserFromFixtures(
-            new PageParser(),
-            (new PageScraper())->initialize(['genderCategoryMerge' => '1']),
+        $parametersParsed = static::getParserParameters(
+            ['genderCategoryMerge' => '1'],
             'ResultsPage/no_category'
         );
 
@@ -207,7 +211,7 @@ class ResultsPageTest extends AbstractPageTest
                 'posGen' => '6',
                 'bib' => '201',
                 'fullName' => 'David Mihai',
-                'href' => 'MyResults.aspx?uid=16648-168-2-10993',
+                'href' => 'myresults.aspx?uid=16648-168-2-10993',
                 'time' => '01:41:38',
                 'category' => 'Masculin 30-39',
                 'posCategory' => '1',
@@ -239,9 +243,30 @@ class ResultsPageTest extends AbstractPageTest
                 'status' => null,
                 'country' => null,
                 'club' => null,
-                'parameters' => null
+                'parameters' => null,
+                'firstName' => null,
+                'lastName' => null,
+                'timeGross' => null
             ],
             $records[5]->__toArray()
         );
+    }
+
+    /**
+     * @param $params
+     * @param $fixturePath
+     * @return mixed
+     */
+    protected static function getParserParameters($params, $fixturePath)
+    {
+        $scraper = new PageScraper();
+        $scraper->initialize($params);
+
+        return static::initParserFromFixtures(
+            new PageParser(),
+            $scraper,
+            $fixturePath
+        );
+
     }
 }

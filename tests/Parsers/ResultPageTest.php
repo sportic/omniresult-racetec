@@ -5,8 +5,8 @@ namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
 use Sportic\Omniresult\Common\Content\ItemContent;
 use Sportic\Omniresult\Common\Models\Result;
 use Sportic\Omniresult\Common\Models\Split;
-use Sportic\Omniresult\RaceTec\Scrapers\ResultPage as PageScraper;
 use Sportic\Omniresult\RaceTec\Parsers\ResultPage as PageParser;
+use Sportic\Omniresult\RaceTec\Scrapers\ResultPage as PageScraper;
 
 /**
  * Class ResultPageTest
@@ -16,11 +16,7 @@ class ResultPageTest extends AbstractPageTest
 {
     public function testGenerateResultsBox()
     {
-        $parsedParameters = static::initParserFromFixtures(
-            new PageParser(),
-            (new PageScraper())->initialize(['uid' => '16648-2091-1-29925']),
-            'result_page'
-        );
+        $parsedParameters = static::getParserParameters('16648-2091-1-29925', 'result_page');
 
         /** @var Result $record */
         $record = $parsedParameters->getRecord();
@@ -44,13 +40,10 @@ class ResultPageTest extends AbstractPageTest
         self::assertSame('Masculin 45-49', $record->getCategory());
         self::assertSame('Finished', $record->getStatus());
     }
+
     public function testNetTimeBox()
     {
-        $parsedParameters = static::initParserFromFixtures(
-            new PageParser(),
-            (new PageScraper())->initialize(['uid' => '16648-116-1-40995']),
-            'ResultPage\net_time_details'
-        );
+        $parsedParameters = static::getParserParameters('16648-116-1-40995', 'ResultPage\net_time_details');
 
         /** @var Result $record */
         $record = $parsedParameters->getRecord();
@@ -67,11 +60,7 @@ class ResultPageTest extends AbstractPageTest
 
     public function testSplits()
     {
-        $parsedParameters = static::initParserFromFixtures(
-            new PageParser(),
-            (new PageScraper())->initialize(['uid' => '16648-2091-1-29925']),
-            'result_page'
-        );
+        $parsedParameters = static::getParserParameters('16648-2091-1-29925', 'result_page');
 
         $record = $parsedParameters->getRecord();
         /** @var Split[] $splits */
@@ -90,11 +79,7 @@ class ResultPageTest extends AbstractPageTest
 
     public function testSplitsNoDataToDisplay()
     {
-        $parsedParameters = static::initParserFromFixtures(
-            new PageParser(),
-            (new PageScraper())->initialize(['uid' => '16648-134-2-8533']),
-            'ResultPage/no_splits'
-        );
+        $parsedParameters = static::getParserParameters('16648-134-2-8533', 'ResultPage/no_splits');
 
         $record = $parsedParameters->getRecord();
 
@@ -105,11 +90,7 @@ class ResultPageTest extends AbstractPageTest
 
     public function testSplitsWithDetails()
     {
-        $parsedParameters = static::initParserFromFixtures(
-            new PageParser(),
-            (new PageScraper())->initialize(['uid' => '16648-117-1-42147']),
-            'ResultPage/detailed_splits'
-        );
+        $parsedParameters = static::getParserParameters('16648-117-1-42147', 'ResultPage/detailed_splits');
 
         $record = $parsedParameters->getRecord();
 
@@ -122,12 +103,30 @@ class ResultPageTest extends AbstractPageTest
         self::assertInstanceOf(Split::class, $split);
         self::assertSame('KM 28,7', $split->getName());
 
-        self::assertSame('01:28:31', $split->getTime());
-        self::assertSame('02:46:52', $split->getTimeFromStart());
-        self::assertSame('11:47:57', $split->getTimeOfDay());
+        self::assertSame('01:15:27', $split->getTime());
+        self::assertSame('02:20:50', $split->getTimeFromStart());
+        self::assertSame('11:21:55', $split->getTimeOfDay());
 
-        self::assertSame('15', $split->getPosGen());
+        self::assertSame('2', $split->getPosGen());
         self::assertSame('2', $split->getPosCategory());
-        self::assertSame('17', $split->getPosGender());
+        self::assertSame('2', $split->getPosGender());
+    }
+
+    /**
+     * @param $uid
+     * @param $fixturePath
+     * @return mixed
+     */
+    protected static function getParserParameters($uid, $fixturePath)
+    {
+        $scraper = new PageScraper();
+        $scraper->initialize(['uid' => $uid]);
+
+        return static::initParserFromFixtures(
+            new PageParser(),
+            $scraper,
+            $fixturePath
+        );
+
     }
 }

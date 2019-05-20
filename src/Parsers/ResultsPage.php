@@ -61,7 +61,8 @@ class ResultsPage extends AbstractParser
         $resultsRows = $this->getResultsRows();
         if ($resultsRows->count() > 0) {
             foreach ($resultsRows as $resultRow) {
-                if ($resultRow->getAttribute('id') !== 'ctl00_Content_Main_grdNew_DXHeadersRow') {
+                $firstCell = $resultRow->childNodes->item(1);
+                if ($firstCell->tagName == 'td') {
                     $result = $this->parseResultsRow($resultRow);
                     if ($result) {
                         $return[] = $result;
@@ -79,11 +80,9 @@ class ResultsPage extends AbstractParser
     protected function getResultsRows()
     {
         $resultsTable = $this->getCrawler()->filter(
-            '#ctl00_Content_Main_grdNew_DXMainTable'
-        )->children();
-        $resultsRows = $resultsTable->nodeName() == 'tbody' ?
-            $resultsTable->children()
-            : $resultsTable;
+            '#ctl00_Content_Main_divGrid tr'
+        );
+        $resultsRows = $resultsTable;
         return $resultsRows;
     }
 
@@ -95,7 +94,7 @@ class ResultsPage extends AbstractParser
         $return = [];
 
         $fields = $this->getCrawler()->filter(
-            '#ctl00_Content_Main_grdNew_DXHeadersRow table td a'
+            '#ctl00_Content_Main_divGrid table th'
         );
         if ($fields->count() > 0) {
             $colNum = 0;
@@ -137,7 +136,7 @@ class ResultsPage extends AbstractParser
      */
     protected function parseResultsHeaderRowSplit($fieldName)
     {
-        $needles = ['lap','km'];
+        $needles = ['lap', 'km'];
         $haystack = strtolower($fieldName);
         foreach ($needles as $needle) {
             if (strpos($haystack, $needle) !== false) {

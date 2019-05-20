@@ -30,9 +30,9 @@ class EventPage extends AbstractParser
     protected function parseRaces()
     {
         $return = [];
-        $eventMenu = $this->getCrawler()->filter('#ctl00_Content_Main_pnlEventMenu');
+        $eventMenu = $this->getCrawler()->filter('#ctl00_Content_Main_divEvents');
         if ($eventMenu->count() > 0) {
-            $raceLinks = $eventMenu->filter('div.tab > a');
+            $raceLinks = $eventMenu->filter('li.nav-item > a');
             foreach ($raceLinks as $link) {
                 $parameters = [
                     'name' => $link->nodeValue,

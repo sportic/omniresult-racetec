@@ -3,6 +3,7 @@
 namespace Sportic\Omniresult\RaceTec\Scrapers;
 
 use Sportic\Omniresult\RaceTec\Parsers\EventPage as Parser;
+use Symfony\Component\DomCrawler\Crawler;
 
 /**
  * Class CompanyPage
@@ -103,12 +104,13 @@ class ResultsPage extends AbstractScraper
 
     /**
      * @param $client
-     * @param $crawler
+     * @param Crawler $crawler
      * @return mixed
      */
     protected function clickPageLink($client, $crawler, $page)
     {
-        $link = $crawler->filter('#ctl00_Content_Main_grdTopPager')->selectLink($page)->first()->getNode(0);
+        $pagerContent = $crawler->filter('#ctl00_Content_Main_divTopPager');
+        $link = $pagerContent->selectLink($page)->first()->getNode(0);
         $href = $link->getAttribute('href');
         $eventTarget = str_replace(["javascript:__doPostBack('", "','')"], '', $href);
 
@@ -127,6 +129,7 @@ class ResultsPage extends AbstractScraper
         return $this->getCrawlerUriHost() . '/Results.aspx?'
             . 'CId=' . $this->getCId()
             . '&RId=' . $this->getRId()
-            . '&EId=' . $this->getEId();
+            . '&EId=' . $this->getEId()
+            . '&dt=0';
     }
 }

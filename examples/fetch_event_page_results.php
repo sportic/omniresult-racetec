@@ -6,7 +6,7 @@ $parameters = [
     'cId' => 16648,
     'rId' => 121,
     'eId' => 3,
-    'page' => 7,
+    'page' => 10,
 ];
 
 $client = new \Sportic\Omniresult\RaceTec\RaceTecClient();

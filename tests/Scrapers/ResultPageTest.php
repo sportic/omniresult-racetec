@@ -67,6 +67,18 @@ class ResultPageTest extends TestCase
 
         file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultPage/no_splits.html', $crawler->html());
     }
+
+    public function testGetCrawlerHtmlWithLapsTiming()
+    {
+        $crawler = $this->getCrawler('16648-2146-1-51779');
+
+        static::assertInstanceOf(Crawler::class, $crawler);
+
+        static::assertContains('Serbu Victor', $crawler->html());
+
+        file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultPage/with_laps.html', $crawler->html());
+    }
+
     /**
      * @return Crawler
      */

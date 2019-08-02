@@ -51,7 +51,8 @@ class ResultsPageTest extends AbstractPageTest
                 'club' => null,
                 'firstName' => null,
                 'lastName' => null,
-                'timeGross' => null
+                'timeGross' => null,
+                'notes' => null
             ],
             $results[5]->__toArray()
         );
@@ -139,7 +140,8 @@ class ResultsPageTest extends AbstractPageTest
                 'club' => null,
                 'firstName' => null,
                 'lastName' => null,
-                'timeGross' => null
+                'timeGross' => null,
+                'notes' => null
             ],
             $records[5]->__toArray()
         );
@@ -191,6 +193,30 @@ class ResultsPageTest extends AbstractPageTest
         $split = $splits[1];
         self::assertEquals('KM 10,5', $split->getName());
         self::assertEquals('00:25:00', $split->getTime());
+    }
+
+    public function testForLapsColumns()
+    {
+        $parametersParsed = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper()),
+            'ResultsPage/with_laps'
+        );
+
+        /** @var array|Result[] $records */
+        $records = $parametersParsed['records'];
+
+        self::assertCount(22, $records);
+        self::assertInstanceOf(Result::class, $records[5]);
+
+        $result = $records[5];
+        self::assertEquals('Serbu Victor', $result->getFullName());
+        self::assertEquals('23:51:08', $result->getTime());
+        self::assertEquals('26 laps', $result->getNotes());
+        self::assertEquals('16648-2146-1-51779', $result->getId());
+
+        $splits = $result->getSplits();
+        self::assertCount(0, $splits);
     }
 
     public function testForSplitsColumns()
@@ -246,7 +272,8 @@ class ResultsPageTest extends AbstractPageTest
                 'parameters' => null,
                 'firstName' => null,
                 'lastName' => null,
-                'timeGross' => null
+                'timeGross' => null,
+                'notes' => null
             ],
             $records[5]->__toArray()
         );

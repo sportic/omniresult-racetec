@@ -112,6 +112,28 @@ class ResultPageTest extends AbstractPageTest
         self::assertSame('2', $split->getPosGender());
     }
 
+    public function testSplitsWithLaps()
+    {
+        $parsedParameters = static::getParserParameters('16648-2146-1-51779', 'ResultPage/with_laps');
+
+        /** @var Result $record */
+        $record = $parsedParameters->getRecord();
+
+        self::assertSame('Serbu Victor', $record->getFullName());
+
+        /** @var Split[] $splits */
+        $splits = $record->getSplits();
+        self::assertEquals(38, count($splits));
+
+        $split = $splits[3];
+
+        self::assertInstanceOf(Split::class, $split);
+        self::assertSame('Lap 3', $split->getName());
+
+        self::assertSame('00:36:39.32', $split->getTime());
+        self::assertSame('01:45:59.62', $split->getTimeFromStart());
+    }
+
     /**
      * @param $uid
      * @param $fixturePath

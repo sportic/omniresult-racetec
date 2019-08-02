@@ -116,6 +116,10 @@ class ResultsPage extends AbstractParser
      */
     protected function parseResultsHeaderRow($field)
     {
+        $classes = $field->getAttribute('class');
+        if (strpos($classes, 'd-sm-none') !== false) {
+            return false;
+        }
         $fieldMap = self::getLabelMaps();
         $fieldName = $field->nodeValue;
         $labelFind = isset($fieldMap[$fieldName]) ? $fieldMap[$fieldName] : null;
@@ -138,6 +142,9 @@ class ResultsPage extends AbstractParser
     {
         $needles = ['lap', 'km'];
         $haystack = strtolower($fieldName);
+        if (in_array($haystack, ['laps', 'fastest lap', 'slowest lap', 'average lap'])) {
+            return false;
+        }
         foreach ($needles as $needle) {
             if (strpos($haystack, $needle) !== false) {
                 return new Split(['name' => $fieldName]);
@@ -195,6 +202,8 @@ class ResultsPage extends AbstractParser
                 parse_str(parse_url($parameters['href'], PHP_URL_QUERY), $urlParameters);
                 $parameters['id'] = isset($urlParameters['uid']) ? $urlParameters['uid'] : '';
                 $parameters[$field] = trim($cell->nodeValue);
+            } elseif ($field == 'laps') {
+                $parameters['notes'] = trim($cell->nodeValue) . ' laps';
             } else {
                 $parameters[$field] = trim($cell->nodeValue);
             }
@@ -242,7 +251,8 @@ class ResultsPage extends AbstractParser
             'Category' => 'category',
             'Cat Pos' => 'posCategory',
             'Gender' => 'gender',
-            'Gen Pos' => 'posGender'
+            'Gen Pos' => 'posGender',
+            'Laps' => 'laps'
         ];
     }
 

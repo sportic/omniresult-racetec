@@ -1,0 +1,762 @@
+<head id="ctl00_Head1" lang="en">
+<title>
+	Mures 24H - 2019
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+<link href="/css/rtv2_v2.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://connect.facebook.net/en_US/sdk.js?hash=19138a26f77ee97b6fcc2c5b11453cee" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.3"></script><script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="js/panelState.js"></script>
+    <link rel="icon" type="image/png" href="images/racetecicon.png">
+</head>
+<body onload="setState()">
+    <script type="text/javascript">
+        function clearField(input, val) {
+            if (input.value == val)
+                input.value = "";
+        };
+    </script>
+
+    <form name="aspnetForm" method="post" action="./Results.aspx?CId=16648&amp;RId=2146&amp;EId=1&amp;dt=0" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=g-QepA_JjF8KNmTrAe1WQhvOrXX95wDUrVQIEGu0LkkMplJS7zdAEjfCSI8Rj-CQHnjehSfqacQSPDkS_Pu-uodeKyE1&amp;t=636531734700000000" type="text/javascript"></script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="63301E89">
+</div>
+        <div id="ctl00_divRaceName" class="d-flex justify-content-between" style="background-color:#0769AD;">
+            <div class="" style="padding-left: 10px">
+                <span id="ctl00_lblRaceName" class="h4" style="color:#FFFFFF;">Mures 24H - 2019</span>
+            </div>
+            <div class="text-right" style="padding-right: 10px">
+                <span id="ctl00_lblRaceDate" class="small" style="color:#FFFFFF;">27 Jul 2019</span>
+            </div>
+        </div>
+        <nav id="ctl00_divNavBar" class="navbar navbar-thin navbar-dark navbar-expand-md navbar-toggleable-md" style="padding:0.2rem;background-color:#0769AD;color:#FFFFFF;">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li id="ctl00_lnkResults" class="nav-item font-weight-bold">
+                        <a id="ctl00_hlResults" class="nav-link" href="Results.aspx?CId=16648&amp;RId=2146&amp;EId=1" style="color:#FFFFFF;">Results</a>
+                    </li>
+                    <li id="ctl00_lnkTeams" class="nav-item">
+                        
+                    </li>
+                    <li id="ctl00_lnkLive" class="nav-item">
+                        
+                    </li>
+                    <li id="ctl00_lnkStats" class="nav-item">
+                        <a id="ctl00_hlStats" class="nav-link" href="Stats.aspx?CId=16648&amp;RId=2146" style="color:#FFFFFF;">Details</a>
+                    </li>
+                    <li id="ctl00_lnkIFrame" class="nav-item">
+                        
+                    </li>
+                    
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li id="ctl00_lnkHome" class="nav-item">
+                        <a id="ctl00_hlHome" class="nav-link" href="#" style="color:#FFFFFF;"><i class="fas fa-home"> </i>Home</a>
+                    </li>
+                    <div class="md-form my-0">
+                        <div class="input-group">
+                            <input name="ctl00$edtSearch" type="text" onchange="javascript:setTimeout('__doPostBack(\'ctl00$edtSearch\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_edtSearch" class="form-control" placeholder="Search">
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        
+        <div id="ctl00_divLogo" class="xd-flex justify-content-center" align="center">
+            <a id="ctl00_hlLogo" target="_blank"><img id="ctl00_imgLogo" class="img-fluid" src="Images/Clients/RaceLogos/16648_2146.jpg" style="border-width:0px;"></a>
+            <a id="ctl00_hlTimerImageTop" class="d-none d-md-inline" href="#"><img src="Images/Clients/16648_Timer.png" alt="" style="border-width:0px;"></a>
+            <div id="divLogoBottomSpacer" style="border-bottom-style: solid; border-width: 0px; border-color: #CCCCCC; height: 20px">
+
+            </div>
+        </div>
+        <div>
+            
+
+    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=44#channel=f175ec957&amp;origin=http%3A%2F%2Fracetecresults.com" style="border: none;"></iframe></div></div></div>
+    <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+    <script type="text/javascript">
+        function ShowTwitterWindow(HashTags, Text, URL) {
+
+            window.open('https://twitter.com/intent/tweet?' +
+                'url=' + URL +
+                '&hashtags=' + HashTags +
+                '&text=' + Text,
+		        'height=300,width=550')
+        }
+        function clearField(input, val) {
+            if (input.value == val)
+                input.value = "";
+        };
+    </script>
+
+
+    <div class="container">
+        <div>
+            <ul id="ctl00_Content_Main_divEvents" class="nav nav-tabs justify-content-center">
+<li class="nav-item">   <a class="nav-link active ltw-activeeventtab" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=1">MTB - Individual</a>
+</li> <li class="nav-item"> <a class="nav-link" style="color: #000;" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=2">MTB - Echipe</a>
+</li> <li class="nav-item"> <a class="nav-link" style="color: #000;" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=3">Trail Running - Individual</a>
+</li> <li class="nav-item"> <a class="nav-link" style="color: #000;" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=4">Trail Running - Echipe</a>
+</li> </ul>
+        </div>
+        <br>
+        <div class="text-center">
+            <input type="button" name="ctl00$Content_Main$btnCateg" value="Category Results" onclick="javascript:__doPostBack('ctl00$Content_Main$btnCateg','')" id="ctl00_Content_Main_btnCateg" class="btn btn-outline-primary">
+             
+            <input type="button" name="ctl00$Content_Main$btnGender" value="Gender Results" onclick="javascript:__doPostBack('ctl00$Content_Main$btnGender','')" id="ctl00_Content_Main_btnGender" class="btn btn-outline-primary">
+             
+            <input type="button" name="ctl00$Content_Main$btnAll" value="All Results" onclick="javascript:__doPostBack('ctl00$Content_Main$btnAll','')" id="ctl00_Content_Main_btnAll" class="btn btn-outline-primary active">
+             
+            <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="setCookie('collapseOne')">
+                <span id="ctl00_Content_Main_lblAdvanced">Advanced</span>
+            </button>
+        </div>
+        <div id="ctl00_Content_Main_divMain" class="ltw-bottom-pad">
+            <div id="ctl00_Content_Main_pnlDropdowns">
+                <div align="center">
+                    <span id="ctl00_Content_Main_lblMessage" style="color:#003399;"></span>
+                </div>
+                <div id="accordion">
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div>
+                            <br>
+                        </div>
+                        <div class="card card-body">
+                            <div class="row ltw-row-pad">
+                                <div class="col-xs-12 col-sm-4 input-group">
+                                    <input name="ctl00$Content_Main$edtSearch" type="text" value="Filter" id="ctl00_Content_Main_edtSearch" class="form-control" placeholder="Filter" onfocus="clearField(this,'Filter');">
+                                    
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+                                    <select name="ctl00$Content_Main$cbGender" id="ctl00_Content_Main_cbGender" class="form-control">
+	<option selected value="All genders">All genders</option>
+	<option value="Female">Female</option>
+	<option value="Male">Male</option>
+
+</select>
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+                                    <select name="ctl00$Content_Main$cbCateg" id="ctl00_Content_Main_cbCateg" class="form-control">
+	<option value="All categories">All categories</option>
+	<option value="Feminin">Feminin</option>
+	<option value="Masculin">Masculin</option>
+
+</select>
+                                </div>
+                            </div>
+                            <div class="row ltw-row-pad">
+                                <div class="col-xs-12 col-sm-4">
+                                    <select name="ctl00$Content_Main$cbClub" id="ctl00_Content_Main_cbClub" class="form-control">
+	<option selected value="All clubs">All clubs</option>
+
+</select>
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+                                    <select name="ctl00$Content_Main$cbSort" id="ctl00_Content_Main_cbSort" class="form-control">
+	<option selected value="0">Sort by finish order</option>
+	<option value="1">Sort by race number</option>
+	<option value="2">Sort by name</option>
+	<option value="3">Sort by fastest lap</option>
+	<option value="4">Sort by category</option>
+	<option value="6">Sort by team</option>
+
+</select>
+                                </div>
+                                <div class="col-xs-12 col-sm-4 text-left">
+                                    <input type="button" name="ctl00$Content_Main$btnSearch" value="Apply" onclick="javascript:__doPostBack('ctl00$Content_Main$btnSearch','')" id="ctl00_Content_Main_btnSearch" class="btn btn-outline-primary">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container-fluid">
+        
+        <div id="ctl00_Content_Main_divTopPager" class="row ltw-table-div">
+            <div class="col-12 col-sm-6 text-left">
+                <table id="ctl00_Content_Main_grdTopPager" border="0" style="font-size:10pt;">
+	<tbody>
+<tr>
+		<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl00','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl01','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl02','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl03','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl04','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl05','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl06','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl07','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl08','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl09','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl10','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl11','')" style="font-weight:normal;"></a></td>
+	</tr>
+</tbody>
+</table>
+            </div>
+            <div class="d-none d-sm-block col-sm-6 text-right">
+                <small>
+                    <span id="ctl00_Content_Main_lblTopPager">Page 1 of 1 (22 items)</span></small>
+            </div>
+        </div>
+        <div id="ctl00_Content_Main_divGrid" align="center">
+            <!-- Main grid goes here-->
+        <table class="table table-striped xtable-bordered xtable-responsive table-sm xtable-hover small align-middle ltw-cell-center" border="0">
+	<tbody>
+<tr valign="middle" style="background-color:#0769AD;height:40px;">
+		<th class="ltw-cell-center align-middle " style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=1&amp;dt=0&amp;st=uSahzbPGRo4Plwznez58Rg%3d%3d" style="color:#FFFFFF;">Pos<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=1&amp;dt=0&amp;st=ulzq9Dd7KCuh2DXRmSud9Q%3d%3d" style="color:#FFFFFF;">Race No<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;width:100%;">Name</th>
+<th class="ltw-cell-left align-middle d-sm-none d-xs-table-cell" style="color:#FFFFFF;width:100%;">Name</th>
+<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=1&amp;dt=0&amp;st=oX0%2fKv3SMT9OGKOQ3eFNTOfnXFSSeL0YrqattZn8Ed0%3d" style="color:#FFFFFF;">Time<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-center align-middle d-sm-none d-xs-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=1&amp;dt=0&amp;st=oX0%2fKv3SMT9OGKOQ3eFNTOfnXFSSeL0YrqattZn8Ed0%3d" style="color:#FFFFFF;">Time<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=1&amp;dt=0&amp;st=CKvEJOqNXIGBaewHRoz6N46YhCBtsrjsH%2f9u4otCEes%3d" style="color:#FFFFFF;">Category<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-center align-middle " style="color:#FFFFFF;">Cat Pos</th>
+<th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=1&amp;dt=0&amp;st=xFKd5wbE81VFNemnbZda2mWFk9BOHr3bT%2bJ35GDKCZI%3d" style="color:#FFFFFF;">Gender<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-center align-middle " style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=1&amp;dt=0&amp;st=j4tkdZkZSx3iUkhFa4TEEdZ3RJfvfyMM2YA5A1v33DE%3d" style="color:#FFFFFF;">Laps<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=1&amp;dt=0&amp;st=KqLu6RTBlGYIk5FwRnvXmXA7xNlV1xjjMHkIjTsCzqc%3d" style="color:#FFFFFF;">Fastest Lap<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=1&amp;dt=0&amp;st=%2fJB1OXEIetjm9Phd8AmYqM8eAvfZT8RJDU3KToXBlsE%3d" style="color:#FFFFFF;">Slowest Lap<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=2146&amp;EId=1&amp;dt=0&amp;st=FyqA6mVmaGQLU8CtWH3%2f1IO0vhbTUt8xAYQUVEjLhO0%3d" style="color:#FFFFFF;">Average Lap<i class="fa fa-fw fa-sort-down"></i></a></th>
+	</tr>
+<tr>
+		<td>1</td>
+<td class=" d-none d-sm-table-cell">19</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51763" target="_blank">Attila Malnasi</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51763" target="_blank">Attila Malnasi</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">23:12:02</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">23:12:02<br>37 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>1</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>37</td>
+<td class=" d-none d-sm-table-cell">00:25:06</td>
+<td class=" d-none d-sm-table-cell">01:11:53</td>
+<td class=" d-none d-sm-table-cell">00:37:37</td>
+	</tr>
+<tr>
+		<td>2</td>
+<td class=" d-none d-sm-table-cell">21</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51773" target="_blank">Terebesi Istvan</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51773" target="_blank">Terebesi Istvan</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">21:39:13</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">21:39:13<br>34 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>2</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>34</td>
+<td class=" d-none d-sm-table-cell">00:25:57</td>
+<td class=" d-none d-sm-table-cell">00:59:23</td>
+<td class=" d-none d-sm-table-cell">00:38:12</td>
+	</tr>
+<tr>
+		<td>3</td>
+<td class=" d-none d-sm-table-cell">4</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51778" target="_blank">Barabási Tibor Zsolt</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51778" target="_blank">Barabási Tibor Zsolt</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">22:51:13</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">22:51:13<br>31 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>3</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>31</td>
+<td class=" d-none d-sm-table-cell">00:30:28</td>
+<td class=" d-none d-sm-table-cell">01:37:37</td>
+<td class=" d-none d-sm-table-cell">00:44:13</td>
+	</tr>
+<tr>
+		<td>4</td>
+<td class=" d-none d-sm-table-cell">111</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51764" target="_blank">Kocsis Attila</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51764" target="_blank">Kocsis Attila</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">22:54:33</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">22:54:33<br>30 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>4</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>30</td>
+<td class=" d-none d-sm-table-cell">00:29:06</td>
+<td class=" d-none d-sm-table-cell">01:16:30</td>
+<td class=" d-none d-sm-table-cell">00:45:49</td>
+	</tr>
+<tr>
+		<td>5</td>
+<td class=" d-none d-sm-table-cell">2</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51781" target="_blank">Radu Cristian</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51781" target="_blank">Radu Cristian</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">23:34:15</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">23:34:15<br>27 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>5</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>27</td>
+<td class=" d-none d-sm-table-cell">00:35:22</td>
+<td class=" d-none d-sm-table-cell">01:20:00</td>
+<td class=" d-none d-sm-table-cell">00:52:22</td>
+	</tr>
+<tr>
+		<td>6</td>
+<td class=" d-none d-sm-table-cell">3</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51779" target="_blank">Serbu Victor</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51779" target="_blank">Serbu Victor</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">23:51:08</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">23:51:08<br>26 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>6</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>26</td>
+<td class=" d-none d-sm-table-cell">00:33:38</td>
+<td class=" d-none d-sm-table-cell">01:58:34</td>
+<td class=" d-none d-sm-table-cell">00:55:02</td>
+	</tr>
+<tr>
+		<td>7</td>
+<td class=" d-none d-sm-table-cell">7</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51775" target="_blank">Mohan Marcel</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51775" target="_blank">Mohan Marcel</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">23:08:14</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">23:08:14<br>25 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>7</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>25</td>
+<td class=" d-none d-sm-table-cell">00:39:50</td>
+<td class=" d-none d-sm-table-cell">01:16:36</td>
+<td class=" d-none d-sm-table-cell">00:55:31</td>
+	</tr>
+<tr>
+		<td>8</td>
+<td class=" d-none d-sm-table-cell">13</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51760" target="_blank">Puskas Robert</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51760" target="_blank">Puskas Robert</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">23:24:59</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">23:24:59<br>24 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>8</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>24</td>
+<td class=" d-none d-sm-table-cell">00:37:42</td>
+<td class=" d-none d-sm-table-cell">01:44:55</td>
+<td class=" d-none d-sm-table-cell">00:58:32</td>
+	</tr>
+<tr>
+		<td>9</td>
+<td class=" d-none d-sm-table-cell">6</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51776" target="_blank">Bartha Botond Zsolt</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51776" target="_blank">Bartha Botond Zsolt</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">21:53:29</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">21:53:29<br>21 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>9</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>21</td>
+<td class=" d-none d-sm-table-cell">00:37:04</td>
+<td class=" d-none d-sm-table-cell">01:43:03</td>
+<td class=" d-none d-sm-table-cell">01:02:32</td>
+	</tr>
+<tr>
+		<td>10</td>
+<td class=" d-none d-sm-table-cell">8</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51774" target="_blank">Puiu Gabriela</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51774" target="_blank">Puiu Gabriela</a><span><br>Female Feminin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">17:27:14</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">17:27:14<br>20 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Feminin</td>
+<td>1</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td>20</td>
+<td class=" d-none d-sm-table-cell">00:40:21</td>
+<td class=" d-none d-sm-table-cell">01:15:46</td>
+<td class=" d-none d-sm-table-cell">00:52:21</td>
+	</tr>
+<tr>
+		<td>11</td>
+<td class=" d-none d-sm-table-cell">12</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51768" target="_blank">Chioseaua Cristian</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51768" target="_blank">Chioseaua Cristian</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">23:41:44</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">23:41:44<br>20 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>10</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>20</td>
+<td class=" d-none d-sm-table-cell">00:39:54</td>
+<td class=" d-none d-sm-table-cell">01:51:09</td>
+<td class=" d-none d-sm-table-cell">01:11:05</td>
+	</tr>
+<tr>
+		<td>12</td>
+<td class=" d-none d-sm-table-cell">9</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51772" target="_blank">Santha Jeno</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51772" target="_blank">Santha Jeno</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">21:55:28</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">21:55:28<br>19 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>11</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>19</td>
+<td class=" d-none d-sm-table-cell">00:43:12</td>
+<td class=" d-none d-sm-table-cell">01:38:21</td>
+<td class=" d-none d-sm-table-cell">01:09:14</td>
+	</tr>
+<tr>
+		<td>13</td>
+<td class=" d-none d-sm-table-cell">16</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51769" target="_blank">Voaides Mihai</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51769" target="_blank">Voaides Mihai</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">16:15:42</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">16:15:42<br>16 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>12</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>16</td>
+<td class=" d-none d-sm-table-cell">00:39:16</td>
+<td class=" d-none d-sm-table-cell">01:39:54</td>
+<td class=" d-none d-sm-table-cell">01:00:58</td>
+	</tr>
+<tr>
+		<td>14</td>
+<td class=" d-none d-sm-table-cell">11</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51770" target="_blank">Bita Mariana</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51770" target="_blank">Bita Mariana</a><span><br>Female Feminin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">17:40:52</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">17:40:52<br>16 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Feminin</td>
+<td>2</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td>16</td>
+<td class=" d-none d-sm-table-cell">00:50:19</td>
+<td class=" d-none d-sm-table-cell">01:32:25</td>
+<td class=" d-none d-sm-table-cell">01:06:18</td>
+	</tr>
+<tr>
+		<td>15</td>
+<td class=" d-none d-sm-table-cell">15</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51765" target="_blank">Janos Banyai</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51765" target="_blank">Janos Banyai</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">13:26:51</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">13:26:51<br>15 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>13</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>15</td>
+<td class=" d-none d-sm-table-cell">00:39:45</td>
+<td class=" d-none d-sm-table-cell">01:25:25</td>
+<td class=" d-none d-sm-table-cell">00:53:47</td>
+	</tr>
+<tr>
+		<td>16</td>
+<td class=" d-none d-sm-table-cell">1</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51780" target="_blank">Bucur Geanina</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51780" target="_blank">Bucur Geanina</a><span><br>Female Feminin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">14:00:00</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">14:00:00<br>15 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Feminin</td>
+<td>3</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td>15</td>
+<td class=" d-none d-sm-table-cell">00:41:15</td>
+<td class=" d-none d-sm-table-cell">01:14:27</td>
+<td class=" d-none d-sm-table-cell">00:56:00</td>
+	</tr>
+<tr>
+		<td>17</td>
+<td class=" d-none d-sm-table-cell">5</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51777" target="_blank">Valentin Radu</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51777" target="_blank">Valentin Radu</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">14:12:38</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">14:12:38<br>15 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>14</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>15</td>
+<td class=" d-none d-sm-table-cell">00:37:35</td>
+<td class=" d-none d-sm-table-cell">01:23:49</td>
+<td class=" d-none d-sm-table-cell">00:56:50</td>
+	</tr>
+<tr>
+		<td>18</td>
+<td class=" d-none d-sm-table-cell">18</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51762" target="_blank">Joszo Tibor</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51762" target="_blank">Joszo Tibor</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">14:35:47</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">14:35:47<br>15 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>15</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>15</td>
+<td class=" d-none d-sm-table-cell">00:39:17</td>
+<td class=" d-none d-sm-table-cell">01:35:53</td>
+<td class=" d-none d-sm-table-cell">00:58:23</td>
+	</tr>
+<tr>
+		<td>19</td>
+<td class=" d-none d-sm-table-cell">20</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51761" target="_blank">Resceanu Madalin</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51761" target="_blank">Resceanu Madalin</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">14:55:16</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">14:55:16<br>15 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>16</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>15</td>
+<td class=" d-none d-sm-table-cell">00:40:51</td>
+<td class=" d-none d-sm-table-cell">01:23:04</td>
+<td class=" d-none d-sm-table-cell">00:59:41</td>
+	</tr>
+<tr>
+		<td>20</td>
+<td class=" d-none d-sm-table-cell">17</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51766" target="_blank">Ciobanu Andrei</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51766" target="_blank">Ciobanu Andrei</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">18:15:51</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">18:15:51<br>15 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>17</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>15</td>
+<td class=" d-none d-sm-table-cell">00:47:47</td>
+<td class=" d-none d-sm-table-cell">01:42:32</td>
+<td class=" d-none d-sm-table-cell">01:13:03</td>
+	</tr>
+<tr>
+		<td>21</td>
+<td class=" d-none d-sm-table-cell">10</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51771" target="_blank">Popa Eugen Tudor</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51771" target="_blank">Popa Eugen Tudor</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">DNF</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">DNF<br>12 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>18</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>12</td>
+<td class=" d-none d-sm-table-cell">00:48:30</td>
+<td class=" d-none d-sm-table-cell">01:55:11</td>
+<td class=" d-none d-sm-table-cell">01:14:19</td>
+	</tr>
+<tr>
+		<td>22</td>
+<td class=" d-none d-sm-table-cell">14</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51767" target="_blank">Ormenisan Mihai</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<a class="ltw-name" href="myresults.aspx?uid=16648-2146-1-51767" target="_blank">Ormenisan Mihai</a><span><br>Male Masculin</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">DNF</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">DNF<br>10 laps</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Masculin</td>
+<td>19</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td>10</td>
+<td class=" d-none d-sm-table-cell">00:48:31</td>
+<td class=" d-none d-sm-table-cell">01:55:08</td>
+<td class=" d-none d-sm-table-cell">01:29:11</td>
+	</tr>
+</tbody>
+</table>
+</div>
+        <div id="ctl00_Content_Main_divBottomPager" class="row ltw-table-div">
+            <div class="col-12 col-sm-6 text-left">
+                <table id="ctl00_Content_Main_grdBottomPager" border="0" style="font-size:10pt;">
+	<tbody>
+<tr>
+		<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl12','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl13','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl14','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl15','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl16','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl17','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl18','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl19','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl20','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl21','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl22','')" style="font-weight:normal;"></a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl23','')" style="font-weight:normal;"></a></td>
+	</tr>
+</tbody>
+</table>
+            </div>
+            <div class="d-none d-sm-block col-sm-6 text-right">
+                <small>
+                    <span id="ctl00_Content_Main_lblBottomPager">Page 1 of 1 (22 items)</span></small>
+            </div>
+        </div>
+        <div id="ctl00_Content_Main_divExport" class="text-center">
+            <input type="button" name="ctl00$Content_Main$btnCSV" value="Export to CSV" onclick="javascript:__doPostBack('ctl00$Content_Main$btnCSV','')" id="ctl00_Content_Main_btnCSV" class="btn btn-outline-primary">
+             
+                    <input type="button" name="ctl00$Content_Main$btnXLS" value="Export to XLS" onclick="javascript:__doPostBack('ctl00$Content_Main$btnXLS','')" id="ctl00_Content_Main_btnXLS" class="btn btn-outline-primary">
+             
+            <br>
+            <br>
+        </div>
+    </div>
+    <div>
+        
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#DetailModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget) // Button that triggered the modal
+                var recipient = button.data('whatever') // Extract info from data-* attributes
+                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                var modal = $(this)
+                modal.find('iframe').attr('src', recipient)
+            })
+        })
+    </script>
+
+    <div class="modal fade" id="DetailModal" style="display: none;">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-lg vertical-align-center">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe class="modal-iframe" id="myiframeView" src="" width="100%" height="100%" frameborder="0"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.vertical-alignment-helper -->
+    </div>
+
+        </div>
+        <br>
+        <footer id="ctl00_divFooter" class="container-fluid">
+            <br>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    
+                </div>
+                <div class="col-xs-12 col-sm-4 text-center">
+                    
+                </div>
+                <div class="hidden-xs col-sm-4 text-right">
+                    
+                </div>
+            </div>
+            <p>
+            </p>
+        </footer>
+        <input type="hidden" name="ctl00$TrackerCode1" id="TrackerCode1" value="UA-40561276-1">
+        <input type="hidden" name="ctl00$TrackerCode2" id="TrackerCode2">
+    </form>
+
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', document.getElementById("TrackerCode1").value, 'auto');
+        ga('create', document.getElementById("TrackerCode2").value, 'auto', 'clientTracker');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- End Google Analytics -->
+
+
+
+</body>

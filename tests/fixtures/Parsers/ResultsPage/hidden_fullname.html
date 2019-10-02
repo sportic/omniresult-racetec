@@ -1,0 +1,1709 @@
+<head id="ctl00_Head1" lang="en">
+<title>
+
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+<link href="/css/rtv2_v2.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <script src="https://connect.facebook.net/en_US/sdk.js?hash=1abe340055ff16f311b96b268d7332b2" async="" crossorigin="anonymous"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.3"></script><script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="js/panelState.js"></script>
+    <link rel="icon" type="image/png" href="images/racetecicon.png">
+</head>
+<body onload="setState()">
+    <script type="text/javascript">
+        function clearField(input, val) {
+            if (input.value == val)
+                input.value = "";
+        };
+    </script>
+
+    <form name="aspnetForm" method="post" action="./Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;dt=0" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDg4NjcwMzMzD2QWAmYPDxYCHgtNeVBhZ2VUaXRsZQUbU2Fsb21vbiBFY29SdW4gTW9pZWNpdSAyMDE5ZBYCAgMPZBYMAgEPFgIeBXN0eWxlBRliYWNrZ3JvdW5kLWNvbG9yOiMwNzY5QUQ7FgQCAQ8PFgYeBFRleHQFG1NhbG9tb24gRWNvUnVuIE1vaWVjaXUgMjAxOR4JRm9yZUNvbG9yCf////8eBF8hU0ICBGRkAgMPDxYGHwIFCjQgTWF5IDIwMTkfAwn/////HwQCBGRkAgMPFgIfAQU2cGFkZGluZzowLjJyZW07YmFja2dyb3VuZC1jb2xvcjojMDc2OUFEO2NvbG9yOiNGRkZGRkY7FhACAQ8WAh4FY2xhc3MFGW5hdi1pdGVtIGZvbnQtd2VpZ2h0LWJvbGQWAgIBDw8WCB8CBQdSZXN1bHRzHwMJ/////x4LTmF2aWdhdGVVcmwFJn4vUmVzdWx0cy5hc3B4P0NJZD0xNjY0OCZSSWQ9MjA3JkVJZD0yHwQCBGRkAgMPZBYCAgEPDxYGHwMJ/////x8EAgQeB1Zpc2libGVoZGQCBQ9kFgICAQ8PFgYfAwn/////HwQCBB8HaGRkAgcPZBYCAgEPDxYIHwIFB0RldGFpbHMfAwn/////HwYFHn4vU3RhdHMuYXNweD9DSWQ9MTY2NDgmUklkPTIwNx8EAgRkZAIJD2QWAgIBDw8WBh8DCf////8fBAIEHwdoZGQCCw8WAh8HaBYCAgEPFgIfAQUOY29sb3I6I0ZGRkZGRjsWAgIBDw8WBh8CBQVMaW5rcx8DCf////8fBAIEZGQCDQ8WAh8HaBYCAgEPDxYEHwMJ/////x8EAgRkZAIPD2QWAgIBDw8WCB8DCf////8fBgUBIx8CBSQ8aSBjbGFzcz0iZmFzIGZhLWhvbWUiPiZuYnNwPC9pPkhvbWUfBAIEZGQCBQ8WBB8BBTlwYWRkaW5nLWxlZnQ6MTBweDtiYWNrZ3JvdW5kLWNvbG9yOiMwNzY5QUQ7Y29sb3I6I0ZGRkZGRjsfB2hkAgkPZBYEAgEPZBYCZg8PFgIeCEltYWdlVXJsBSh+L0ltYWdlcy9DbGllbnRzL1JhY2VMb2dvcy8xNjY0OF8yMDcuanBnZGQCAw8PFggeCENzc0NsYXNzBRJkLW5vbmUgZC1tZC1pbmxpbmUfCAUgfi9JbWFnZXMvQ2xpZW50cy8xNjY0OF9UaW1lci5wbmcfBgUBIx8EAgJkZAILD2QWHgIBDxYCHglpbm5lcmh0bWwF/gE8bGkgY2xhc3M9Im5hdi1pdGVtIj4gPGEgY2xhc3M9Im5hdi1saW5rIiBzdHlsZT0iY29sb3I6ICMwMDA7IiBocmVmPSJyZXN1bHRzLmFzcHg/Q0lkPTE2NjQ4JlJJZD0yMDcmRUlkPTEiPk1hcmF0aG9uPC9hPjwvbGk+IDxsaSBjbGFzcz0ibmF2LWl0ZW0iPiAgIDxhIGNsYXNzPSJuYXYtbGluayBhY3RpdmUgbHR3LWFjdGl2ZWV2ZW50dGFiIiBocmVmPSJyZXN1bHRzLmFzcHg/Q0lkPTE2NjQ4JlJJZD0yMDcmRUlkPTIiPkNyb3NzPC9hPjwvbGk+IGQCAw8PFgIfAgUQQ2F0ZWdvcnkgUmVzdWx0c2RkAgUPDxYCHwIFDkdlbmRlciBSZXN1bHRzZGQCBw8PFgYfAgULQWxsIFJlc3VsdHMfCQUlYnRuIGJ0bi1vdXRsaW5lLXByaW1hcnkgYWN0aXZlIGFjdGl2ZR8EAgJkZAIJDw8WAh8CBQhBZHZhbmNlZGRkAgsPDxYCHwIFEENhdGVnb3J5IFJlc3VsdHNkZAINDw8WAh8CBQ5HZW5kZXIgUmVzdWx0c2RkAg8PDxYGHwIFC0FsbCBSZXN1bHRzHwkFN2J0biBidG4tb3V0bGluZS1wcmltYXJ5IGx0dy1mb250LXNtYWxsLW5iIGFjdGl2ZSBhY3RpdmUfBAICZGQCEQ8PFgIfAgUIQWR2YW5jZWRkZAITD2QWBAIBD2QWEAIBDw8WBB8CZR8HZ2RkAgMPD2QWAh4Hb25mb2N1cwUaY2xlYXJGaWVsZCh0aGlzLCdGaWx0ZXInKTtkAgUPEA8WAh8HaGRkFgFmZAIHDxBkEBUDC0FsbCBnZW5kZXJzBkZlbWFsZQRNYWxlFQMLQWxsIGdlbmRlcnMGRmVtYWxlBE1hbGUUKwMDZ2dnZGQCCQ8QZBAVBw5BbGwgY2F0ZWdvcmllcwUxOC0yMgUyMy0zOQU0MC00OQU1MC01OQI2MARPUEVOFQcOQWxsIGNhdGVnb3JpZXMFMTgtMjIFMjMtMzkFNDAtNDkFNTAtNTkCNjAET1BFThQrAwdnZ2dnZ2dnZGQCCw8QZBAVAQlBbGwgY2x1YnMVAQlBbGwgY2x1YnMUKwMBZ2RkAg0PEGQQFQUUU29ydCBieSBmaW5pc2ggb3JkZXITU29ydCBieSByYWNlIG51bWJlcgxTb3J0IGJ5IG5hbWUQU29ydCBieSBjYXRlZ29yeQxTb3J0IGJ5IHRlYW0VBQEwATEBMgE0ATYUKwMFZ2dnZ2dkZAIPDw8WAh8CBQVBcHBseWRkAgMPDxYCHwdoZBYEAgEPDxYCHwIFKk5vIHJlY29yZHMgZm91bmQsIG9yIG5vIHJlc3VsdHMgYXZhaWxhYmxlLmRkAgMPDxYCHwIFN0lmIHlvdSBoYXZlIHRleHQgaW4gdGhlIGZpbHRlciBib3ggYWJvdmUgdGhlbiBjbGVhciBpdC5kZAIVDxYCHwdoFgICAQ8PFgIfAgUKRmF2b3VyaXRlc2RkAhcPZBYEAgEPDxYEHglGb250X1NpemUoKiJTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLkZvbnRVbml0BDEwcHQfBAKACGQWAmYPZBYYZg9kFgJmDw8WCB8CBQExHglGb250X0JvbGRoHgdFbmFibGVkZx8EAoAQZGQCAQ9kFgJmDw8WBh8CBQEyHw1oHwQCgBBkZAICD2QWAmYPDxYGHwIFATMfDWgfBAKAEGRkAgMPZBYCZg8PFgofAgUDLi4uHw1nHwQCgFAeDkZvbnRfVW5kZXJsaW5laB8OaGRkAgQPZBYCZg8PFgYfAgUBNh8NaB8EAoAQZGQCBQ9kFgJmDw8WCB8CBQNbN10fDWcfBAKAEB8OaGRkAgYPZBYCZg8PFgYfAgUBOB8NaB8EAoAQZGQCBw9kFgJmDw8WCh8CBQE5Hw9oHw1oHw5nHwQCgFBkZAIID2QWAmYPDxYKHwIFAy4uLh8NZx8EAoBQHw9oHw5oZGQCCQ9kFgJmDw8WBh8CBQIyNB8NaB8EAoAQZGQCCg9kFgJmDw8WBh8CBQIyNR8NaB8EAoAQZGQCCw9kFgJmDw8WBh8CBQIyNh8NaB8EAoAQZGQCAw8PFgQfAgUZUGFnZSA3IG9mIDI2ICgxMjYzIGl0ZW1zKR8HZ2RkAhsPZBYEAgEPDxYEHwwoKwQEMTBwdB8EAoAIZBYCZg9kFhhmD2QWAmYPDxYIHwIFATEfDWgfDmcfBAKAEGRkAgEPZBYCZg8PFgYfAgUBMh8NaB8EAoAQZGQCAg9kFgJmDw8WBh8CBQEzHw1oHwQCgBBkZAIDD2QWAmYPDxYKHwIFAy4uLh8NZx8EAoBQHw9oHw5oZGQCBA9kFgJmDw8WBh8CBQE2Hw1oHwQCgBBkZAIFD2QWAmYPDxYIHwIFA1s3XR8NZx8EAoAQHw5oZGQCBg9kFgJmDw8WBh8CBQE4Hw1oHwQCgBBkZAIHD2QWAmYPDxYKHwIFATkfD2gfDWgfDmcfBAKAUGRkAggPZBYCZg8PFgofAgUDLi4uHw1nHwQCgFAfD2gfDmhkZAIJD2QWAmYPDxYGHwIFAjI0Hw1oHwQCgBBkZAIKD2QWAmYPDxYGHwIFAjI1Hw1oHwQCgBBkZAILD2QWAmYPDxYGHwIFAjI2Hw1oHwQCgBBkZAIDDw8WBB8CBRlQYWdlIDcgb2YgMjYgKDEyNjMgaXRlbXMpHwdnZGQCHQ8WAh8HZxYEAgEPDxYCHwIFDUV4cG9ydCB0byBDU1ZkZAIDDw8WAh8CBQ1FeHBvcnQgdG8gWExTZGQCHw8WAh8HaGQCDQ9kFgYCAQ8PFgIfB2hkFgICAQ8PFgIfCAUUfi9JbWFnZXMvUmFjZVRlYy5wbmdkZAIDDw8WBh8IBSB+L0ltYWdlcy9DbGllbnRzLzE2NjQ4X1RpbWVyLnBuZx8GBQEjHwdoZGQCBQ8WAh8HaGRk+VApKAMFOEqXgNp57mJyYbiAZXs=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=g-QepA_JjF8KNmTrAe1WQhvOrXX95wDUrVQIEGu0LkkMplJS7zdAEjfCSI8Rj-CQHnjehSfqacQSPDkS_Pu-uodeKyE1&amp;t=636531734700000000" type="text/javascript"></script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="63301E89">
+</div>
+        <div id="ctl00_divRaceName" class="d-flex justify-content-between" style="background-color:#0769AD;">
+            <div class="" style="padding-left: 10px">
+                <span id="ctl00_lblRaceName" class="h4" style="color:#FFFFFF;">Salomon EcoRun Moieciu 2019</span>
+            </div>
+            <div class="text-right" style="padding-right: 10px">
+                <span id="ctl00_lblRaceDate" class="small" style="color:#FFFFFF;">4 May 2019</span>
+            </div>
+        </div>
+        <nav id="ctl00_divNavBar" class="navbar navbar-thin navbar-dark navbar-expand-md navbar-toggleable-md" style="padding:0.2rem;background-color:#0769AD;color:#FFFFFF;">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li id="ctl00_lnkResults" class="nav-item font-weight-bold">
+                        <a id="ctl00_hlResults" class="nav-link" href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2" style="color:#FFFFFF;">Results</a>
+                    </li>
+                    <li id="ctl00_lnkTeams" class="nav-item">
+                        
+                    </li>
+                    <li id="ctl00_lnkLive" class="nav-item">
+                        
+                    </li>
+                    <li id="ctl00_lnkStats" class="nav-item">
+                        <a id="ctl00_hlStats" class="nav-link" href="Stats.aspx?CId=16648&amp;RId=207" style="color:#FFFFFF;">Details</a>
+                    </li>
+                    <li id="ctl00_lnkIFrame" class="nav-item">
+                        
+                    </li>
+                    
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li id="ctl00_lnkHome" class="nav-item">
+                        <a id="ctl00_hlHome" class="nav-link" href="#" style="color:#FFFFFF;"><i class="fas fa-home"> </i>Home</a>
+                    </li>
+                    <div class="md-form my-0">
+                        <div class="input-group">
+                            <input name="ctl00$edtSearch" type="text" onchange="javascript:setTimeout('__doPostBack(\'ctl00$edtSearch\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_edtSearch" class="form-control" placeholder="Search">
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        
+        <div id="ctl00_divSearch" class="p-2 d-md-none" style="padding-left: 10px">
+            <div class="input-group ">
+                <input name="ctl00$edtSearch2" type="text" onchange="javascript:setTimeout('__doPostBack(\'ctl00$edtSearch2\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_edtSearch2" class="form-control border-primary text-primary" placeholder="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-primary fa fa-search" type="button"></button>
+                </div>
+            </div>
+        </div>
+        <div id="ctl00_divLogo" class="xd-flex justify-content-center" align="center">
+            <a id="ctl00_hlLogo" target="_blank"><img id="ctl00_imgLogo" class="img-fluid" src="Images/Clients/RaceLogos/16648_207.jpg" style="border-width:0px;"></a>
+            <a id="ctl00_hlTimerImageTop" class="d-none d-md-inline" href="#"><img src="Images/Clients/16648_Timer.png" alt="" style="border-width:0px;"></a>
+            <div id="divLogoBottomSpacer" style="border-bottom-style: solid; border-width: 0px; border-color: #CCCCCC; height: 20px">
+            </div>
+        </div>
+        <div>
+            
+
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+    <script type="text/javascript">
+        function ShowTwitterWindow(HashTags, Text, URL) {
+
+            window.open('https://twitter.com/intent/tweet?' +
+                'url=' + URL +
+                '&hashtags=' + HashTags +
+                '&text=' + Text,
+		        'height=300,width=550')
+        }
+        function clearField(input, val) {
+            if (input.value == val)
+                input.value = "";
+        };
+    </script>
+
+
+    <div class="container">
+        <div>
+            <ul id="ctl00_Content_Main_divEvents" class="nav nav-tabs justify-content-center">
+<li class="nav-item"> <a class="nav-link" style="color: #000;" href="results.aspx?CId=16648&amp;RId=207&amp;EId=1">Marathon</a>
+</li> <li class="nav-item">   <a class="nav-link active ltw-activeeventtab" href="results.aspx?CId=16648&amp;RId=207&amp;EId=2">Cross</a>
+</li> </ul>
+        </div>
+        <br>
+        <div class="text-center">
+            <div class="d-none d-sm-inline-flex">
+                <input type="button" name="ctl00$Content_Main$btnCateg" value="Category Results" onclick="javascript:__doPostBack('ctl00$Content_Main$btnCateg','')" id="ctl00_Content_Main_btnCateg" class="btn btn-outline-primary">
+                 
+                <input type="button" name="ctl00$Content_Main$btnGender" value="Gender Results" onclick="javascript:__doPostBack('ctl00$Content_Main$btnGender','')" id="ctl00_Content_Main_btnGender" class="btn btn-outline-primary">
+                 
+                <input type="button" name="ctl00$Content_Main$btnAll" value="All Results" onclick="javascript:__doPostBack('ctl00$Content_Main$btnAll','')" id="ctl00_Content_Main_btnAll" class="btn btn-outline-primary active active">
+                 
+                <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="setCookie('collapseOne')">
+                    <span id="ctl00_Content_Main_lblAdvanced">Advanced</span>
+                </button>
+            </div>
+            <div class="d-sm-none">
+                <input type="button" name="ctl00$Content_Main$btnCategXs" value="Category Results" onclick="javascript:__doPostBack('ctl00$Content_Main$btnCategXs','')" id="ctl00_Content_Main_btnCategXs" class="btn btn-outline-primary ltw-font-small-nb">
+                 
+                <input type="button" name="ctl00$Content_Main$btnGenderXs" value="Gender Results" onclick="javascript:__doPostBack('ctl00$Content_Main$btnGenderXs','')" id="ctl00_Content_Main_btnGenderXs" class="btn btn-outline-primary ltw-font-small-nb">
+                 
+                <input type="button" name="ctl00$Content_Main$btnAllXs" value="All Results" onclick="javascript:__doPostBack('ctl00$Content_Main$btnAllXs','')" id="ctl00_Content_Main_btnAllXs" class="btn btn-outline-primary ltw-font-small-nb active active">
+                 
+                <button class="btn btn-outline-primary ltw-font-small-nb" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="setCookie('collapseOne')">
+                    <span id="ctl00_Content_Main_lblAdvancedXs">Advanced</span>
+                </button>
+            </div>
+        </div>
+        <div id="ctl00_Content_Main_divMain" class="ltw-bottom-pad">
+            <div id="ctl00_Content_Main_pnlDropdowns">
+                <div align="center">
+                    <span id="ctl00_Content_Main_lblMessage" style="color:#003399;"></span>
+                </div>
+                <div id="accordion">
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div>
+                            <br>
+                        </div>
+                        <div class="card card-body">
+                            <div class="row ltw-row-pad">
+                                <div class="col-xs-12 col-sm-4 input-group">
+                                    <input name="ctl00$Content_Main$edtSearch" type="text" value="Filter" id="ctl00_Content_Main_edtSearch" class="form-control" placeholder="Filter" onfocus="clearField(this,'Filter');">
+                                    
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+                                    <select name="ctl00$Content_Main$cbGender" id="ctl00_Content_Main_cbGender" class="form-control">
+	<option selected value="All genders">All genders</option>
+	<option value="Female">Female</option>
+	<option value="Male">Male</option>
+
+</select>
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+                                    <select name="ctl00$Content_Main$cbCateg" id="ctl00_Content_Main_cbCateg" class="form-control">
+	<option selected value="All categories">All categories</option>
+	<option value="18-22">18-22</option>
+	<option value="23-39">23-39</option>
+	<option value="40-49">40-49</option>
+	<option value="50-59">50-59</option>
+	<option value="60">60</option>
+	<option value="OPEN">OPEN</option>
+
+</select>
+                                </div>
+                            </div>
+                            <div class="row ltw-row-pad">
+                                <div class="col-xs-12 col-sm-4">
+                                    <select name="ctl00$Content_Main$cbClub" id="ctl00_Content_Main_cbClub" class="form-control">
+	<option selected value="All clubs">All clubs</option>
+
+</select>
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+                                    <select name="ctl00$Content_Main$cbSort" id="ctl00_Content_Main_cbSort" class="form-control">
+	<option selected value="0">Sort by finish order</option>
+	<option value="1">Sort by race number</option>
+	<option value="2">Sort by name</option>
+	<option value="4">Sort by category</option>
+	<option value="6">Sort by team</option>
+
+</select>
+                                </div>
+                                <div class="col-xs-12 col-sm-4 text-left">
+                                    <input type="button" name="ctl00$Content_Main$btnSearch" value="Apply" onclick="javascript:__doPostBack('ctl00$Content_Main$btnSearch','')" id="ctl00_Content_Main_btnSearch" class="btn btn-outline-primary">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container-fluid">
+        
+        <div id="ctl00_Content_Main_divTopPager" class="row ltw-table-div">
+            <div class="col-12 col-sm-6 text-left">
+                <table id="ctl00_Content_Main_grdTopPager" border="0" style="font-size:10pt;">
+	<tbody>
+<tr>
+		<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl00','')" style="font-weight:normal;">1</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl01','')" style="font-weight:normal;">2</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl02','')" style="font-weight:normal;">3</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;text-decoration:none;">...</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl04','')" style="font-weight:normal;">6</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;">[7]</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl06','')" style="font-weight:normal;">8</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl07','')" style="font-weight:normal;text-decoration:none;">9</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;text-decoration:none;">...</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl09','')" style="font-weight:normal;">24</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl10','')" style="font-weight:normal;">25</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl11','')" style="font-weight:normal;">26</a></td>
+	</tr>
+</tbody>
+</table>
+            </div>
+            <div class="d-sm-block col-sm-6 text-right">
+                <small>
+                    <span id="ctl00_Content_Main_lblTopPager">Page 7 of 26 (1263 items)</span></small>
+            </div>
+        </div>
+        <div id="ctl00_Content_Main_divGrid" align="center">
+            <!-- Main grid goes here-->
+        <table class="table table-striped xtable-bordered xtable-responsive table-sm xtable-hover small align-middle ltw-cell-center" border="0">
+	<tbody>
+<tr valign="middle" style="background-color:#0769AD;height:40px;">
+		<td></td>
+<th class="ltw-cell-center align-middle " style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;dt=0&amp;st=uSahzbPGRo4Plwznez58Rg%3d%3d" style="color:#FFFFFF;">Pos<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;dt=0&amp;st=ulzq9Dd7KCuh2DXRmSud9Q%3d%3d" style="color:#FFFFFF;">Race No<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;width:100%;">Name</th>
+<th class="ltw-cell-left align-middle d-sm-none d-xs-table-cell" style="color:#FFFFFF;width:100%;">Name</th>
+<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;dt=0&amp;st=oX0%2fKv3SMT9OGKOQ3eFNTOfnXFSSeL0YrqattZn8Ed0%3d" style="color:#FFFFFF;">Time<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-center align-middle d-sm-none d-xs-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;dt=0&amp;st=oX0%2fKv3SMT9OGKOQ3eFNTOfnXFSSeL0YrqattZn8Ed0%3d" style="color:#FFFFFF;">Time<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-center align-middle d-sm-none d-xs-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;dt=0&amp;st=CKvEJOqNXIGBaewHRoz6N46YhCBtsrjsH%2f9u4otCEes%3d" style="color:#FFFFFF;">Cat Pos<br>(Gen Pos)<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;dt=0&amp;st=CKvEJOqNXIGBaewHRoz6N46YhCBtsrjsH%2f9u4otCEes%3d" style="color:#FFFFFF;">Category<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;">Cat Pos</th>
+<th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;dt=0&amp;st=xFKd5wbE81VFNemnbZda2mWFk9BOHr3bT%2bJ35GDKCZI%3d" style="color:#FFFFFF;">Gender<i class="fa fa-fw fa-sort-down"></i></a></th>
+<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;">Gen Pos</th>
+<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;dt=0&amp;st=xOjcOsOpwirlLA1jzKb5mQ%3d%3d" style="color:#FFFFFF;">Finish<i class="fa fa-fw fa-sort-down"></i></a></th>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row0" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>301</td>
+<td class=" d-none d-sm-table-cell">1061</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74636" target="_blank">Stanciu Alecsandru</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Stanciu Alecsandru</b></span><span><br><b>#1061</b> Male 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:52:49</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:52:49</td>
+<th class=" d-sm-none d-xs-table-cell">63<br>(240)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">63</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">240</td>
+<td class=" d-none d-sm-table-cell">01:52:49</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row0"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74636&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74636" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row1">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>302</td>
+<td class=" d-none d-sm-table-cell">1082</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74586" target="_blank">Cuta Alexandru</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Cuta Alexandru</b></span><span><br><b>#1082</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:52:50</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:52:50</td>
+<th class=" d-sm-none d-xs-table-cell">144<br>(241)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">144</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">241</td>
+<td class=" d-none d-sm-table-cell">01:52:50</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row1"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74586&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74586" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row2" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>303</td>
+<td class=" d-none d-sm-table-cell">2548</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74241" target="_blank">Mihaila George</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Mihaila George</b></span><span><br><b>#2548</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:52:50</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:52:50</td>
+<th class=" d-sm-none d-xs-table-cell">145<br>(242)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">145</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">242</td>
+<td class=" d-none d-sm-table-cell">01:52:50</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row2"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74241&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74241" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row3">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>304</td>
+<td class=" d-none d-sm-table-cell">1163</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74395" target="_blank">Toma Gabriel</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Toma Gabriel</b></span><span><br><b>#1163</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:52:51</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:52:51</td>
+<th class=" d-sm-none d-xs-table-cell">146<br>(243)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">146</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">243</td>
+<td class=" d-none d-sm-table-cell">01:52:51</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row3"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74395&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74395" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row4" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>305</td>
+<td class=" d-none d-sm-table-cell">1453</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73777" target="_blank">Diaconu Radu Ionut</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Diaconu Radu Ionut</b></span><span><br><b>#1453</b> Male 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:52:52</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:52:52</td>
+<th class=" d-sm-none d-xs-table-cell">64<br>(244)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">64</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">244</td>
+<td class=" d-none d-sm-table-cell">01:52:52</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row4"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73777&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73777" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row5">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>306</td>
+<td class=" d-none d-sm-table-cell">1140</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74445" target="_blank">Mihai Diana</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Mihai Diana</b></span><span><br><b>#1140</b> Female 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:52:53</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:52:53</td>
+<th class=" d-sm-none d-xs-table-cell">31<br>(62)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">31</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">62</td>
+<td class=" d-none d-sm-table-cell">01:52:53</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row5"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74445&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74445" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row6" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>307</td>
+<td class=" d-none d-sm-table-cell">1519</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73666" target="_blank">Toma Eugenia</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Toma Eugenia</b></span><span><br><b>#1519</b> Female 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:00</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:00</td>
+<th class=" d-sm-none d-xs-table-cell">14<br>(63)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">14</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">63</td>
+<td class=" d-none d-sm-table-cell">01:53:00</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row6"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73666&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73666" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row7">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>308</td>
+<td class=" d-none d-sm-table-cell">2323</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74650" target="_blank">Radulescu Adrian</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Radulescu Adrian</b></span><span><br><b>#2323</b> Male 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:07</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:07</td>
+<th class=" d-sm-none d-xs-table-cell">65<br>(245)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">65</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">245</td>
+<td class=" d-none d-sm-table-cell">01:53:07</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row7"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74650&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74650" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row8" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>309</td>
+<td class=" d-none d-sm-table-cell">2726</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73915" target="_blank">Hassoyas Dimitris</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Hassoyas Dimitris</b></span><span><br><b>#2726</b> Male 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:09</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:09</td>
+<th class=" d-sm-none d-xs-table-cell">66<br>(246)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">66</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">246</td>
+<td class=" d-none d-sm-table-cell">01:53:09</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row8"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73915&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73915" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row9">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>310</td>
+<td class=" d-none d-sm-table-cell">1231</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74252" target="_blank">Nan Calin Horatiu</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Nan Calin Horatiu</b></span><span><br><b>#1231</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:11</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:11</td>
+<th class=" d-sm-none d-xs-table-cell">147<br>(247)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">147</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">247</td>
+<td class=" d-none d-sm-table-cell">01:53:11</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row9"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74252&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74252" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row10" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>311</td>
+<td class=" d-none d-sm-table-cell">2337</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74627" target="_blank">Dan Andreea</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Dan Andreea</b></span><span><br><b>#2337</b> Female 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:12</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:12</td>
+<th class=" d-sm-none d-xs-table-cell">15<br>(64)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">15</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">64</td>
+<td class=" d-none d-sm-table-cell">01:53:12</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row10"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74627&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74627" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row11">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>312</td>
+<td class=" d-none d-sm-table-cell">1432</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73816" target="_blank">Pantelimon Lucian</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Pantelimon Lucian</b></span><span><br><b>#1432</b> Male 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:15</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:15</td>
+<th class=" d-sm-none d-xs-table-cell">67<br>(248)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">67</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">248</td>
+<td class=" d-none d-sm-table-cell">01:53:15</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row11"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73816&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73816" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row12" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>313</td>
+<td class=" d-none d-sm-table-cell">1474</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73740" target="_blank">Constantinescu Adrian</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Constantinescu Adrian</b></span><span><br><b>#1474</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:20</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:20</td>
+<th class=" d-sm-none d-xs-table-cell">148<br>(249)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">148</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">249</td>
+<td class=" d-none d-sm-table-cell">01:53:20</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row12"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73740&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73740" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row13">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>314</td>
+<td class=" d-none d-sm-table-cell">1504</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73689" target="_blank">Hurezeanu Vlad</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Hurezeanu Vlad</b></span><span><br><b>#1504</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:22</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:22</td>
+<th class=" d-sm-none d-xs-table-cell">149<br>(250)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">149</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">250</td>
+<td class=" d-none d-sm-table-cell">01:53:22</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row13"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73689&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73689" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row14" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>315</td>
+<td class=" d-none d-sm-table-cell">1502</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73691" target="_blank">Pop Alexandru</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Pop Alexandru</b></span><span><br><b>#1502</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:22</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:22</td>
+<th class=" d-sm-none d-xs-table-cell">150<br>(251)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">150</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">251</td>
+<td class=" d-none d-sm-table-cell">01:53:22</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row14"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73691&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73691" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row15">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>316</td>
+<td class=" d-none d-sm-table-cell">1065</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74626" target="_blank">Potcovaru Cristian</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Potcovaru Cristian</b></span><span><br><b>#1065</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:27</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:27</td>
+<th class=" d-sm-none d-xs-table-cell">151<br>(252)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">151</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">252</td>
+<td class=" d-none d-sm-table-cell">01:53:27</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row15"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74626&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74626" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row16" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>317</td>
+<td class=" d-none d-sm-table-cell">1041</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74675" target="_blank">Stanila Marinel</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Stanila Marinel</b></span><span><br><b>#1041</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:28</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:28</td>
+<th class=" d-sm-none d-xs-table-cell">152<br>(253)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">152</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">253</td>
+<td class=" d-none d-sm-table-cell">01:53:28</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row16"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74675&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74675" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row17">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>318</td>
+<td class=" d-none d-sm-table-cell">1398</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73897" target="_blank">Mircea Vlad Mihai</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Mircea Vlad Mihai</b></span><span><br><b>#1398</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:30</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:30</td>
+<th class=" d-sm-none d-xs-table-cell">153<br>(254)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">153</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">254</td>
+<td class=" d-none d-sm-table-cell">01:53:30</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row17"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73897&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73897" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row18" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>319</td>
+<td class=" d-none d-sm-table-cell">1459</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73764" target="_blank">Stanciu Alexandru Stefan</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Stanciu Alexandru Stefan</b></span><span><br><b>#1459</b> Male 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:37</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:37</td>
+<th class=" d-sm-none d-xs-table-cell">68<br>(255)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">68</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">255</td>
+<td class=" d-none d-sm-table-cell">01:53:37</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row18"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73764&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73764" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row19">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>320</td>
+<td class=" d-none d-sm-table-cell">1361</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73998" target="_blank">Bazna Ionica</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Bazna Ionica</b></span><span><br><b>#1361</b> Female 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:39</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:39</td>
+<th class=" d-sm-none d-xs-table-cell">32<br>(65)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">32</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">65</td>
+<td class=" d-none d-sm-table-cell">01:53:39</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row19"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73998&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73998" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row20" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>321</td>
+<td class=" d-none d-sm-table-cell">1117</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74489" target="_blank">Ciungan Lucian</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Ciungan Lucian</b></span><span><br><b>#1117</b> Male 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:45</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:45</td>
+<th class=" d-sm-none d-xs-table-cell">69<br>(256)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">69</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">256</td>
+<td class=" d-none d-sm-table-cell">01:53:45</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row20"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74489&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74489" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row21">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>322</td>
+<td class=" d-none d-sm-table-cell">1132</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74462" target="_blank">Borcea Adrian</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Borcea Adrian</b></span><span><br><b>#1132</b> Male 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:46</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:46</td>
+<th class=" d-sm-none d-xs-table-cell">70<br>(257)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">70</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">257</td>
+<td class=" d-none d-sm-table-cell">01:53:46</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row21"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74462&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74462" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row22" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>323</td>
+<td class=" d-none d-sm-table-cell">1337</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74041" target="_blank">Mituleci Ion</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Mituleci Ion</b></span><span><br><b>#1337</b> Male 60</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:46</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:46</td>
+<th class=" d-sm-none d-xs-table-cell">4<br>(258)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">60</td>
+<td class=" d-none d-sm-table-cell">4</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">258</td>
+<td class=" d-none d-sm-table-cell">01:53:46</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row22"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74041&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74041" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row23">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>324</td>
+<td class=" d-none d-sm-table-cell">1313</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74096" target="_blank">Raducanu Samuel</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Raducanu Samuel</b></span><span><br><b>#1313</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:47</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:47</td>
+<th class=" d-sm-none d-xs-table-cell">154<br>(259)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">154</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">259</td>
+<td class=" d-none d-sm-table-cell">01:53:47</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row23"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74096&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74096" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row24" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>325</td>
+<td class=" d-none d-sm-table-cell">2740</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73874" target="_blank">Hategan Corina</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Hategan Corina</b></span><span><br><b>#2740</b> Female 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:49</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:49</td>
+<th class=" d-sm-none d-xs-table-cell">16<br>(66)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">16</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">66</td>
+<td class=" d-none d-sm-table-cell">01:53:49</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row24"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73874&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73874" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row25">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>326</td>
+<td class=" d-none d-sm-table-cell">1071</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74613" target="_blank">Gorcea Simona</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Gorcea Simona</b></span><span><br><b>#1071</b> Female 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:51</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:51</td>
+<th class=" d-sm-none d-xs-table-cell">33<br>(67)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">33</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">67</td>
+<td class=" d-none d-sm-table-cell">01:53:51</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row25"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74613&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74613" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row26" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>327</td>
+<td class=" d-none d-sm-table-cell">1388</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73910" target="_blank">Podaru Mihai</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Podaru Mihai</b></span><span><br><b>#1388</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:55</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:55</td>
+<th class=" d-sm-none d-xs-table-cell">155<br>(260)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">155</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">260</td>
+<td class=" d-none d-sm-table-cell">01:53:55</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row26"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73910&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73910" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row27">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>328</td>
+<td class=" d-none d-sm-table-cell">1545</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73612" target="_blank">Gheorghita Diana</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Gheorghita Diana</b></span><span><br><b>#1545</b> Female 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:58</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:58</td>
+<th class=" d-sm-none d-xs-table-cell">17<br>(68)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">17</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">68</td>
+<td class=" d-none d-sm-table-cell">01:53:58</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row27"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73612&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73612" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row28" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>329</td>
+<td class=" d-none d-sm-table-cell">1143</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74438" target="_blank">Nastase Madalin Razvan</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Nastase Madalin Razvan</b></span><span><br><b>#1143</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:53:58</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:53:58</td>
+<th class=" d-sm-none d-xs-table-cell">156<br>(261)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">156</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">261</td>
+<td class=" d-none d-sm-table-cell">01:53:58</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row28"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74438&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74438" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row29">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>330</td>
+<td class=" d-none d-sm-table-cell">2838</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73653" target="_blank">Sabau Cristina</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Sabau Cristina</b></span><span><br><b>#2838</b> Female 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:54:02</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:54:02</td>
+<th class=" d-sm-none d-xs-table-cell">18<br>(69)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">18</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">69</td>
+<td class=" d-none d-sm-table-cell">01:54:02</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row29"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73653&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73653" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row30" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>331</td>
+<td class=" d-none d-sm-table-cell">1188</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74326" target="_blank">Dumitru Emil</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Dumitru Emil</b></span><span><br><b>#1188</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:54:06</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:54:06</td>
+<th class=" d-sm-none d-xs-table-cell">157<br>(262)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">157</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">262</td>
+<td class=" d-none d-sm-table-cell">01:54:06</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row30"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74326&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74326" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row31">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>332</td>
+<td class=" d-none d-sm-table-cell">2353</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74601" target="_blank">Preda Cosmina</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Preda Cosmina</b></span><span><br><b>#2353</b> Female 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:54:06</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:54:06</td>
+<th class=" d-sm-none d-xs-table-cell">34<br>(70)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">34</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">70</td>
+<td class=" d-none d-sm-table-cell">01:54:06</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row31"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74601&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74601" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row32" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>333</td>
+<td class=" d-none d-sm-table-cell">1418</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73847" target="_blank">Dobre Bogdan Alexandru</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Dobre Bogdan Alexandru</b></span><span><br><b>#1418</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:54:13</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:54:13</td>
+<th class=" d-sm-none d-xs-table-cell">158<br>(263)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">158</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">263</td>
+<td class=" d-none d-sm-table-cell">01:54:13</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row32"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73847&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73847" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row33">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>334</td>
+<td class=" d-none d-sm-table-cell">1497</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73697" target="_blank">Luca Simona</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Luca Simona</b></span><span><br><b>#1497</b> Female 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:54:16</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:54:16</td>
+<th class=" d-sm-none d-xs-table-cell">35<br>(71)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">35</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">71</td>
+<td class=" d-none d-sm-table-cell">01:54:16</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row33"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73697&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73697" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row34" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>335</td>
+<td class=" d-none d-sm-table-cell">2609</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74106" target="_blank">Rapisca Nicoleta</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Rapisca Nicoleta</b></span><span><br><b>#2609</b> Female 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:54:20</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:54:20</td>
+<th class=" d-sm-none d-xs-table-cell">36<br>(72)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">36</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">72</td>
+<td class=" d-none d-sm-table-cell">01:54:20</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row34"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74106&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74106" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row35">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>336</td>
+<td class=" d-none d-sm-table-cell">1040</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74678" target="_blank">Cocis Diana</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Cocis Diana</b></span><span><br><b>#1040</b> Female 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:54:26</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:54:26</td>
+<th class=" d-sm-none d-xs-table-cell">37<br>(73)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">37</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">73</td>
+<td class=" d-none d-sm-table-cell">01:54:26</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row35"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74678&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74678" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row36" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>337</td>
+<td class=" d-none d-sm-table-cell">1114</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74503" target="_blank">Popescu Paul</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Popescu Paul</b></span><span><br><b>#1114</b> Male 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:54:26</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:54:26</td>
+<th class=" d-sm-none d-xs-table-cell">71<br>(264)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">71</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">264</td>
+<td class=" d-none d-sm-table-cell">01:54:26</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row36"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74503&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74503" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row37">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>338</td>
+<td class=" d-none d-sm-table-cell">1304</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74114" target="_blank">Barbu Horatiu Nicolae</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Barbu Horatiu Nicolae</b></span><span><br><b>#1304</b> Male 50-59</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:54:31</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:54:31</td>
+<th class=" d-sm-none d-xs-table-cell">11<br>(265)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">50-59</td>
+<td class=" d-none d-sm-table-cell">11</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">265</td>
+<td class=" d-none d-sm-table-cell">01:54:31</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row37"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74114&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74114" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row38" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>339</td>
+<td class=" d-none d-sm-table-cell">1480</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73728" target="_blank">Ablachim Sunai</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Ablachim Sunai</b></span><span><br><b>#1480</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:54:36</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:54:36</td>
+<th class=" d-sm-none d-xs-table-cell">159<br>(266)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">159</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">266</td>
+<td class=" d-none d-sm-table-cell">01:54:36</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row38"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73728&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73728" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row39">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>340</td>
+<td class=" d-none d-sm-table-cell">2854</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73622" target="_blank">Mancas Elena</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Mancas Elena</b></span><span><br><b>#2854</b> Female 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:54:39</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:54:39</td>
+<th class=" d-sm-none d-xs-table-cell">38<br>(74)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">38</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">74</td>
+<td class=" d-none d-sm-table-cell">01:54:39</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row39"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73622&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73622" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row40" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>341</td>
+<td class=" d-none d-sm-table-cell">1134</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74458" target="_blank">Neacsu Dan Luca</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Neacsu Dan Luca</b></span><span><br><b>#1134</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:54:41</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:54:41</td>
+<th class=" d-sm-none d-xs-table-cell">160<br>(267)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">160</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">267</td>
+<td class=" d-none d-sm-table-cell">01:54:41</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row40"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74458&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74458" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row41">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>342</td>
+<td class=" d-none d-sm-table-cell">1036</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74685" target="_blank">Zgubea Corneliu</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Zgubea Corneliu</b></span><span><br><b>#1036</b> Male 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:55:17</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:55:17</td>
+<th class=" d-sm-none d-xs-table-cell">72<br>(268)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">72</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">268</td>
+<td class=" d-none d-sm-table-cell">01:55:17</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row41"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74685&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74685" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row42" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>343</td>
+<td class=" d-none d-sm-table-cell">1253</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74193" target="_blank">Ciobanu Catalin</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Ciobanu Catalin</b></span><span><br><b>#1253</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:55:18</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:55:18</td>
+<th class=" d-sm-none d-xs-table-cell">161<br>(269)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">161</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">269</td>
+<td class=" d-none d-sm-table-cell">01:55:18</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row42"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74193&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74193" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row43">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>344</td>
+<td class=" d-none d-sm-table-cell">1286</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74144" target="_blank">Raducu Maria</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Raducu Maria</b></span><span><br><b>#1286</b> Female 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:55:18</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:55:18</td>
+<th class=" d-sm-none d-xs-table-cell">19<br>(75)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">19</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">75</td>
+<td class=" d-none d-sm-table-cell">01:55:18</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row43"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74144&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74144" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row44" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>345</td>
+<td class=" d-none d-sm-table-cell">2933</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73462" target="_blank">Rodina Paul</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Rodina Paul</b></span><span><br><b>#2933</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:55:21</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:55:21</td>
+<th class=" d-sm-none d-xs-table-cell">162<br>(270)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">162</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">270</td>
+<td class=" d-none d-sm-table-cell">01:55:21</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row44"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73462&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73462" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row45">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>346</td>
+<td class=" d-none d-sm-table-cell">2948</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73452" target="_blank">Camenscic Aurica</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Camenscic Aurica</b></span><span><br><b>#2948</b> Female 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:55:22</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:55:22</td>
+<th class=" d-sm-none d-xs-table-cell">39<br>(76)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">39</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
+<td class=" d-none d-sm-table-cell">76</td>
+<td class=" d-none d-sm-table-cell">01:55:22</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row45"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73452&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73452" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row46" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>347</td>
+<td class=" d-none d-sm-table-cell">2948</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73458" target="_blank">Szocs Levente</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Szocs Levente</b></span><span><br><b>#2948</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:55:22</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:55:22</td>
+<th class=" d-sm-none d-xs-table-cell">163<br>(271)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">163</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">271</td>
+<td class=" d-none d-sm-table-cell">01:55:22</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row46"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73458&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73458" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row47">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>348</td>
+<td class=" d-none d-sm-table-cell">1367</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-73972" target="_blank">Neicu Liviu</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Neicu Liviu</b></span><span><br><b>#1367</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:55:25</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:55:25</td>
+<th class=" d-sm-none d-xs-table-cell">164<br>(272)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">164</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">272</td>
+<td class=" d-none d-sm-table-cell">01:55:25</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row47"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=73972&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-73972" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row48" style="background-color:#F9F9F9;">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>349</td>
+<td class=" d-none d-sm-table-cell">2429</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74476" target="_blank">Carabulea Alin</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Carabulea Alin</b></span><span><br><b>#2429</b> Male 23-39</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:55:40</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:55:40</td>
+<th class=" d-sm-none d-xs-table-cell">165<br>(273)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">23-39</td>
+<td class=" d-none d-sm-table-cell">165</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">273</td>
+<td class=" d-none d-sm-table-cell">01:55:40</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row48"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74476&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74476" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+<tr class="accordion-toggle" data-toggle="collapse" cursor="pointer" onclick="void(0)" data-target="#row49">
+		<td><i class="fa fa-plus" aria-hidden="true"></i></td>
+<td>350</td>
+<td class=" d-none d-sm-table-cell">1167</td>
+<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-207-2-74389" target="_blank">Bondoc Liviu</a></td>
+<td class="ltw-cell-left d-sm-none d-table-cell">
+<span><b>Bondoc Liviu</b></span><span><br><b>#1167</b> Male 40-49</span>
+</td>
+<td class=" d-none d-sm-table-cell ltw-time ">01:55:43</td>
+<td class=" d-sm-none d-xs-table-cell ltw-time ">01:55:43</td>
+<th class=" d-sm-none d-xs-table-cell">73<br>(274)</th>
+<td class="ltw-cell-left d-none d-sm-table-cell">40-49</td>
+<td class=" d-none d-sm-table-cell">73</td>
+<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
+<td class=" d-none d-sm-table-cell">274</td>
+<td class=" d-none d-sm-table-cell">01:55:43</td>
+	</tr>
+<tr>
+		<td class="hiddenRow" colspan="13" style="padding:0px;background-color:#FFFFFF;"><div class="accordian-body collapse" id="row49"><div class="ltw-detail-row text-left">
+<div class="container-fluid text-left">
+<br><a href="Results.aspx?CId=16648&amp;RId=207&amp;EId=2&amp;AId=74389&amp;Fav=1" class="btn btn-outline-primary">Add To Favourites</a>    <a target="_blank" href="MyResults.aspx?uid=16648-207-2-74389" class="btn btn-outline-primary">Detailed Results</a>
+</div>
+<br><div class="d-flex flex-wrap ltw-share-pad"></div>
+<br>
+</div></div></td>
+	</tr>
+</tbody>
+</table>
+</div>
+        <div id="ctl00_Content_Main_divBottomPager" class="row ltw-table-div">
+            <div class="col-12 col-sm-6 text-left">
+                <table id="ctl00_Content_Main_grdBottomPager" border="0" style="font-size:10pt;">
+	<tbody>
+<tr>
+		<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl12','')" style="font-weight:normal;">1</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl13','')" style="font-weight:normal;">2</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl14','')" style="font-weight:normal;">3</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;text-decoration:none;">...</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl16','')" style="font-weight:normal;">6</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;">[7]</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl18','')" style="font-weight:normal;">8</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl19','')" style="font-weight:normal;text-decoration:none;">9</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;text-decoration:none;">...</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl21','')" style="font-weight:normal;">24</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl22','')" style="font-weight:normal;">25</a></td>
+<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl23','')" style="font-weight:normal;">26</a></td>
+	</tr>
+</tbody>
+</table>
+            </div>
+            <div class="d-none d-sm-block col-sm-6 text-right">
+                <small>
+                    <span id="ctl00_Content_Main_lblBottomPager">Page 7 of 26 (1263 items)</span></small>
+            </div>
+        </div>
+        <div id="ctl00_Content_Main_divExport" class="text-center">
+            <input type="button" name="ctl00$Content_Main$btnCSV" value="Export to CSV" onclick="javascript:__doPostBack('ctl00$Content_Main$btnCSV','')" id="ctl00_Content_Main_btnCSV" class="btn btn-outline-primary">
+             
+                    <input type="button" name="ctl00$Content_Main$btnXLS" value="Export to XLS" onclick="javascript:__doPostBack('ctl00$Content_Main$btnXLS','')" id="ctl00_Content_Main_btnXLS" class="btn btn-outline-primary">
+             
+            <br>
+            <br>
+        </div>
+    </div>
+    <div>
+        
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#DetailModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget) // Button that triggered the modal
+                var recipient = button.data('whatever') // Extract info from data-* attributes
+                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                var modal = $(this)
+                modal.find('iframe').attr('src', recipient)
+            })
+        })
+    </script>
+
+    <div class="modal fade" id="DetailModal" style="display: none;">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-lg vertical-align-center">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe class="modal-iframe" id="myiframeView" src="" width="100%" height="100%" frameborder="0"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.vertical-alignment-helper -->
+    </div>
+
+        </div>
+        <br>
+        <footer id="ctl00_divFooter" class="container-fluid">
+            <br>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    
+                </div>
+                <div class="col-xs-12 col-sm-4 text-center">
+                    
+                </div>
+                <div class="hidden-xs col-sm-4 text-right">
+                    
+                </div>
+            </div>
+            <p>
+            </p>
+        </footer>
+        <input type="hidden" name="ctl00$TrackerCode1" id="TrackerCode1" value="UA-40561276-1">
+        <input type="hidden" name="ctl00$TrackerCode2" id="TrackerCode2">
+    </form>
+
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', document.getElementById("TrackerCode1").value, 'auto');
+        ga('create', document.getElementById("TrackerCode2").value, 'auto', 'clientTracker');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- End Google Analytics -->
+
+
+
+</body>

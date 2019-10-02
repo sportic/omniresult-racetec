@@ -61,8 +61,7 @@ class ResultsPage extends AbstractParser
         $resultsRows = $this->getResultsRows();
         if ($resultsRows->count() > 0) {
             foreach ($resultsRows as $resultRow) {
-                $firstCell = $resultRow->childNodes->item(1);
-                if ($firstCell->tagName == 'td') {
+                if ($this->isResultRow($resultRow)) {
                     $result = $this->parseResultsRow($resultRow);
                     if ($result) {
                         $return[] = $result;
@@ -72,6 +71,25 @@ class ResultsPage extends AbstractParser
         }
 
         return $return;
+    }
+
+    /**
+     * @param DOMElement $resultRow
+     * @return bool
+     */
+    protected function isResultRow($resultRow)
+    {
+        $firstChild = $resultRow->childNodes->item(1);
+        if ($firstChild->tagName != 'td') {
+            return false;
+        }
+        $value = $resultRow->textContent;
+        foreach (['Race No', 'Cat Pos', 'Gen Pos'] as $key) {
+            if (strpos($value, $key) !== false) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
@@ -93,9 +111,12 @@ class ResultsPage extends AbstractParser
     {
         $return = [];
 
-        $fields = $this->getCrawler()->filter(
-            '#ctl00_Content_Main_divGrid table th'
-        );
+        $resultsTable = $this->getCrawler()->filter(
+            '#ctl00_Content_Main_divGrid table'
+        )->first();
+        $fields = $resultsTable->filter(
+            'tr'
+        )->first()->children();
         if ($fields->count() > 0) {
             $colNum = 0;
             foreach ($fields as $field) {

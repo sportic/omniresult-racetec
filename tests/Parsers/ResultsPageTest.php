@@ -169,6 +169,24 @@ class ResultsPageTest extends AbstractPageTest
         );
     }
 
+    public function testForResultsWithHiddenFullName()
+    {
+        $parametersParsed = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper()),
+            'ResultsPage/hidden_fullname'
+        );
+
+        /** @var array|Result[] $records */
+        $records = $parametersParsed['records'];
+
+        self::assertCount(50, $records);
+
+        $selectedRecord = $records[5];
+        self::assertInstanceOf(Result::class, $selectedRecord);
+        self::assertSame('Mihai Diana', $selectedRecord->getFullName());
+    }
+
     public function testForNetTimeColumns()
     {
         $parametersParsed = static::initParserFromFixtures(

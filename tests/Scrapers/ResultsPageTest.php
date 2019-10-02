@@ -41,6 +41,21 @@ class ResultsPageTest extends TestCase
         file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultsPage/has_splits.html', $crawler->html());
     }
 
+    public function testGetCrawlerHiddenSimpleName()
+    {
+        $crawler = $this->getCrawler(207, 2, 7);
+
+        static::assertInstanceOf(Crawler::class, $crawler);
+
+        static::assertSame(
+            'http://racetecresults.com/Results.aspx?CId=16648&RId=207&EId=2&dt=0',
+            $crawler->getUri()
+        );
+
+        static::assertContains('Stanciu Alecsandru', $crawler->html());
+
+        file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultsPage/hidden_fullname.html', $crawler->html());
+    }
 
     public function testGetCrawlerNetTime()
     {

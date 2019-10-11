@@ -80,11 +80,11 @@ class ResultsPage extends AbstractParser
     protected function isResultRow($resultRow)
     {
         $firstChild = $resultRow->childNodes->item(1);
-        if ($firstChild->tagName != 'td') {
+        if ($firstChild instanceof DOMElement && $firstChild->tagName != 'td') {
             return false;
         }
         $value = $resultRow->textContent;
-        foreach (['Race No', 'Cat Pos', 'Gen Pos'] as $key) {
+        foreach (['Race No', 'Cat Pos', 'Gen Pos', 'accordian-body'] as $key) {
             if (strpos($value, $key) !== false) {
                 return false;
             }
@@ -98,7 +98,7 @@ class ResultsPage extends AbstractParser
     protected function getResultsRows()
     {
         $resultsTable = $this->getCrawler()->filter(
-            '#ctl00_Content_Main_divGrid tr'
+            '#ctl00_Content_Main_divGrid  > table > tbody > tr'
         );
         $resultsRows = $resultsTable;
         return $resultsRows;
@@ -114,9 +114,8 @@ class ResultsPage extends AbstractParser
         $resultsTable = $this->getCrawler()->filter(
             '#ctl00_Content_Main_divGrid table'
         )->first();
-        $fields = $resultsTable->filter(
-            'tr'
-        )->first()->children();
+        $firstRow = $resultsTable->filter('tr')->first();
+        $fields = $firstRow->children();
         if ($fields->count() > 0) {
             $colNum = 0;
             foreach ($fields as $field) {
@@ -218,7 +217,8 @@ class ResultsPage extends AbstractParser
                 $split->setParameters(['time' => trim($cell->nodeValue)]);
                 $parameters['splits'][] = $split;
             } elseif ($field == 'fullName') {
-                $parameters['href'] = $cell->lastChild->getAttribute('href');
+                $links = $cell->getElementsByTagName('a');
+                $parameters['href'] = $links->item(0)->getAttribute('href');
 
                 parse_str(parse_url($parameters['href'], PHP_URL_QUERY), $urlParameters);
                 $parameters['id'] = isset($urlParameters['uid']) ? $urlParameters['uid'] : '';

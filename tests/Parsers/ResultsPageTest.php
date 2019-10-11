@@ -187,6 +187,24 @@ class ResultsPageTest extends AbstractPageTest
         self::assertSame('Mihai Diana', $selectedRecord->getFullName());
     }
 
+    public function testForResultsWithHiddenRowAccordion()
+    {
+        $parametersParsed = static::initParserFromFixtures(
+            new PageParser(),
+            (new PageScraper()),
+            'ResultsPage/hidden_accordion_row'
+        );
+
+        /** @var array|Result[] $records */
+        $records = $parametersParsed['records'];
+
+        self::assertCount(50, $records);
+
+        $selectedRecord = $records[5];
+        self::assertInstanceOf(Result::class, $selectedRecord);
+        self::assertSame('Bobic Florin', $selectedRecord->getFullName());
+    }
+
     public function testForNetTimeColumns()
     {
         $parametersParsed = static::initParserFromFixtures(
@@ -312,6 +330,5 @@ class ResultsPageTest extends AbstractPageTest
             $scraper,
             $fixturePath
         );
-
     }
 }

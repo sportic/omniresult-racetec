@@ -150,8 +150,7 @@ class ResultPage extends AbstractParser
         );
         if ($splitRows->count() > 0) {
             foreach ($splitRows as $resultRow) {
-                $firstCell = $resultRow->childNodes->item(1);
-                if ($firstCell->tagName == 'th') {
+                if ($this->isSplitHeaderRow($resultRow)) {
                     $headerData = $this->parseSplitsHeader($resultRow);
                 } else {
                     $split = $this->parseSplitRow($resultRow, $headerData);
@@ -163,6 +162,29 @@ class ResultPage extends AbstractParser
         }
 
         return $return;
+    }
+
+    /**
+     * @param $row
+     * @return bool
+     */
+    protected function isSplitHeaderRow($row)
+    {
+        $firstCell = $row->childNodes->item(1);
+        if ($firstCell instanceof DOMElement &&  $firstCell->tagName == 'th') {
+            return true;
+        }
+        $firstCell = $row->childNodes->item(2);
+        if ($firstCell instanceof DOMElement &&  $firstCell->tagName == 'th') {
+            return true;
+        }
+        $value = $row->textContent;
+        foreach (['th class'] as $key) {
+            if (strpos($value, $key) !== false) {
+                return false;
+            }
+        }
+        return false;
     }
 
     /**
@@ -250,10 +272,12 @@ class ResultPage extends AbstractParser
             'Leg Time' => 'time',
             'Split Time' => 'time',
             'Time From Previous Split' => 'time',
+            //'Time(Time of Day)' => 'timeOfDay',
             'Time of Day' => 'timeOfDay',
             'TOD' => 'timeOfDay',
             'O Pos' => 'posGender',
             'G/Pos' => 'posGender',
+            //'Pos(C/Pos)' => 'posCategory',
             'C Pos' => 'posCategory',
             'C/Pos' => 'posCategory',
             'G Pos' => 'posGen',

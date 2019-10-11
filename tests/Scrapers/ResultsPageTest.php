@@ -57,6 +57,22 @@ class ResultsPageTest extends TestCase
         file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultsPage/hidden_fullname.html', $crawler->html());
     }
 
+    public function testGetCrawlerHiddenAccordionRow()
+    {
+        $crawler = $this->getCrawler(207, 1, 10);
+
+        static::assertInstanceOf(Crawler::class, $crawler);
+
+        static::assertSame(
+            'http://racetecresults.com/Results.aspx?CId=16648&RId=207&EId=1&dt=0',
+            $crawler->getUri()
+        );
+
+        static::assertContains('Bocica Dragos', $crawler->html());
+
+        file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultsPage/hidden_accordion_row.html', $crawler->html());
+    }
+
     public function testGetCrawlerNetTime()
     {
         $crawler = $this->getCrawler(116, 1, 1);

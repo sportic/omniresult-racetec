@@ -140,7 +140,7 @@ class ResultPage extends AbstractParser
         if ($this->getScraper()->isGenderCategoryMerge()) {
             $gender = isset($this->returnContent['gender']) ? $this->returnContent['gender'] : '';
             $category = isset($this->returnContent['category']) ? $this->returnContent['category'] : '';
-            $this->returnContent['category'] = trim($gender . ' ' . $category);
+            $this->returnContent['category'] = trim(ucfirst($gender) . ' ' . $category);
         }
     }
 

@@ -26,8 +26,11 @@ class ResultPage extends AbstractScraper
     {
         if (strpos($uid, '::')) {
             list($uid, $parameters) = explode('::', $uid);
-            $parameters = unserialize(base64_encode($parameters));
-            $this->initialize($parameters);
+            $decoded = @base64_decode($parameters);
+            $parameters = @unserialize($decoded);
+            if (is_array($parameters)) {
+                $this->initialize($parameters);
+            }
         }
         $this->setParameter('uid', $uid);
     }

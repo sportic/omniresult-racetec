@@ -14,7 +14,7 @@ use Sportic\Omniresult\RaceTec\Scrapers\ResultPage as PageScraper;
  */
 class ResultPageTest extends AbstractPageTest
 {
-    public function testGenerateResultsBox()
+    public function test_generateResultsBox()
     {
         $parsedParameters = static::getParserParameters('16648-2091-1-29925', 'result_page');
 

@@ -12,7 +12,31 @@ use Symfony\Component\DomCrawler\Crawler;
  */
 class ResultPageTest extends TestCase
 {
-    public function testGetCrawlerUri()
+
+    public function test_setUid()
+    {
+        $scraper = new ResultPage();
+        $scraper->initialize(['uid' => '16648-248-1-88264::YToxOntzOjE5OiJnZW5kZXJDYXRlZ29yeU1lcmdlIjtzOjE6IjEiO30=']);
+        self::assertSame('16648-248-1-88264', $scraper->getUid());
+        self::assertSame(true, $scraper->isGenderCategoryMerge());
+
+        $scraper = new ResultPage();
+        $scraper->initialize(['uid' => '16648-248-1-88264::YToxOntz']);
+        self::assertSame('16648-248-1-88264', $scraper->getUid());
+        self::assertSame(false, $scraper->isGenderCategoryMerge());
+
+        $scraper = new ResultPage();
+        $scraper->initialize(['uid' => '16648-248-1-88264::']);
+        self::assertSame('16648-248-1-88264', $scraper->getUid());
+        self::assertSame(false, $scraper->isGenderCategoryMerge());
+
+        $scraper = new ResultPage();
+        $scraper->initialize(['uid' => '16648-248-1-88264']);
+        self::assertSame('16648-248-1-88264', $scraper->getUid());
+        self::assertSame(false, $scraper->isGenderCategoryMerge());
+    }
+
+    public function test_etCrawlerUri()
     {
         $crawler = $this->getCrawler();
 

@@ -136,6 +136,12 @@ class ResultPage extends AbstractParser
                     break;
             }
         }
+
+        if ($this->getScraper()->isGenderCategoryMerge()) {
+            $gender = isset($this->returnContent['gender']) ? $this->returnContent['gender'] : '';
+            $category = isset($this->returnContent['category']) ? $this->returnContent['category'] : '';
+            $this->returnContent['category'] = trim($gender . ' ' . $category);
+        }
     }
 
     /**

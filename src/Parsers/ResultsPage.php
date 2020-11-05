@@ -222,6 +222,9 @@ class ResultsPage extends AbstractParser
 
                 parse_str(parse_url($parameters['href'], PHP_URL_QUERY), $urlParameters);
                 $parameters['id'] = isset($urlParameters['uid']) ? $urlParameters['uid'] : '';
+                $passedParams = ['genderCategoryMerge' => $this->getScraper()->isGenderCategoryMerge() ? '1' : '0'];
+                $parameters['id'] .= '::' . base64_encode(serialize($passedParams));
+
                 $parameters[$field] = trim($cell->nodeValue);
             } elseif ($field == 'laps') {
                 $parameters['notes'] = trim($cell->nodeValue) . ' laps';

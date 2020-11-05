@@ -19,7 +19,7 @@ class EventPageTest extends TestCase
         static::assertInstanceOf(Crawler::class, $crawler);
 
         static::assertSame(
-            'http://racetecresults.com/Results.aspx?CId=16648&RId=2091&EId=1',
+            'https://racetecresults.com/Results.aspx?CId=16648&RId=2091&EId=1',
             $crawler->getUri()
         );
     }

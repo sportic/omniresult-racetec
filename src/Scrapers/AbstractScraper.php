@@ -22,6 +22,6 @@ abstract class AbstractScraper extends \Sportic\Omniresult\Common\Scrapers\Abstr
      */
     protected function getCrawlerUriHost()
     {
-        return 'http://racetecresults.com';
+        return 'https://racetecresults.com';
     }
 }

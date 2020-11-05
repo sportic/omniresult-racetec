@@ -43,14 +43,14 @@ class ResultsPageTest extends AbstractPageTest
                 'posCategory' => '3',
                 'gender' => 'male',
                 'posGender' => '6',
-                'id' => '16648-2091-1-29984',
+                'id' => '16648-2091-1-29984::YToxOntzOjE5OiJnZW5kZXJDYXRlZ29yeU1lcmdlIjtzOjE6IjAiO30=',
                 'parameters' => null,
                 'splits' => [],
                 'status' => null,
                 'country' => null,
                 'club' => null,
-                'firstName' => null,
-                'lastName' => null,
+                'firstName' => 'Sorin',
+                'lastName' => 'Boriceanu',
                 'timeGross' => null,
                 'notes' => null
             ],
@@ -71,6 +71,7 @@ class ResultsPageTest extends AbstractPageTest
                 'current' => 1,
                 'all' => 5,
                 'items' => 222,
+                'nextUrl' => ''
             ],
             $parametersParsed['pagination']
         );
@@ -84,6 +85,7 @@ class ResultsPageTest extends AbstractPageTest
             'event_page'
         );
         $parametersSerialized = static::getParametersFixtures('event_page');
+        $string = serialize($parametersParsed->all());
         self::assertEquals($parametersSerialized, $parametersParsed->all());
     }
 
@@ -111,7 +113,7 @@ class ResultsPageTest extends AbstractPageTest
                 'posCategory' => null,
                 'gender' => 'male',
                 'posGender' => '6',
-                'id' => '16648-175-1-64191',
+                'id' => '16648-175-1-64191::YToxOntzOjE5OiJnZW5kZXJDYXRlZ29yeU1lcmdlIjtzOjE6IjAiO30=',
                 'parameters' => null,
                 'splits' => [
                     0 => [
@@ -138,8 +140,8 @@ class ResultsPageTest extends AbstractPageTest
                 'status' => null,
                 'country' => null,
                 'club' => null,
-                'firstName' => null,
-                'lastName' => null,
+                'firstName' => 'Branzoi',
+                'lastName' => 'Dorin',
                 'timeGross' => null,
                 'notes' => null
             ],
@@ -249,7 +251,7 @@ class ResultsPageTest extends AbstractPageTest
         self::assertEquals('Serbu Victor', $result->getFullName());
         self::assertEquals('23:51:08', $result->getTime());
         self::assertEquals('26 laps', $result->getNotes());
-        self::assertEquals('16648-2146-1-51779', $result->getId());
+        self::assertEquals('16648-2146-1-51779::YToxOntzOjE5OiJnZW5kZXJDYXRlZ29yeU1lcmdlIjtzOjE6IjAiO30=', $result->getId());
 
         $splits = $result->getSplits();
         self::assertCount(0, $splits);
@@ -279,7 +281,7 @@ class ResultsPageTest extends AbstractPageTest
                 'posCategory' => '1',
                 'gender' => 'male',
                 'posGender' => '6',
-                'id' => '16648-168-2-10993',
+                'id' => '16648-168-2-10993::YToxOntzOjE5OiJnZW5kZXJDYXRlZ29yeU1lcmdlIjtzOjE6IjAiO30=',
                 'splits' => [
                     0 => [
                         'name' => 'Lap 1',
@@ -306,8 +308,8 @@ class ResultsPageTest extends AbstractPageTest
                 'country' => null,
                 'club' => null,
                 'parameters' => null,
-                'firstName' => null,
-                'lastName' => null,
+                'firstName' => 'David',
+                'lastName' => 'Mihai',
                 'timeGross' => null,
                 'notes' => null
             ],

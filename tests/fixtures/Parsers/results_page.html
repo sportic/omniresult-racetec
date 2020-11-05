@@ -1,22 +1,37 @@
-<head id="ctl00_Head1" lang="en">
-<title></title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-<link href="/css/rtv2_v2.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://connect.facebook.net/en_US/sdk.js?hash=c4d68e99f92de264f87b611b5e9df690" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.3"></script><script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<script src="js/panelState.js"></script><link rel="icon" type="image/png" href="images/racetecicon.png">
-</head>
+<head id="ctl00_Head1" lang="en"><title>
+
+</title><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous"><link href="/css/rtv2_v2.css" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <script src="https://connect.facebook.net/en_US/sdk.js?hash=2c0e8524387ce81d49068089f360d07c" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.3"></script><script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="js/panelState.js"></script>
+    <script src="js/ltw.js"></script>
+    <script src="css/jquery.min.js" type="text/javascript"></script>
+    <link rel="icon" type="image/png" href="images/racetecicon.png">
+    <script language="javascript">
+        $(document).ready(function () {
+            StartCountDown();
+        });
+    </script>
+<style type="text/css" data-fbcssmodules="css:fb.css.basecss:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
 <body onload="setState()">
     <script type="text/javascript">
         function clearField(input, val) {
             if (input.value == val)
                 input.value = "";
         };
-    </script><form name="aspnetForm" method="post" action="./Results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0" id="aspnetForm">
+    </script>
+
+    <form name="aspnetForm" method="post" action="./Results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0" id="aspnetForm">
 <div>
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""><input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""><input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value=""><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDg4NjcwMzMzD2QWAmYPDxYCHgtNeVBhZ2VUaXRsZQUNQsSDbmVhc2EgUmFjZWQWAgIDD2QWDAIBDxYCHgVzdHlsZQUZYmFja2dyb3VuZC1jb2xvcjojMDc2OUFEOxYEAgEPDxYGHgRUZXh0BQ1CxINuZWFzYSBSYWNlHglGb3JlQ29sb3IJ/////x4EXyFTQgIEZGQCAw8PFgYfAgULMTUgQXByIDIwMTgfAwn/////HwQCBGRkAgMPFgIfAQU2cGFkZGluZzowLjJyZW07YmFja2dyb3VuZC1jb2xvcjojMDc2OUFEO2NvbG9yOiNGRkZGRkY7FhACAQ8WAh4FY2xhc3MFGW5hdi1pdGVtIGZvbnQtd2VpZ2h0LWJvbGQWAgIBDw8WCB8CBQdSZXN1bHRzHwMJ/////x4LTmF2aWdhdGVVcmwFJn4vUmVzdWx0cy5hc3B4P0NJZD0xNjY0OCZSSWQ9MTYzJkVJZD0xHwQCBGRkAgMPZBYCAgEPDxYGHwMJ/////x8EAgQeB1Zpc2libGVoZGQCBQ9kFgICAQ8PFgYfAwn/////HwQCBB8HaGRkAgcPZBYCAgEPDxYIHwIFB0RldGFpbHMfAwn/////HwYFHn4vU3RhdHMuYXNweD9DSWQ9MTY2NDgmUklkPTE2Mx8EAgRkZAIJD2QWAgIBDw8WBh8DCf////8fBAIEHwdoZGQCCw8WAh8HaBYCAgEPFgIfAQUOY29sb3I6I0ZGRkZGRjsWAgIBDw8WBh8CBQVMaW5rcx8DCf////8fBAIEZGQCDQ8WAh8HaBYCAgEPDxYEHwMJ/////x8EAgRkZAIPD2QWAgIBDw8WCB8DCf////8fBgUBIx8CBSQ8aSBjbGFzcz0iZmFzIGZhLWhvbWUiPiZuYnNwPC9pPkhvbWUfBAIEZGQCBQ8WBB8BBTlwYWRkaW5nLWxlZnQ6MTBweDtiYWNrZ3JvdW5kLWNvbG9yOiMwNzY5QUQ7Y29sb3I6I0ZGRkZGRjsfB2hkAgkPZBYEAgEPZBYCZg8PFgIeCEltYWdlVXJsBSh+L0ltYWdlcy9DbGllbnRzL1JhY2VMb2dvcy8xNjY0OF8xNjMucG5nZGQCAw8PFggeCENzc0NsYXNzBRJkLW5vbmUgZC1tZC1pbmxpbmUfCAUgfi9JbWFnZXMvQ2xpZW50cy8xNjY0OF9UaW1lci5wbmcfBgUBIx8EAgJkZAILD2QWHgIBDxYCHglpbm5lcmh0bWwFgAI8bGkgY2xhc3M9Im5hdi1pdGVtIj4gICA8YSBjbGFzcz0ibmF2LWxpbmsgYWN0aXZlIGx0dy1hY3RpdmVldmVudHRhYiIgaHJlZj0icmVzdWx0cy5hc3B4P0NJZD0xNjY0OCZSSWQ9MTYzJkVJZD0xIj5Dcm9zPC9hPjwvbGk+IDxsaSBjbGFzcz0ibmF2LWl0ZW0iPiA8YSBjbGFzcz0ibmF2LWxpbmsiIHN0eWxlPSJjb2xvcjogIzAwMDsiIGhyZWY9InJlc3VsdHMuYXNweD9DSWQ9MTY2NDgmUklkPTE2MyZFSWQ9MiI+U2VtaW1hcmF0b248L2E+PC9saT4gZAIDDw8WAh8CBRBDYXRlZ29yeSBSZXN1bHRzZGQCBQ8PFgIfAgUOR2VuZGVyIFJlc3VsdHNkZAIHDw8WBh8CBQtBbGwgUmVzdWx0cx8JBTNidG4gYnRuLW91dGxpbmUtcHJpbWFyeSBhY3RpdmUgYWN0aXZlIGFjdGl2ZSBhY3RpdmUfBAICZGQCCQ8PFgIfAgUIQWR2YW5jZWRkZAILDw8WAh8CBRBDYXRlZ29yeSBSZXN1bHRzZGQCDQ8PFgIfAgUOR2VuZGVyIFJlc3VsdHNkZAIPDw8WBh8CBQtBbGwgUmVzdWx0cx8JBUVidG4gYnRuLW91dGxpbmUtcHJpbWFyeSBsdHctZm9udC1zbWFsbC1uYiBhY3RpdmUgYWN0aXZlIGFjdGl2ZSBhY3RpdmUfBAICZGQCEQ8PFgIfAgUIQWR2YW5jZWRkZAITD2QWBAIBD2QWEAIBDw8WBB8CZR8HZ2RkAgMPD2QWAh4Hb25mb2N1cwUaY2xlYXJGaWVsZCh0aGlzLCdGaWx0ZXInKTtkAgUPEA8WAh8HaGRkFgFmZAIHDxBkEBUDC0FsbCBnZW5kZXJzBkZlbWFsZQRNYWxlFQMLQWxsIGdlbmRlcnMGRmVtYWxlBE1hbGUUKwMDZ2dnZGQCCQ8QZBAVCQ5BbGwgY2F0ZWdvcmllcw1GZW1pbmluIDE4LTI5DUZlbWluaW4gMzAtMzkNRmVtaW5pbiA0MC00OQtGZW1pbmluIDUwKw5NYXNjdWxpbiAxOC0yOQ5NYXNjdWxpbiAzMC0zOQ5N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">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
 </div>
 
 <script type="text/javascript">
@@ -33,7 +48,12 @@ function __doPostBack(eventTarget, eventArgument) {
     }
 }
 //]]>
-</script><script src="/WebResource.axd?d=g-QepA_JjF8KNmTrAe1WQhvOrXX95wDUrVQIEGu0LkkMplJS7zdAEjfCSI8Rj-CQHnjehSfqacQSPDkS_Pu-uodeKyE1&amp;t=636531734700000000" type="text/javascript"></script><div>
+</script>
+
+
+<script src="/WebResource.axd?d=g-QepA_JjF8KNmTrAe1WQhvOrXX95wDUrVQIEGu0LkkMplJS7zdAEjfCSI8Rj-CQHnjehSfqacQSPDkS_Pu-uodeKyE1&amp;t=637100538060000000" type="text/javascript"></script>
+
+<div>
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="63301E89">
 </div>
@@ -45,13 +65,14 @@ function __doPostBack(eventTarget, eventArgument) {
                 <span id="ctl00_lblRaceDate" class="small" style="color:#FFFFFF;">15 Apr 2018</span>
             </div>
         </div>
-        <nav id="ctl00_divNavBar" class="navbar navbar-thin navbar-dark navbar-expand-md navbar-toggleable-md" style="padding:0.2rem;background-color:#0769AD;color:#FFFFFF;"><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <nav id="ctl00_divNavBar" class="navbar navbar-thin navbar-dark navbar-expand-md navbar-toggleable-md" style="padding:0.2rem;background-color:#0769AD;color:#FFFFFF;">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-<li id="ctl00_lnkResults" class="nav-item font-weight-bold">
+                    <li id="ctl00_lnkResults" class="nav-item font-weight-bold">
                         <a id="ctl00_hlResults" class="nav-link" href="Results.aspx?CId=16648&amp;RId=163&amp;EId=1" style="color:#FFFFFF;">Results</a>
                     </li>
                     <li id="ctl00_lnkTeams" class="nav-item">
@@ -68,20 +89,24 @@ function __doPostBack(eventTarget, eventArgument) {
                     </li>
                     
                 </ul>
-<ul class="navbar-nav ml-auto">
-<li id="ctl00_lnkHome" class="nav-item">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li id="ctl00_lnkHome" class="nav-item">
                         <a id="ctl00_hlHome" class="nav-link" href="#" style="color:#FFFFFF;"><i class="fas fa-home"> </i>Home</a>
                     </li>
-                    <div class="md-form my-0">
+                    <div id="ctl00_divSearch" class="md-form my-0">
                         <div class="input-group">
                             <input name="ctl00$edtSearch" type="text" onchange="javascript:setTimeout('__doPostBack(\'ctl00$edtSearch\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_edtSearch" class="form-control" placeholder="Search">
-</div>
+                        </div>
                     </div>
                 </ul>
-</div>
-        </nav><div id="ctl00_divSearch" class="p-2 d-md-none" style="padding-left: 10px">
+            </div>
+        </nav>
+        
+        <div id="ctl00_divSearch2" class="p-2 d-md-none" style="padding-left: 10px">
             <div class="input-group ">
-                <input name="ctl00$edtSearch2" type="text" onchange="javascript:setTimeout('__doPostBack(\'ctl00$edtSearch2\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_edtSearch2" class="form-control border-primary text-primary" placeholder="Search" aria-describedby="basic-addon2"><div class="input-group-append">
+                <input name="ctl00$edtSearch2" type="text" onchange="javascript:setTimeout('__doPostBack(\'ctl00$edtSearch2\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_edtSearch2" class="form-control border-primary text-primary" placeholder="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
                     <button class="btn btn-outline-primary fa fa-search" type="button"></button>
                 </div>
             </div>
@@ -95,36 +120,42 @@ function __doPostBack(eventTarget, eventArgument) {
         <div>
             
 
-    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=44#channel=f10e98def4&amp;origin=http%3A%2F%2Fracetecresults.com" style="border: none;"></iframe></div></div></div>
+    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
     <script>(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
-    </script><script type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
         function ShowTwitterWindow(HashTags, Text, URL) {
 
             window.open('https://twitter.com/intent/tweet?' +
                 'url=' + URL +
                 '&hashtags=' + HashTags +
                 '&text=' + Text,
-		        'height=300,width=550')
+                'height=300,width=550')
         }
         function clearField(input, val) {
             if (input.value == val)
                 input.value = "";
         };
-    </script><div class="container">
+    </script>
+
+    <div class="container">
         <div>
-            <ul id="ctl00_Content_Main_divEvents" class="nav nav-tabs justify-content-center">
-<li class="nav-item">   <a class="nav-link active ltw-activeeventtab" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1">Cros</a>
-</li> <li class="nav-item"> <a class="nav-link" style="color: #000;" href="results.aspx?CId=16648&amp;RId=163&amp;EId=2">Semimaraton</a>
-</li> </ul>
-</div>
-        <br><div class="text-center">
+            <ul id="ctl00_Content_Main_divEvents" class="nav nav-tabs justify-content-center"><li class="nav-item">   <a class="nav-link active ltw-activeeventtab" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1">Cros</a></li> <li class="nav-item"> <a class="nav-link" style="color: #000;" href="results.aspx?CId=16648&amp;RId=163&amp;EId=2">Semimaraton</a></li> </ul>
+            
+        </div>
+        
+        <div id="ctl00_Content_Main_divNoCountdown">
+            <br>
+        </div>
+        <div id="ctl00_Content_Main_divButtons" class="text-center">
             <div class="d-none d-sm-inline-flex">
                 <input type="button" name="ctl00$Content_Main$btnCateg" value="Category Results" onclick="javascript:__doPostBack('ctl00$Content_Main$btnCateg','')" id="ctl00_Content_Main_btnCateg" class="btn btn-outline-primary">
                  
@@ -132,9 +163,7 @@ function __doPostBack(eventTarget, eventArgument) {
                  
                 <input type="button" name="ctl00$Content_Main$btnAll" value="All Results" onclick="javascript:__doPostBack('ctl00$Content_Main$btnAll','')" id="ctl00_Content_Main_btnAll" class="btn btn-outline-primary active active active active">
                  
-                <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="setCookie('collapseOne')">
-                    <span id="ctl00_Content_Main_lblAdvanced">Advanced</span>
-                </button>
+                <input type="button" name="ctl00$Content_Main$btnAdv" value="Advanced" onclick="javascript:__doPostBack('ctl00$Content_Main$btnAdv','')" id="ctl00_Content_Main_btnAdv" class="btn btn-outline-primary">
             </div>
             <div class="d-sm-none">
                 <input type="button" name="ctl00$Content_Main$btnCategXs" value="Category Results" onclick="javascript:__doPostBack('ctl00$Content_Main$btnCategXs','')" id="ctl00_Content_Main_btnCategXs" class="btn btn-outline-primary ltw-font-small-nb">
@@ -143,85 +172,27 @@ function __doPostBack(eventTarget, eventArgument) {
                  
                 <input type="button" name="ctl00$Content_Main$btnAllXs" value="All Results" onclick="javascript:__doPostBack('ctl00$Content_Main$btnAllXs','')" id="ctl00_Content_Main_btnAllXs" class="btn btn-outline-primary ltw-font-small-nb active active active active">
                  
-                <button class="btn btn-outline-primary ltw-font-small-nb" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="setCookie('collapseOne')">
-                    <span id="ctl00_Content_Main_lblAdvancedXs">Advanced</span>
-                </button>
+                <input type="button" name="ctl00$Content_Main$btnAdvX" value="Advanced" onclick="javascript:__doPostBack('ctl00$Content_Main$btnAdvX','')" id="ctl00_Content_Main_btnAdvX" class="btn btn-outline-primary ltw-font-small-nb">
             </div>
         </div>
-        <div id="ctl00_Content_Main_divMain" class="ltw-bottom-pad">
-            <div id="ctl00_Content_Main_pnlDropdowns">
-                <div align="center">
-                    <span id="ctl00_Content_Main_lblMessage" style="color:#003399;"></span>
-                </div>
-                <div id="accordion">
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div>
-                            <br>
-</div>
-                        <div class="card card-body">
-                            <div class="row ltw-row-pad">
-                                <div class="col-xs-12 col-sm-4 input-group">
-                                    <input name="ctl00$Content_Main$edtSearch" type="text" value="Filter" id="ctl00_Content_Main_edtSearch" class="form-control" placeholder="Filter" onfocus="clearField(this,'Filter');">
-</div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <select name="ctl00$Content_Main$cbGender" id="ctl00_Content_Main_cbGender" class="form-control"><option selected value="All genders">All genders</option>
-<option value="Female">Female</option>
-<option value="Male">Male</option></select>
-</div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <select name="ctl00$Content_Main$cbCateg" id="ctl00_Content_Main_cbCateg" class="form-control"><option selected value="All categories">All categories</option>
-<option value="Feminin 18-29">Feminin 18-29</option>
-<option value="Feminin 30-39">Feminin 30-39</option>
-<option value="Feminin 40-49">Feminin 40-49</option>
-<option value="Feminin 50+">Feminin 50+</option>
-<option value="Masculin 18-29">Masculin 18-29</option>
-<option value="Masculin 30-39">Masculin 30-39</option>
-<option value="Masculin 40-49">Masculin 40-49</option>
-<option value="masculin 50+">masculin 50+</option></select>
-</div>
-                            </div>
-                            <div class="row ltw-row-pad">
-                                <div class="col-xs-12 col-sm-4">
-                                    <select name="ctl00$Content_Main$cbClub" id="ctl00_Content_Main_cbClub" class="form-control"><option selected value="All clubs">All clubs</option></select>
-</div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <select name="ctl00$Content_Main$cbSort" id="ctl00_Content_Main_cbSort" class="form-control"><option selected value="0">Sort by finish order</option>
-<option value="1">Sort by race number</option>
-<option value="2">Sort by name</option>
-<option value="4">Sort by category</option>
-<option value="5">Sort by net time</option>
-<option value="6">Sort by team</option></select>
-</div>
-                                <div class="col-xs-12 col-sm-4 text-left">
-                                    <input type="button" name="ctl00$Content_Main$btnSearch" value="Apply" onclick="javascript:__doPostBack('ctl00$Content_Main$btnSearch','')" id="ctl00_Content_Main_btnSearch" class="btn btn-outline-primary">
-</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="ctl00_Content_Main_divMain" class="pb-1">
+            
+            
+            
             
         </div>
+        
     </div>
-    <div class="container-fluid">
+    <div id="ctl00_Content_Main_divOverallResults" class="container-fluid">
         
         <div id="ctl00_Content_Main_divTopPager" class="row ltw-table-div">
             <div class="col-12 col-sm-6 text-left">
-                <table id="ctl00_Content_Main_grdTopPager" border="0" style="font-size:10pt;"><tbody><tr>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl00','')" style="font-weight:normal;">1</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl01','')" style="font-weight:normal;">2</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl02','')" style="font-weight:normal;">3</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;text-decoration:none;">...</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl04','')" style="font-weight:normal;">6</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl05','')" style="font-weight:normal;">7</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl06','')" style="font-weight:normal;">8</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl07','')" style="font-weight:normal;text-decoration:none;">9</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;text-decoration:none;">[10]</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl09','')" style="font-weight:normal;">11</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl10','')" style="font-weight:normal;">12</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl11','')" style="font-weight:normal;">13</a></td>
-	</tr></tbody></table>
-</div>
+                <table id="ctl00_Content_Main_grdTopPager" border="0" style="font-size:10pt;">
+	<tbody><tr>
+		<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl00','')" style="font-weight:normal;">1</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl01','')" style="font-weight:normal;">2</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl02','')" style="font-weight:normal;">3</a></td><td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;text-decoration:none;">...</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl04','')" style="font-weight:normal;">6</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl05','')" style="font-weight:normal;">7</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl06','')" style="font-weight:normal;">8</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl07','')" style="font-weight:normal;text-decoration:none;">9</a></td><td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;text-decoration:none;">[10]</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl09','')" style="font-weight:normal;">11</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl10','')" style="font-weight:normal;">12</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl11','')" style="font-weight:normal;">13</a></td>
+	</tr>
+</tbody></table>
+            </div>
             <div class="d-sm-block col-sm-6 text-right">
                 <small>
                     <span id="ctl00_Content_Main_lblTopPager">Page 10 of 13 (643 items)</span></small>
@@ -229,993 +200,119 @@ function __doPostBack(eventTarget, eventArgument) {
         </div>
         <div id="ctl00_Content_Main_divGrid" align="center">
             <!-- Main grid goes here-->
-        <table class="table table-striped xtable-bordered xtable-responsive table-sm xtable-hover small align-middle ltw-cell-center" border="0"><tbody>
-<tr valign="middle" style="background-color:#0769AD;height:40px;">
-<th class="ltw-cell-center align-middle " style="color:#FFFFFF;">Fav</th>
-<th class="ltw-cell-center align-middle " style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;st=uSahzbPGRo4Plwznez58Rg%3d%3d" style="color:#FFFFFF;">Pos<i class="fa fa-fw fa-sort-down"></i></a></th>
-<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;st=ulzq9Dd7KCuh2DXRmSud9Q%3d%3d" style="color:#FFFFFF;">Race No<i class="fa fa-fw fa-sort-down"></i></a></th>
-<th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;width:100%;">Name</th>
-<th class="ltw-cell-left align-middle d-sm-none d-xs-table-cell" style="color:#FFFFFF;width:100%;">Name</th>
-<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;st=oX0%2fKv3SMT9OGKOQ3eFNTOfnXFSSeL0YrqattZn8Ed0%3d" style="color:#FFFFFF;">Time<i class="fa fa-fw fa-sort-down"></i></a></th>
-<th class="ltw-cell-center align-middle d-sm-none d-xs-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;st=oX0%2fKv3SMT9OGKOQ3eFNTOfnXFSSeL0YrqattZn8Ed0%3d" style="color:#FFFFFF;">Time<br>(Net Time)<i class="fa fa-fw fa-sort-down"></i></a></th>
-<th class="ltw-cell-center align-middle d-sm-none d-xs-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;st=CKvEJOqNXIGBaewHRoz6N46YhCBtsrjsH%2f9u4otCEes%3d" style="color:#FFFFFF;">Cat Pos<br>(Gen Pos)<i class="fa fa-fw fa-sort-down"></i></a></th>
-<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;st=9h%2bkNQloOFvIXIVkaak3e%2fp%2fasKtsP2RL9uP%2fhRo%2f74%3d" style="color:#FFFFFF;">Net Time<i class="fa fa-fw fa-sort-down"></i></a></th>
-<th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;st=CKvEJOqNXIGBaewHRoz6N46YhCBtsrjsH%2f9u4otCEes%3d" style="color:#FFFFFF;">Category<i class="fa fa-fw fa-sort-down"></i></a></th>
-<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;">Cat Pos</th>
-<th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;st=xFKd5wbE81VFNemnbZda2mWFk9BOHr3bT%2bJ35GDKCZI%3d" style="color:#FFFFFF;">Gender<i class="fa fa-fw fa-sort-down"></i></a></th>
-<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;">Gen Pos</th>
-<th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;">Wave</th>
-<th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;">Start Time</th>
+        <table class="table table-striped xtable-bordered xtable-responsive table-sm xtable-hover small align-middle ltw-cell-center" border="0">
+	<tbody><tr valign="middle" style="background-color:#0769AD;height:40px;">
+		<th class="ltw-cell-center align-middle " style="color:#FFFFFF;font-weight:normal;">Fav</th><th class="ltw-cell-center align-middle " style="color:#FFFFFF;font-weight:normal;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;so=1&amp;st=le8evkb%2bkw1qCFVeEXi%2f5g%3d%3d" style="color:#FFFFFF;">Pos<i class="fa fa-fw fa-sort-down"></i></a></th><th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;font-weight:normal;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;so=1&amp;st=gtcWd%2bJeK530AW%2bjwpcJpQ%3d%3d" style="color:#FFFFFF;">Race No<i class="fa fa-fw fa-sort-down"></i></a></th><th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;font-weight:normal;width:50%;">Name</th><th class="ltw-cell-left align-middle d-sm-none d-xs-table-cell" style="color:#FFFFFF;width:100%;">Name</th><th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;font-weight:normal;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;so=1&amp;st=sL0P6hT17GLleRsNVn9WeQ3DvvGYdQhgYyrdMCyXuj5xbqkfgZjrgH6DkEiqalOh" style="color:#FFFFFF;">Time<i class="fa fa-fw fa-sort-down"></i></a></th><th class="ltw-cell-center align-middle d-sm-none d-xs-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;so=1&amp;st=sL0P6hT17GLleRsNVn9WeQ3DvvGYdQhgYyrdMCyXuj5xbqkfgZjrgH6DkEiqalOh" style="color:#FFFFFF;">Time<br>(Net Time)<i class="fa fa-fw fa-sort-down"></i></a></th><th class="ltw-cell-center align-middle d-sm-none d-xs-table-cell" style="color:#FFFFFF;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;so=1&amp;st=xJjh8aUemfha%2fGBJWoaDuaX3WL4ZdrSeNRB8BSSZ323bGHEfjbnZjzvNKjLnPVYT" style="color:#FFFFFF;">Cat Pos<br>(Gen Pos)<i class="fa fa-fw fa-sort-down"></i></a></th><th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;font-weight:normal;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;so=1&amp;st=5BLLnSAxVMb7eZvcbROgAzEWpRgnvA7QEJsYf1DtjW4%3d" style="color:#FFFFFF;">Net Time<i class="fa fa-fw fa-sort-down"></i></a></th><th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;font-weight:normal;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;so=1&amp;st=xJjh8aUemfha%2fGBJWoaDuaX3WL4ZdrSeNRB8BSSZ323bGHEfjbnZjzvNKjLnPVYT" style="color:#FFFFFF;">Category<i class="fa fa-fw fa-sort-down"></i></a></th><th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;font-weight:normal;">Cat Pos</th><th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;font-weight:normal;"><a class="ltw-nodecor" href="results.aspx?CId=16648&amp;RId=163&amp;EId=1&amp;dt=0&amp;so=1&amp;st=jXZinHpAGAb1OQ0GIYx6QvB2woPsULeEvM0i6u66zY0%3d" style="color:#FFFFFF;">Gender<i class="fa fa-fw fa-sort-down"></i></a></th><th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;font-weight:normal;">Gen Pos</th><th class="ltw-cell-left align-middle d-none d-sm-table-cell" style="color:#FFFFFF;font-weight:normal;">Wave</th><th class="ltw-cell-center align-middle d-none d-sm-table-cell" style="color:#FFFFFF;font-weight:normal;">Start Time</th>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55078&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>451</td><td class=" d-none d-sm-table-cell">168</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55078" target="_blank">Dragan Antoaneta</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55078" target="_blank"><b>Dragan Antoaneta</b></a><span><br><b>#168</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:23:33</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:23:33<br>(01:23:29)</td><th class=" d-sm-none d-xs-table-cell">101<br>(202)</th><td class=" d-none d-sm-table-cell ltw-time ">01:23:29</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">101</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">202</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55521&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>452</td><td class=" d-none d-sm-table-cell">614</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55521" target="_blank">Oprea Iulian</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55521" target="_blank"><b>Oprea Iulian</b></a><span><br><b>#614</b> Male Masculin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:23:39</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:23:39<br>(01:23:29)</td><th class=" d-sm-none d-xs-table-cell">54<br>(250)</th><td class=" d-none d-sm-table-cell ltw-time ">01:23:29</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 18-29</td><td class=" d-none d-sm-table-cell">54</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">250</td><td class="ltw-cell-left d-none d-sm-table-cell">4</td><td class=" d-none d-sm-table-cell">09:43:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55366&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>453</td><td class=" d-none d-sm-table-cell">459</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55366" target="_blank">Bogdan Alexandru</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55366" target="_blank"><b>Bogdan Alexandru</b></a><span><br><b>#459</b> Male Masculin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:23:41</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:23:41<br>(01:23:30)</td><th class=" d-sm-none d-xs-table-cell">116<br>(251)</th><td class=" d-none d-sm-table-cell ltw-time ">01:23:30</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 30-39</td><td class=" d-none d-sm-table-cell">116</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">251</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55480&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>454</td><td class=" d-none d-sm-table-cell">573</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55480" target="_blank">Preda Elena</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55480" target="_blank"><b>Preda Elena</b></a><span><br><b>#573</b> Female Feminin 50+</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:23:47</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:23:47<br>(01:23:46)</td><th class=" d-sm-none d-xs-table-cell">6<br>(203)</th><td class=" d-none d-sm-table-cell ltw-time ">01:23:46</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 50+</td><td class=" d-none d-sm-table-cell">6</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">203</td><td class="ltw-cell-left d-none d-sm-table-cell">5</td><td class=" d-none d-sm-table-cell">09:47:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55115&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>455</td><td class=" d-none d-sm-table-cell">205</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55115" target="_blank">Mihai Dana Florentina</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55115" target="_blank"><b>Mihai Dana Florentina</b></a><span><br><b>#205</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:23:54</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:23:54<br>(01:23:45)</td><th class=" d-sm-none d-xs-table-cell">102<br>(204)</th><td class=" d-none d-sm-table-cell ltw-time ">01:23:45</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">102</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">204</td><td class="ltw-cell-left d-none d-sm-table-cell">5</td><td class=" d-none d-sm-table-cell">09:47:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55357&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>456</td><td class=" d-none d-sm-table-cell">450</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55357" target="_blank">Coltea Catalina</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55357" target="_blank"><b>Coltea Catalina</b></a><span><br><b>#450</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:24:06</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:06<br>(01:19:55)</td><th class=" d-sm-none d-xs-table-cell">103<br>(205)</th><td class=" d-none d-sm-table-cell ltw-time ">01:19:55</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">103</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">205</td><td class="ltw-cell-left d-none d-sm-table-cell">5</td><td class=" d-none d-sm-table-cell">09:47:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55453&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>456</td><td class=" d-none d-sm-table-cell">546</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55453" target="_blank">Florica Loredana</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55453" target="_blank"><b>Florica Loredana</b></a><span><br><b>#546</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:24:06</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:06<br>(01:19:56)</td><th class=" d-sm-none d-xs-table-cell">103<br>(205)</th><td class=" d-none d-sm-table-cell ltw-time ">01:19:56</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">103</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">205</td><td class="ltw-cell-left d-none d-sm-table-cell">5</td><td class=" d-none d-sm-table-cell">09:47:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55591&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>458</td><td class=" d-none d-sm-table-cell">684</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55591" target="_blank">Bezim Jeanina</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55591" target="_blank"><b>Bezim Jeanina</b></a><span><br><b>#684</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:24:17</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:17<br>(01:24:11)</td><th class=" d-sm-none d-xs-table-cell">105<br>(207)</th><td class=" d-none d-sm-table-cell ltw-time ">01:24:11</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">105</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">207</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55586&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>459</td><td class=" d-none d-sm-table-cell">679</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55586" target="_blank">Doniga Sorin</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55586" target="_blank"><b>Doniga Sorin</b></a><span><br><b>#679</b> Male Masculin 40-49</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:24:23</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:23<br>(01:24:19)</td><th class=" d-sm-none d-xs-table-cell">62<br>(252)</th><td class=" d-none d-sm-table-cell ltw-time ">01:24:19</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 40-49</td><td class=" d-none d-sm-table-cell">62</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">252</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55409&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>460</td><td class=" d-none d-sm-table-cell">502</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55409" target="_blank">Barbu Mirela</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55409" target="_blank"><b>Barbu Mirela</b></a><span><br><b>#502</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:24:25</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:25<br>(01:24:16)</td><th class=" d-sm-none d-xs-table-cell">106<br>(208)</th><td class=" d-none d-sm-table-cell ltw-time ">01:24:16</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">106</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">208</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55604&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>461</td><td class=" d-none d-sm-table-cell">697</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55604" target="_blank">Demian Ileana</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55604" target="_blank"><b>Demian Ileana</b></a><span><br><b>#697</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:24:32</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:32<br>(01:24:24)</td><th class=" d-sm-none d-xs-table-cell">107<br>(209)</th><td class=" d-none d-sm-table-cell ltw-time ">01:24:24</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">107</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">209</td><td class="ltw-cell-left d-none d-sm-table-cell">4</td><td class=" d-none d-sm-table-cell">09:43:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55519&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>462</td><td class=" d-none d-sm-table-cell">612</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55519" target="_blank">Sans Alexandra</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55519" target="_blank"><b>Sans Alexandra</b></a><span><br><b>#612</b> Female Feminin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:24:33</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:33<br>(01:24:23)</td><th class=" d-sm-none d-xs-table-cell">54<br>(210)</th><td class=" d-none d-sm-table-cell ltw-time ">01:24:23</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td><td class=" d-none d-sm-table-cell">54</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">210</td><td class="ltw-cell-left d-none d-sm-table-cell">4</td><td class=" d-none d-sm-table-cell">09:43:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55533&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>463</td><td class=" d-none d-sm-table-cell">626</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55533" target="_blank">Petre Marius</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55533" target="_blank"><b>Petre Marius</b></a><span><br><b>#626</b> Male Masculin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:24:35</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:35<br>(01:24:31)</td><th class=" d-sm-none d-xs-table-cell">55<br>(253)</th><td class=" d-none d-sm-table-cell ltw-time ">01:24:31</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 18-29</td><td class=" d-none d-sm-table-cell">55</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">253</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55449&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>464</td><td class=" d-none d-sm-table-cell">542</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55449" target="_blank">Munteanu Stefana Daniela</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55449" target="_blank"><b>Munteanu Stefana Daniela</b></a><span><br><b>#542</b> Female Feminin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:24:40</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:40<br>(01:24:29)</td><th class=" d-sm-none d-xs-table-cell">55<br>(211)</th><td class=" d-none d-sm-table-cell ltw-time ">01:24:29</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td><td class=" d-none d-sm-table-cell">55</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">211</td><td class="ltw-cell-left d-none d-sm-table-cell">4</td><td class=" d-none d-sm-table-cell">09:43:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55051&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>465</td><td class=" d-none d-sm-table-cell">141</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55051" target="_blank">Stefan Viorel</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55051" target="_blank"><b>Stefan Viorel</b></a><span><br><b>#141</b> Male Masculin 40-49</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:24:55</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:55<br>(01:24:44)</td><th class=" d-sm-none d-xs-table-cell">63<br>(254)</th><td class=" d-none d-sm-table-cell ltw-time ">01:24:44</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 40-49</td><td class=" d-none d-sm-table-cell">63</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">254</td><td class="ltw-cell-left d-none d-sm-table-cell">5</td><td class=" d-none d-sm-table-cell">09:47:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55052&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>466</td><td class=" d-none d-sm-table-cell">142</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55052" target="_blank">Stefan Nicoleta</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55052" target="_blank"><b>Stefan Nicoleta</b></a><span><br><b>#142</b> Female Feminin 40-49</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:24:56</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:56<br>(01:24:44)</td><th class=" d-sm-none d-xs-table-cell">42<br>(212)</th><td class=" d-none d-sm-table-cell ltw-time ">01:24:44</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td><td class=" d-none d-sm-table-cell">42</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">212</td><td class="ltw-cell-left d-none d-sm-table-cell">5</td><td class=" d-none d-sm-table-cell">09:47:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55201&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>467</td><td class=" d-none d-sm-table-cell">292</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55201" target="_blank">Nae Andrei Viorel</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55201" target="_blank"><b>Nae Andrei Viorel</b></a><span><br><b>#292</b> Male Masculin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:25:10</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:10<br>(01:25:08)</td><th class=" d-sm-none d-xs-table-cell">117<br>(255)</th><td class=" d-none d-sm-table-cell ltw-time ">01:25:08</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 30-39</td><td class=" d-none d-sm-table-cell">117</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">255</td><td class="ltw-cell-left d-none d-sm-table-cell">3</td><td class=" d-none d-sm-table-cell">09:39:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55025&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>468</td><td class=" d-none d-sm-table-cell">115</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55025" target="_blank">Marinescu Manuela</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55025" target="_blank"><b>Marinescu Manuela</b></a><span><br><b>#115</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:25:12</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:12<br>(01:24:58)</td><th class=" d-sm-none d-xs-table-cell">108<br>(213)</th><td class=" d-none d-sm-table-cell ltw-time ">01:24:58</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">108</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">213</td><td class="ltw-cell-left d-none d-sm-table-cell">5</td><td class=" d-none d-sm-table-cell">09:47:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55413&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>469</td><td class=" d-none d-sm-table-cell">506</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55413" target="_blank">Fagateanu Diana</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55413" target="_blank"><b>Fagateanu Diana</b></a><span><br><b>#506</b> Female Feminin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:25:39</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:39<br>(01:25:29)</td><th class=" d-sm-none d-xs-table-cell">56<br>(214)</th><td class=" d-none d-sm-table-cell ltw-time ">01:25:29</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td><td class=" d-none d-sm-table-cell">56</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">214</td><td class="ltw-cell-left d-none d-sm-table-cell">5</td><td class=" d-none d-sm-table-cell">09:47:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55253&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>470</td><td class=" d-none d-sm-table-cell">344</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55253" target="_blank">Ungherea Giorgiana</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55253" target="_blank"><b>Ungherea Giorgiana</b></a><span><br><b>#344</b> Female Feminin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:25:42</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:42<br>(01:25:30)</td><th class=" d-sm-none d-xs-table-cell">57<br>(215)</th><td class=" d-none d-sm-table-cell ltw-time ">01:25:30</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td><td class=" d-none d-sm-table-cell">57</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">215</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55254&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>470</td><td class=" d-none d-sm-table-cell">345</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55254" target="_blank">Craciun-Minea Maria Adriana</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55254" target="_blank"><b>Craciun-Minea Maria Adriana</b></a><span><br><b>#345</b> Female Feminin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:25:42</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:42<br>(01:25:31)</td><th class=" d-sm-none d-xs-table-cell">57<br>(215)</th><td class=" d-none d-sm-table-cell ltw-time ">01:25:31</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td><td class=" d-none d-sm-table-cell">57</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">215</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55350&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>472</td><td class=" d-none d-sm-table-cell">443</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55350" target="_blank">Manolache Cristina</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55350" target="_blank"><b>Manolache Cristina</b></a><span><br><b>#443</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:25:56</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:56<br>(01:25:49)</td><th class=" d-sm-none d-xs-table-cell">109<br>(217)</th><td class=" d-none d-sm-table-cell ltw-time ">01:25:49</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">109</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">217</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55352&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>473</td><td class=" d-none d-sm-table-cell">445</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55352" target="_blank">Rusu Beatrice</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55352" target="_blank"><b>Rusu Beatrice</b></a><span><br><b>#445</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:25:56</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:56<br>(01:25:48)</td><th class=" d-sm-none d-xs-table-cell">110<br>(218)</th><td class=" d-none d-sm-table-cell ltw-time ">01:25:48</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">110</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">218</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55132&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>474</td><td class=" d-none d-sm-table-cell">222</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55132" target="_blank">Ungureanu Cristina - Elena</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55132" target="_blank"><b>Ungureanu Cristina - Elena</b></a><span><br><b>#222</b> Female Feminin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:26:03</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:03<br>(01:25:58)</td><th class=" d-sm-none d-xs-table-cell">59<br>(219)</th><td class=" d-none d-sm-table-cell ltw-time ">01:25:58</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td><td class=" d-none d-sm-table-cell">59</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">219</td><td class="ltw-cell-left d-none d-sm-table-cell">1</td><td class=" d-none d-sm-table-cell">09:31:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55232&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>475</td><td class=" d-none d-sm-table-cell">323</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55232" target="_blank">Bicher Ana-Maria</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55232" target="_blank"><b>Bicher Ana-Maria</b></a><span><br><b>#323</b> Female Feminin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:26:06</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:06<br>(01:25:58)</td><th class=" d-sm-none d-xs-table-cell">60<br>(220)</th><td class=" d-none d-sm-table-cell ltw-time ">01:25:58</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td><td class=" d-none d-sm-table-cell">60</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">220</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55134&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>476</td><td class=" d-none d-sm-table-cell">224</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55134" target="_blank">Nicut Gabriela</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55134" target="_blank"><b>Nicut Gabriela</b></a><span><br><b>#224</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:26:12</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:12<br>(01:26:01)</td><th class=" d-sm-none d-xs-table-cell">111<br>(221)</th><td class=" d-none d-sm-table-cell ltw-time ">01:26:01</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">111</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">221</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55447&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>477</td><td class=" d-none d-sm-table-cell">540</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55447" target="_blank">Prichelmaer Felix</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55447" target="_blank"><b>Prichelmaer Felix</b></a><span><br><b>#540</b> Male Masculin 40-49</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:26:25</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:25<br>(01:26:19)</td><th class=" d-sm-none d-xs-table-cell">64<br>(256)</th><td class=" d-none d-sm-table-cell ltw-time ">01:26:19</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 40-49</td><td class=" d-none d-sm-table-cell">64</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">256</td><td class="ltw-cell-left d-none d-sm-table-cell">5</td><td class=" d-none d-sm-table-cell">09:47:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55592&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>478</td><td class=" d-none d-sm-table-cell">685</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55592" target="_blank">Corina Estera Ioan</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55592" target="_blank"><b>Corina Estera Ioan</b></a><span><br><b>#685</b> Female Feminin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:26:34</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:34<br>(01:26:26)</td><th class=" d-sm-none d-xs-table-cell">61<br>(222)</th><td class=" d-none d-sm-table-cell ltw-time ">01:26:26</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td><td class=" d-none d-sm-table-cell">61</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">222</td><td class="ltw-cell-left d-none d-sm-table-cell">2</td><td class=" d-none d-sm-table-cell">09:35:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55287&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>479</td><td class=" d-none d-sm-table-cell">380</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55287" target="_blank">Deaconu Anca</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55287" target="_blank"><b>Deaconu Anca</b></a><span><br><b>#380</b> Female Feminin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:26:44</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:44<br>(01:26:33)</td><th class=" d-sm-none d-xs-table-cell">62<br>(223)</th><td class=" d-none d-sm-table-cell ltw-time ">01:26:33</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td><td class=" d-none d-sm-table-cell">62</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">223</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55288&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>479</td><td class=" d-none d-sm-table-cell">381</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55288" target="_blank">Bodea Dragos</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55288" target="_blank"><b>Bodea Dragos</b></a><span><br><b>#381</b> Male Masculin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:26:44</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:44<br>(01:26:33)</td><th class=" d-sm-none d-xs-table-cell">56<br>(257)</th><td class=" d-none d-sm-table-cell ltw-time ">01:26:33</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 18-29</td><td class=" d-none d-sm-table-cell">56</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">257</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55212&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>481</td><td class=" d-none d-sm-table-cell">303</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55212" target="_blank">Dragan Stefania</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55212" target="_blank"><b>Dragan Stefania</b></a><span><br><b>#303</b> Female Feminin 40-49</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:26:58</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:58<br>(01:26:51)</td><th class=" d-sm-none d-xs-table-cell">43<br>(224)</th><td class=" d-none d-sm-table-cell ltw-time ">01:26:51</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td><td class=" d-none d-sm-table-cell">43</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">224</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55012&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>482</td><td class=" d-none d-sm-table-cell">102</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55012" target="_blank">Nitu Mihaela</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55012" target="_blank"><b>Nitu Mihaela</b></a><span><br><b>#102</b> Female Feminin 40-49</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:27:17</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:17<br>(01:27:14)</td><th class=" d-sm-none d-xs-table-cell">44<br>(225)</th><td class=" d-none d-sm-table-cell ltw-time ">01:27:14</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td><td class=" d-none d-sm-table-cell">44</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">225</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55297&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>483</td><td class=" d-none d-sm-table-cell">390</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55297" target="_blank">Guraliuc Andreea</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55297" target="_blank"><b>Guraliuc Andreea</b></a><span><br><b>#390</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:27:25</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:25<br>(01:27:20)</td><th class=" d-sm-none d-xs-table-cell">112<br>(226)</th><td class=" d-none d-sm-table-cell ltw-time ">01:27:20</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">112</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">226</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55264&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>484</td><td class=" d-none d-sm-table-cell">356</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55264" target="_blank">Ceapa Carmen</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55264" target="_blank"><b>Ceapa Carmen</b></a><span><br><b>#356</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:27:27</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:27<br>(01:27:21)</td><th class=" d-sm-none d-xs-table-cell">113<br>(227)</th><td class=" d-none d-sm-table-cell ltw-time ">01:27:21</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">113</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">227</td><td class="ltw-cell-left d-none d-sm-table-cell">3</td><td class=" d-none d-sm-table-cell">09:39:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55048&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>485</td><td class=" d-none d-sm-table-cell">138</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55048" target="_blank">Popa Lucian</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55048" target="_blank"><b>Popa Lucian</b></a><span><br><b>#138</b> Male Masculin 40-49</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:27:37</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:37<br>(01:27:27)</td><th class=" d-sm-none d-xs-table-cell">65<br>(258)</th><td class=" d-none d-sm-table-cell ltw-time ">01:27:27</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 40-49</td><td class=" d-none d-sm-table-cell">65</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">258</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55189&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>486</td><td class=" d-none d-sm-table-cell">280</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55189" target="_blank">Petcu Andreea</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55189" target="_blank"><b>Petcu Andreea</b></a><span><br><b>#280</b> Female Feminin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:27:46</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:46<br>(01:27:41)</td><th class=" d-sm-none d-xs-table-cell">63<br>(228)</th><td class=" d-none d-sm-table-cell ltw-time ">01:27:41</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td><td class=" d-none d-sm-table-cell">63</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">228</td><td class="ltw-cell-left d-none d-sm-table-cell">4</td><td class=" d-none d-sm-table-cell">09:43:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55187&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>487</td><td class=" d-none d-sm-table-cell">278</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55187" target="_blank">Caraveteanu Roxana</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55187" target="_blank"><b>Caraveteanu Roxana</b></a><span><br><b>#278</b> Female Feminin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:27:47</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:47<br>(01:27:42)</td><th class=" d-sm-none d-xs-table-cell">64<br>(229)</th><td class=" d-none d-sm-table-cell ltw-time ">01:27:42</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td><td class=" d-none d-sm-table-cell">64</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">229</td><td class="ltw-cell-left d-none d-sm-table-cell">4</td><td class=" d-none d-sm-table-cell">09:43:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55242&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>488</td><td class=" d-none d-sm-table-cell">333</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55242" target="_blank">Scarlat Alina</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55242" target="_blank"><b>Scarlat Alina</b></a><span><br><b>#333</b> Female Feminin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:27:48</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:48<br>(01:27:34)</td><th class=" d-sm-none d-xs-table-cell">114<br>(230)</th><td class=" d-none d-sm-table-cell ltw-time ">01:27:34</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td><td class=" d-none d-sm-table-cell">114</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">230</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55289&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>489</td><td class=" d-none d-sm-table-cell">382</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55289" target="_blank">Aflorei Catalina</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55289" target="_blank"><b>Aflorei Catalina</b></a><span><br><b>#382</b> Female Feminin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:27:59</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:59<br>(01:27:46)</td><th class=" d-sm-none d-xs-table-cell">65<br>(231)</th><td class=" d-none d-sm-table-cell ltw-time ">01:27:46</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td><td class=" d-none d-sm-table-cell">65</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">231</td><td class="ltw-cell-left d-none d-sm-table-cell">5</td><td class=" d-none d-sm-table-cell">09:47:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55463&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>490</td><td class=" d-none d-sm-table-cell">556</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55463" target="_blank">Secu Alexandru</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55463" target="_blank"><b>Secu Alexandru</b></a><span><br><b>#556</b> Male Masculin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:28:11</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:11<br>(01:28:08)</td><th class=" d-sm-none d-xs-table-cell">57<br>(259)</th><td class=" d-none d-sm-table-cell ltw-time ">01:28:08</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 18-29</td><td class=" d-none d-sm-table-cell">57</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">259</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55155&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>491</td><td class=" d-none d-sm-table-cell">245</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55155" target="_blank">Tenovici Irina</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55155" target="_blank"><b>Tenovici Irina</b></a><span><br><b>#245</b> Female Feminin 40-49</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:28:14</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:14<br>(01:28:12)</td><th class=" d-sm-none d-xs-table-cell">45<br>(232)</th><td class=" d-none d-sm-table-cell ltw-time ">01:28:12</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td><td class=" d-none d-sm-table-cell">45</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">232</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55106&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>492</td><td class=" d-none d-sm-table-cell">196</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55106" target="_blank">Banica Maria</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55106" target="_blank"><b>Banica Maria</b></a><span><br><b>#196</b> Female Feminin 40-49</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:28:30</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:30<br>(01:28:26)</td><th class=" d-sm-none d-xs-table-cell">46<br>(233)</th><td class=" d-none d-sm-table-cell ltw-time ">01:28:26</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td><td class=" d-none d-sm-table-cell">46</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">233</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55448&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>493</td><td class=" d-none d-sm-table-cell">541</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55448" target="_blank">Parvan Luminita</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55448" target="_blank"><b>Parvan Luminita</b></a><span><br><b>#541</b> Female Feminin 40-49</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:28:37</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:37<br>(01:28:31)</td><th class=" d-sm-none d-xs-table-cell">47<br>(234)</th><td class=" d-none d-sm-table-cell ltw-time ">01:28:31</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td><td class=" d-none d-sm-table-cell">47</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">234</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55216&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>494</td><td class=" d-none d-sm-table-cell">307</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55216" target="_blank">Olteanu Marius</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55216" target="_blank"><b>Olteanu Marius</b></a><span><br><b>#307</b> Male Masculin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:28:42</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:42<br>(01:28:29)</td><th class=" d-sm-none d-xs-table-cell">118<br>(260)</th><td class=" d-none d-sm-table-cell ltw-time ">01:28:29</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 30-39</td><td class=" d-none d-sm-table-cell">118</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">260</td><td class="ltw-cell-left d-none d-sm-table-cell">3</td><td class=" d-none d-sm-table-cell">09:39:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55214&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>495</td><td class=" d-none d-sm-table-cell">305</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55214" target="_blank">Capatina Adrian</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55214" target="_blank"><b>Capatina Adrian</b></a><span><br><b>#305</b> Male Masculin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:28:43</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:43<br>(01:28:29)</td><th class=" d-sm-none d-xs-table-cell">58<br>(261)</th><td class=" d-none d-sm-table-cell ltw-time ">01:28:29</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 18-29</td><td class=" d-none d-sm-table-cell">58</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">261</td><td class="ltw-cell-left d-none d-sm-table-cell">3</td><td class=" d-none d-sm-table-cell">09:39:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55213&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>496</td><td class=" d-none d-sm-table-cell">304</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55213" target="_blank">Andrei Gabi Ionela</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55213" target="_blank"><b>Andrei Gabi Ionela</b></a><span><br><b>#304</b> Female Feminin 18-29</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:28:43</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:43<br>(01:28:29)</td><th class=" d-sm-none d-xs-table-cell">66<br>(235)</th><td class=" d-none d-sm-table-cell ltw-time ">01:28:29</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td><td class=" d-none d-sm-table-cell">66</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">235</td><td class="ltw-cell-left d-none d-sm-table-cell">3</td><td class=" d-none d-sm-table-cell">09:39:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55200&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>497</td><td class=" d-none d-sm-table-cell">291</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55200" target="_blank">Onita Daniel</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55200" target="_blank"><b>Onita Daniel</b></a><span><br><b>#291</b> Male Masculin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:29:01</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:29:01<br>(01:20:50)</td><th class=" d-sm-none d-xs-table-cell">119<br>(262)</th><td class=" d-none d-sm-table-cell ltw-time ">01:20:50</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 30-39</td><td class=" d-none d-sm-table-cell">119</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">262</td><td class="ltw-cell-left d-none d-sm-table-cell">2</td><td class=" d-none d-sm-table-cell">09:35:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55383&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>498</td><td class=" d-none d-sm-table-cell">476</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55383" target="_blank">Sucevianu Roxana</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55383" target="_blank"><b>Sucevianu Roxana</b></a><span><br><b>#476</b> Female Feminin 40-49</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:29:10</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:29:10<br>(01:29:06)</td><th class=" d-sm-none d-xs-table-cell">48<br>(236)</th><td class=" d-none d-sm-table-cell ltw-time ">01:29:06</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td><td class=" d-none d-sm-table-cell">48</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">236</td><td class="ltw-cell-left d-none d-sm-table-cell">6</td><td class=" d-none d-sm-table-cell">09:51:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55623&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>499</td><td class=" d-none d-sm-table-cell">716</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55623" target="_blank">Rusei Alexandru</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55623" target="_blank"><b>Rusei Alexandru</b></a><span><br><b>#716</b> Male Masculin 30-39</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:29:38</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:29:38<br>(01:21:21)</td><th class=" d-sm-none d-xs-table-cell">120<br>(263)</th><td class=" d-none d-sm-table-cell ltw-time ">01:21:21</td><td class="ltw-cell-left d-none d-sm-table-cell">Masculin 30-39</td><td class=" d-none d-sm-table-cell">120</td><td class="ltw-cell-left d-none d-sm-table-cell">Male</td><td class=" d-none d-sm-table-cell">263</td><td class="ltw-cell-left d-none d-sm-table-cell">3</td><td class=" d-none d-sm-table-cell">09:39:37</td>
+	</tr><tr>
+		<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55183&amp;fav=1" title="Add To Favourites"></a></div></div></td><td>500</td><td class=" d-none d-sm-table-cell">274</td><td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55183" target="_blank">Foca Oana Maria</a></td><td class="ltw-cell-left d-sm-none d-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55183" target="_blank"><b>Foca Oana Maria</b></a><span><br><b>#274</b> Female Feminin 40-49</span></td><td class=" d-none d-sm-table-cell ltw-time ">01:29:38</td><td class=" d-sm-none d-xs-table-cell ltw-time ">01:29:38<br>(01:29:33)</td><th class=" d-sm-none d-xs-table-cell">49<br>(237)</th><td class=" d-none d-sm-table-cell ltw-time ">01:29:33</td><td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td><td class=" d-none d-sm-table-cell">49</td><td class="ltw-cell-left d-none d-sm-table-cell">Female</td><td class=" d-none d-sm-table-cell">237</td><td class="ltw-cell-left d-none d-sm-table-cell">4</td><td class=" d-none d-sm-table-cell">09:43:37</td>
 	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55078&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>451</td>
-<td class=" d-none d-sm-table-cell">168</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55078" target="_blank">Dragan Antoaneta</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55078" target="_blank"><b>Dragan Antoaneta</b></a><span><br><b>#168</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:23:33</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:23:33<br>(01:23:29)</td>
-<th class=" d-sm-none d-xs-table-cell">101<br>(202)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:23:29</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">101</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">202</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55521&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>452</td>
-<td class=" d-none d-sm-table-cell">614</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55521" target="_blank">Oprea Iulian</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55521" target="_blank"><b>Oprea Iulian</b></a><span><br><b>#614</b> Male Masculin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:23:39</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:23:39<br>(01:23:29)</td>
-<th class=" d-sm-none d-xs-table-cell">54<br>(250)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:23:29</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 18-29</td>
-<td class=" d-none d-sm-table-cell">54</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">250</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">4</td>
-<td class=" d-none d-sm-table-cell">09:43:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55366&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>453</td>
-<td class=" d-none d-sm-table-cell">459</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55366" target="_blank">Bogdan Alexandru</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55366" target="_blank"><b>Bogdan Alexandru</b></a><span><br><b>#459</b> Male Masculin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:23:41</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:23:41<br>(01:23:30)</td>
-<th class=" d-sm-none d-xs-table-cell">116<br>(251)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:23:30</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 30-39</td>
-<td class=" d-none d-sm-table-cell">116</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">251</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55480&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>454</td>
-<td class=" d-none d-sm-table-cell">573</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55480" target="_blank">Preda Elena</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55480" target="_blank"><b>Preda Elena</b></a><span><br><b>#573</b> Female Feminin 50+</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:23:47</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:23:47<br>(01:23:46)</td>
-<th class=" d-sm-none d-xs-table-cell">6<br>(203)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:23:46</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 50+</td>
-<td class=" d-none d-sm-table-cell">6</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">203</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">5</td>
-<td class=" d-none d-sm-table-cell">09:47:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55115&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>455</td>
-<td class=" d-none d-sm-table-cell">205</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55115" target="_blank">Mihai Dana Florentina</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55115" target="_blank"><b>Mihai Dana Florentina</b></a><span><br><b>#205</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:23:54</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:23:54<br>(01:23:45)</td>
-<th class=" d-sm-none d-xs-table-cell">102<br>(204)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:23:45</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">102</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">204</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">5</td>
-<td class=" d-none d-sm-table-cell">09:47:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55357&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>456</td>
-<td class=" d-none d-sm-table-cell">450</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55357" target="_blank">Coltea Catalina</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55357" target="_blank"><b>Coltea Catalina</b></a><span><br><b>#450</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:06</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:06<br>(01:19:55)</td>
-<th class=" d-sm-none d-xs-table-cell">103<br>(205)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:19:55</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">103</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">205</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">5</td>
-<td class=" d-none d-sm-table-cell">09:47:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55453&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>456</td>
-<td class=" d-none d-sm-table-cell">546</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55453" target="_blank">Florica Loredana</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55453" target="_blank"><b>Florica Loredana</b></a><span><br><b>#546</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:06</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:06<br>(01:19:56)</td>
-<th class=" d-sm-none d-xs-table-cell">103<br>(205)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:19:56</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">103</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">205</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">5</td>
-<td class=" d-none d-sm-table-cell">09:47:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55591&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>458</td>
-<td class=" d-none d-sm-table-cell">684</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55591" target="_blank">Bezim Jeanina</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55591" target="_blank"><b>Bezim Jeanina</b></a><span><br><b>#684</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:17</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:17<br>(01:24:11)</td>
-<th class=" d-sm-none d-xs-table-cell">105<br>(207)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:11</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">105</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">207</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55586&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>459</td>
-<td class=" d-none d-sm-table-cell">679</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55586" target="_blank">Doniga Sorin</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55586" target="_blank"><b>Doniga Sorin</b></a><span><br><b>#679</b> Male Masculin 40-49</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:23</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:23<br>(01:24:19)</td>
-<th class=" d-sm-none d-xs-table-cell">62<br>(252)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:19</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 40-49</td>
-<td class=" d-none d-sm-table-cell">62</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">252</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55409&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>460</td>
-<td class=" d-none d-sm-table-cell">502</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55409" target="_blank">Barbu Mirela</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55409" target="_blank"><b>Barbu Mirela</b></a><span><br><b>#502</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:25</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:25<br>(01:24:16)</td>
-<th class=" d-sm-none d-xs-table-cell">106<br>(208)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:16</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">106</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">208</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55604&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>461</td>
-<td class=" d-none d-sm-table-cell">697</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55604" target="_blank">Demian Ileana</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55604" target="_blank"><b>Demian Ileana</b></a><span><br><b>#697</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:32</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:32<br>(01:24:24)</td>
-<th class=" d-sm-none d-xs-table-cell">107<br>(209)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:24</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">107</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">209</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">4</td>
-<td class=" d-none d-sm-table-cell">09:43:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55519&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>462</td>
-<td class=" d-none d-sm-table-cell">612</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55519" target="_blank">Sans Alexandra</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55519" target="_blank"><b>Sans Alexandra</b></a><span><br><b>#612</b> Female Feminin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:33</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:33<br>(01:24:23)</td>
-<th class=" d-sm-none d-xs-table-cell">54<br>(210)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:23</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td>
-<td class=" d-none d-sm-table-cell">54</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">210</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">4</td>
-<td class=" d-none d-sm-table-cell">09:43:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55533&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>463</td>
-<td class=" d-none d-sm-table-cell">626</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55533" target="_blank">Petre Marius</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55533" target="_blank"><b>Petre Marius</b></a><span><br><b>#626</b> Male Masculin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:35</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:35<br>(01:24:31)</td>
-<th class=" d-sm-none d-xs-table-cell">55<br>(253)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:31</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 18-29</td>
-<td class=" d-none d-sm-table-cell">55</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">253</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55449&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>464</td>
-<td class=" d-none d-sm-table-cell">542</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55449" target="_blank">Munteanu Stefana Daniela</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55449" target="_blank"><b>Munteanu Stefana Daniela</b></a><span><br><b>#542</b> Female Feminin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:40</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:40<br>(01:24:29)</td>
-<th class=" d-sm-none d-xs-table-cell">55<br>(211)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:29</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td>
-<td class=" d-none d-sm-table-cell">55</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">211</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">4</td>
-<td class=" d-none d-sm-table-cell">09:43:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55051&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>465</td>
-<td class=" d-none d-sm-table-cell">141</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55051" target="_blank">Stefan Viorel</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55051" target="_blank"><b>Stefan Viorel</b></a><span><br><b>#141</b> Male Masculin 40-49</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:55</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:55<br>(01:24:44)</td>
-<th class=" d-sm-none d-xs-table-cell">63<br>(254)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:44</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 40-49</td>
-<td class=" d-none d-sm-table-cell">63</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">254</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">5</td>
-<td class=" d-none d-sm-table-cell">09:47:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55052&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>466</td>
-<td class=" d-none d-sm-table-cell">142</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55052" target="_blank">Stefan Nicoleta</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55052" target="_blank"><b>Stefan Nicoleta</b></a><span><br><b>#142</b> Female Feminin 40-49</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:56</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:24:56<br>(01:24:44)</td>
-<th class=" d-sm-none d-xs-table-cell">42<br>(212)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:44</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td>
-<td class=" d-none d-sm-table-cell">42</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">212</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">5</td>
-<td class=" d-none d-sm-table-cell">09:47:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55201&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>467</td>
-<td class=" d-none d-sm-table-cell">292</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55201" target="_blank">Nae Andrei Viorel</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55201" target="_blank"><b>Nae Andrei Viorel</b></a><span><br><b>#292</b> Male Masculin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:10</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:10<br>(01:25:08)</td>
-<th class=" d-sm-none d-xs-table-cell">117<br>(255)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:08</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 30-39</td>
-<td class=" d-none d-sm-table-cell">117</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">255</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">3</td>
-<td class=" d-none d-sm-table-cell">09:39:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55025&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>468</td>
-<td class=" d-none d-sm-table-cell">115</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55025" target="_blank">Marinescu Manuela</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55025" target="_blank"><b>Marinescu Manuela</b></a><span><br><b>#115</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:12</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:12<br>(01:24:58)</td>
-<th class=" d-sm-none d-xs-table-cell">108<br>(213)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:24:58</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">108</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">213</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">5</td>
-<td class=" d-none d-sm-table-cell">09:47:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55413&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>469</td>
-<td class=" d-none d-sm-table-cell">506</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55413" target="_blank">Fagateanu Diana</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55413" target="_blank"><b>Fagateanu Diana</b></a><span><br><b>#506</b> Female Feminin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:39</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:39<br>(01:25:29)</td>
-<th class=" d-sm-none d-xs-table-cell">56<br>(214)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:29</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td>
-<td class=" d-none d-sm-table-cell">56</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">214</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">5</td>
-<td class=" d-none d-sm-table-cell">09:47:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55253&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>470</td>
-<td class=" d-none d-sm-table-cell">344</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55253" target="_blank">Ungherea Giorgiana</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55253" target="_blank"><b>Ungherea Giorgiana</b></a><span><br><b>#344</b> Female Feminin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:42</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:42<br>(01:25:30)</td>
-<th class=" d-sm-none d-xs-table-cell">57<br>(215)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:30</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td>
-<td class=" d-none d-sm-table-cell">57</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">215</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55254&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>470</td>
-<td class=" d-none d-sm-table-cell">345</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55254" target="_blank">Craciun-Minea Maria Adriana</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55254" target="_blank"><b>Craciun-Minea Maria Adriana</b></a><span><br><b>#345</b> Female Feminin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:42</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:42<br>(01:25:31)</td>
-<th class=" d-sm-none d-xs-table-cell">57<br>(215)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:31</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td>
-<td class=" d-none d-sm-table-cell">57</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">215</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55350&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>472</td>
-<td class=" d-none d-sm-table-cell">443</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55350" target="_blank">Manolache Cristina</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55350" target="_blank"><b>Manolache Cristina</b></a><span><br><b>#443</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:56</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:56<br>(01:25:49)</td>
-<th class=" d-sm-none d-xs-table-cell">109<br>(217)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:49</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">109</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">217</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55352&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>473</td>
-<td class=" d-none d-sm-table-cell">445</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55352" target="_blank">Rusu Beatrice</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55352" target="_blank"><b>Rusu Beatrice</b></a><span><br><b>#445</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:56</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:25:56<br>(01:25:48)</td>
-<th class=" d-sm-none d-xs-table-cell">110<br>(218)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:48</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">110</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">218</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55132&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>474</td>
-<td class=" d-none d-sm-table-cell">222</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55132" target="_blank">Ungureanu Cristina - Elena</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55132" target="_blank"><b>Ungureanu Cristina - Elena</b></a><span><br><b>#222</b> Female Feminin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:03</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:03<br>(01:25:58)</td>
-<th class=" d-sm-none d-xs-table-cell">59<br>(219)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:58</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td>
-<td class=" d-none d-sm-table-cell">59</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">219</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">1</td>
-<td class=" d-none d-sm-table-cell">09:31:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55232&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>475</td>
-<td class=" d-none d-sm-table-cell">323</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55232" target="_blank">Bicher Ana-Maria</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55232" target="_blank"><b>Bicher Ana-Maria</b></a><span><br><b>#323</b> Female Feminin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:06</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:06<br>(01:25:58)</td>
-<th class=" d-sm-none d-xs-table-cell">60<br>(220)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:25:58</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td>
-<td class=" d-none d-sm-table-cell">60</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">220</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55134&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>476</td>
-<td class=" d-none d-sm-table-cell">224</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55134" target="_blank">Nicut Gabriela</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55134" target="_blank"><b>Nicut Gabriela</b></a><span><br><b>#224</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:12</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:12<br>(01:26:01)</td>
-<th class=" d-sm-none d-xs-table-cell">111<br>(221)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:01</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">111</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">221</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55447&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>477</td>
-<td class=" d-none d-sm-table-cell">540</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55447" target="_blank">Prichelmaer Felix</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55447" target="_blank"><b>Prichelmaer Felix</b></a><span><br><b>#540</b> Male Masculin 40-49</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:25</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:25<br>(01:26:19)</td>
-<th class=" d-sm-none d-xs-table-cell">64<br>(256)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:19</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 40-49</td>
-<td class=" d-none d-sm-table-cell">64</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">256</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">5</td>
-<td class=" d-none d-sm-table-cell">09:47:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55592&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>478</td>
-<td class=" d-none d-sm-table-cell">685</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55592" target="_blank">Corina Estera Ioan</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55592" target="_blank"><b>Corina Estera Ioan</b></a><span><br><b>#685</b> Female Feminin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:34</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:34<br>(01:26:26)</td>
-<th class=" d-sm-none d-xs-table-cell">61<br>(222)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:26</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td>
-<td class=" d-none d-sm-table-cell">61</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">222</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">2</td>
-<td class=" d-none d-sm-table-cell">09:35:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55287&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>479</td>
-<td class=" d-none d-sm-table-cell">380</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55287" target="_blank">Deaconu Anca</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55287" target="_blank"><b>Deaconu Anca</b></a><span><br><b>#380</b> Female Feminin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:44</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:44<br>(01:26:33)</td>
-<th class=" d-sm-none d-xs-table-cell">62<br>(223)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:33</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td>
-<td class=" d-none d-sm-table-cell">62</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">223</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55288&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>479</td>
-<td class=" d-none d-sm-table-cell">381</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55288" target="_blank">Bodea Dragos</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55288" target="_blank"><b>Bodea Dragos</b></a><span><br><b>#381</b> Male Masculin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:44</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:44<br>(01:26:33)</td>
-<th class=" d-sm-none d-xs-table-cell">56<br>(257)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:33</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 18-29</td>
-<td class=" d-none d-sm-table-cell">56</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">257</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55212&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>481</td>
-<td class=" d-none d-sm-table-cell">303</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55212" target="_blank">Dragan Stefania</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55212" target="_blank"><b>Dragan Stefania</b></a><span><br><b>#303</b> Female Feminin 40-49</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:58</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:26:58<br>(01:26:51)</td>
-<th class=" d-sm-none d-xs-table-cell">43<br>(224)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:26:51</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td>
-<td class=" d-none d-sm-table-cell">43</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">224</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55012&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>482</td>
-<td class=" d-none d-sm-table-cell">102</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55012" target="_blank">Nitu Mihaela</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55012" target="_blank"><b>Nitu Mihaela</b></a><span><br><b>#102</b> Female Feminin 40-49</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:17</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:17<br>(01:27:14)</td>
-<th class=" d-sm-none d-xs-table-cell">44<br>(225)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:14</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td>
-<td class=" d-none d-sm-table-cell">44</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">225</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55297&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>483</td>
-<td class=" d-none d-sm-table-cell">390</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55297" target="_blank">Guraliuc Andreea</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55297" target="_blank"><b>Guraliuc Andreea</b></a><span><br><b>#390</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:25</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:25<br>(01:27:20)</td>
-<th class=" d-sm-none d-xs-table-cell">112<br>(226)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:20</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">112</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">226</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55264&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>484</td>
-<td class=" d-none d-sm-table-cell">356</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55264" target="_blank">Ceapa Carmen</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55264" target="_blank"><b>Ceapa Carmen</b></a><span><br><b>#356</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:27</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:27<br>(01:27:21)</td>
-<th class=" d-sm-none d-xs-table-cell">113<br>(227)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:21</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">113</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">227</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">3</td>
-<td class=" d-none d-sm-table-cell">09:39:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55048&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>485</td>
-<td class=" d-none d-sm-table-cell">138</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55048" target="_blank">Popa Lucian</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55048" target="_blank"><b>Popa Lucian</b></a><span><br><b>#138</b> Male Masculin 40-49</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:37</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:37<br>(01:27:27)</td>
-<th class=" d-sm-none d-xs-table-cell">65<br>(258)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:27</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 40-49</td>
-<td class=" d-none d-sm-table-cell">65</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">258</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55189&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>486</td>
-<td class=" d-none d-sm-table-cell">280</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55189" target="_blank">Petcu Andreea</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55189" target="_blank"><b>Petcu Andreea</b></a><span><br><b>#280</b> Female Feminin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:46</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:46<br>(01:27:41)</td>
-<th class=" d-sm-none d-xs-table-cell">63<br>(228)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:41</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td>
-<td class=" d-none d-sm-table-cell">63</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">228</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">4</td>
-<td class=" d-none d-sm-table-cell">09:43:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55187&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>487</td>
-<td class=" d-none d-sm-table-cell">278</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55187" target="_blank">Caraveteanu Roxana</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55187" target="_blank"><b>Caraveteanu Roxana</b></a><span><br><b>#278</b> Female Feminin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:47</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:47<br>(01:27:42)</td>
-<th class=" d-sm-none d-xs-table-cell">64<br>(229)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:42</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td>
-<td class=" d-none d-sm-table-cell">64</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">229</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">4</td>
-<td class=" d-none d-sm-table-cell">09:43:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55242&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>488</td>
-<td class=" d-none d-sm-table-cell">333</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55242" target="_blank">Scarlat Alina</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55242" target="_blank"><b>Scarlat Alina</b></a><span><br><b>#333</b> Female Feminin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:48</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:48<br>(01:27:34)</td>
-<th class=" d-sm-none d-xs-table-cell">114<br>(230)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:34</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 30-39</td>
-<td class=" d-none d-sm-table-cell">114</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">230</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55289&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>489</td>
-<td class=" d-none d-sm-table-cell">382</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55289" target="_blank">Aflorei Catalina</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55289" target="_blank"><b>Aflorei Catalina</b></a><span><br><b>#382</b> Female Feminin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:59</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:27:59<br>(01:27:46)</td>
-<th class=" d-sm-none d-xs-table-cell">65<br>(231)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:27:46</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td>
-<td class=" d-none d-sm-table-cell">65</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">231</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">5</td>
-<td class=" d-none d-sm-table-cell">09:47:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55463&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>490</td>
-<td class=" d-none d-sm-table-cell">556</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55463" target="_blank">Secu Alexandru</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55463" target="_blank"><b>Secu Alexandru</b></a><span><br><b>#556</b> Male Masculin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:11</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:11<br>(01:28:08)</td>
-<th class=" d-sm-none d-xs-table-cell">57<br>(259)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:08</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 18-29</td>
-<td class=" d-none d-sm-table-cell">57</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">259</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55155&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>491</td>
-<td class=" d-none d-sm-table-cell">245</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55155" target="_blank">Tenovici Irina</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55155" target="_blank"><b>Tenovici Irina</b></a><span><br><b>#245</b> Female Feminin 40-49</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:14</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:14<br>(01:28:12)</td>
-<th class=" d-sm-none d-xs-table-cell">45<br>(232)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:12</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td>
-<td class=" d-none d-sm-table-cell">45</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">232</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55106&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>492</td>
-<td class=" d-none d-sm-table-cell">196</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55106" target="_blank">Banica Maria</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55106" target="_blank"><b>Banica Maria</b></a><span><br><b>#196</b> Female Feminin 40-49</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:30</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:30<br>(01:28:26)</td>
-<th class=" d-sm-none d-xs-table-cell">46<br>(233)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:26</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td>
-<td class=" d-none d-sm-table-cell">46</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">233</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55448&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>493</td>
-<td class=" d-none d-sm-table-cell">541</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55448" target="_blank">Parvan Luminita</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55448" target="_blank"><b>Parvan Luminita</b></a><span><br><b>#541</b> Female Feminin 40-49</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:37</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:37<br>(01:28:31)</td>
-<th class=" d-sm-none d-xs-table-cell">47<br>(234)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:31</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td>
-<td class=" d-none d-sm-table-cell">47</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">234</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55216&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>494</td>
-<td class=" d-none d-sm-table-cell">307</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55216" target="_blank">Olteanu Marius</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55216" target="_blank"><b>Olteanu Marius</b></a><span><br><b>#307</b> Male Masculin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:42</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:42<br>(01:28:29)</td>
-<th class=" d-sm-none d-xs-table-cell">118<br>(260)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:29</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 30-39</td>
-<td class=" d-none d-sm-table-cell">118</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">260</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">3</td>
-<td class=" d-none d-sm-table-cell">09:39:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55214&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>495</td>
-<td class=" d-none d-sm-table-cell">305</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55214" target="_blank">Capatina Adrian</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55214" target="_blank"><b>Capatina Adrian</b></a><span><br><b>#305</b> Male Masculin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:43</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:43<br>(01:28:29)</td>
-<th class=" d-sm-none d-xs-table-cell">58<br>(261)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:29</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 18-29</td>
-<td class=" d-none d-sm-table-cell">58</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">261</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">3</td>
-<td class=" d-none d-sm-table-cell">09:39:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55213&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>496</td>
-<td class=" d-none d-sm-table-cell">304</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55213" target="_blank">Andrei Gabi Ionela</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55213" target="_blank"><b>Andrei Gabi Ionela</b></a><span><br><b>#304</b> Female Feminin 18-29</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:43</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:28:43<br>(01:28:29)</td>
-<th class=" d-sm-none d-xs-table-cell">66<br>(235)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:28:29</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 18-29</td>
-<td class=" d-none d-sm-table-cell">66</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">235</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">3</td>
-<td class=" d-none d-sm-table-cell">09:39:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55200&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>497</td>
-<td class=" d-none d-sm-table-cell">291</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55200" target="_blank">Onita Daniel</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55200" target="_blank"><b>Onita Daniel</b></a><span><br><b>#291</b> Male Masculin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:29:01</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:29:01<br>(01:20:50)</td>
-<th class=" d-sm-none d-xs-table-cell">119<br>(262)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:20:50</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 30-39</td>
-<td class=" d-none d-sm-table-cell">119</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">262</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">2</td>
-<td class=" d-none d-sm-table-cell">09:35:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55383&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>498</td>
-<td class=" d-none d-sm-table-cell">476</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55383" target="_blank">Sucevianu Roxana</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55383" target="_blank"><b>Sucevianu Roxana</b></a><span><br><b>#476</b> Female Feminin 40-49</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:29:10</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:29:10<br>(01:29:06)</td>
-<th class=" d-sm-none d-xs-table-cell">48<br>(236)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:29:06</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td>
-<td class=" d-none d-sm-table-cell">48</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">236</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">6</td>
-<td class=" d-none d-sm-table-cell">09:51:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55623&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>499</td>
-<td class=" d-none d-sm-table-cell">716</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55623" target="_blank">Rusei Alexandru</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55623" target="_blank"><b>Rusei Alexandru</b></a><span><br><b>#716</b> Male Masculin 30-39</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:29:38</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:29:38<br>(01:21:21)</td>
-<th class=" d-sm-none d-xs-table-cell">120<br>(263)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:21:21</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Masculin 30-39</td>
-<td class=" d-none d-sm-table-cell">120</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Male</td>
-<td class=" d-none d-sm-table-cell">263</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">3</td>
-<td class=" d-none d-sm-table-cell">09:39:37</td>
-	</tr>
-<tr>
-<td><div class="d-flex d-inline"><div><a class="fa fa-star ltw-share-pad-min" style="color: #007bff" href="results.aspx?uid=16648-163-1-55183&amp;fav=1" title="Add To Favourites"></a></div></div></td>
-<td>500</td>
-<td class=" d-none d-sm-table-cell">274</td>
-<td class="ltw-cell-left d-none d-sm-table-cell"><a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55183" target="_blank">Foca Oana Maria</a></td>
-<td class="ltw-cell-left d-sm-none d-table-cell">
-<a class="ltw-name" href="myresults.aspx?uid=16648-163-1-55183" target="_blank"><b>Foca Oana Maria</b></a><span><br><b>#274</b> Female Feminin 40-49</span>
-</td>
-<td class=" d-none d-sm-table-cell ltw-time ">01:29:38</td>
-<td class=" d-sm-none d-xs-table-cell ltw-time ">01:29:38<br>(01:29:33)</td>
-<th class=" d-sm-none d-xs-table-cell">49<br>(237)</th>
-<td class=" d-none d-sm-table-cell ltw-time ">01:29:33</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Feminin 40-49</td>
-<td class=" d-none d-sm-table-cell">49</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">Female</td>
-<td class=" d-none d-sm-table-cell">237</td>
-<td class="ltw-cell-left d-none d-sm-table-cell">4</td>
-<td class=" d-none d-sm-table-cell">09:43:37</td>
-	</tr>
-</tbody></table>
-</div>
+</tbody></table></div>
         <div id="ctl00_Content_Main_divBottomPager" class="row ltw-table-div">
             <div class="col-12 col-sm-6 text-left">
-                <table id="ctl00_Content_Main_grdBottomPager" border="0" style="font-size:10pt;"><tbody><tr>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl12','')" style="font-weight:normal;">1</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl13','')" style="font-weight:normal;">2</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl14','')" style="font-weight:normal;">3</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;text-decoration:none;">...</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl16','')" style="font-weight:normal;">6</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl17','')" style="font-weight:normal;">7</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl18','')" style="font-weight:normal;">8</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl19','')" style="font-weight:normal;text-decoration:none;">9</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;text-decoration:none;">[10]</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl21','')" style="font-weight:normal;">11</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl22','')" style="font-weight:normal;">12</a></td>
-<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl23','')" style="font-weight:normal;">13</a></td>
-	</tr></tbody></table>
-</div>
+                <table id="ctl00_Content_Main_grdBottomPager" border="0" style="font-size:10pt;">
+	<tbody><tr>
+		<td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl12','')" style="font-weight:normal;">1</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl13','')" style="font-weight:normal;">2</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl14','')" style="font-weight:normal;">3</a></td><td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;text-decoration:none;">...</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl16','')" style="font-weight:normal;">6</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl17','')" style="font-weight:normal;">7</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl18','')" style="font-weight:normal;">8</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl19','')" style="font-weight:normal;text-decoration:none;">9</a></td><td style="padding-left:7px;padding-right:7px;"><a disabled style="font-weight:bold;text-decoration:none;">[10]</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl21','')" style="font-weight:normal;">11</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl22','')" style="font-weight:normal;">12</a></td><td style="padding-left:7px;padding-right:7px;"><a href="javascript:__doPostBack('ctl00%24Content_Main%24ctl23','')" style="font-weight:normal;">13</a></td>
+	</tr>
+</tbody></table>
+            </div>
             <div class="d-none d-sm-block col-sm-6 text-right">
                 <small>
                     <span id="ctl00_Content_Main_lblBottomPager">Page 10 of 13 (643 items)</span></small>
@@ -1226,9 +323,11 @@ function __doPostBack(eventTarget, eventArgument) {
              
                     <input type="button" name="ctl00$Content_Main$btnXLS" value="Export to XLS" onclick="javascript:__doPostBack('ctl00$Content_Main$btnXLS','')" id="ctl00_Content_Main_btnXLS" class="btn btn-outline-primary">
              
-            <br><br>
-</div>
+            <br>
+            <br>
+        </div>
     </div>
+    
     <div>
         
     </div>
@@ -1244,7 +343,9 @@ function __doPostBack(eventTarget, eventArgument) {
                 modal.find('iframe').attr('src', recipient)
             })
         })
-    </script><div class="modal fade" id="DetailModal" style="display: none;">
+    </script>
+
+    <div class="modal fade" id="DetailModal" style="display: none;">
         <div class="vertical-alignment-helper">
             <div class="modal-dialog modal-lg vertical-align-center">
                 <div class="modal-content">
@@ -1269,34 +370,23 @@ function __doPostBack(eventTarget, eventArgument) {
     </div>
 
         </div>
-        <br><footer id="ctl00_divFooter" class="container-fluid"><br><div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    
-                </div>
-                <div class="col-xs-12 col-sm-4 text-center">
-                    
-                </div>
-                <div class="hidden-xs col-sm-4 text-right">
-                    
-                </div>
+        <br>
+        <div id="ctl00_divFooter" class="container">
+            <div class="d-flex justify-content-center hidden-xs">
+                
             </div>
-            <p>
-            </p>
-        </footer><input type="hidden" name="ctl00$TrackerCode1" id="TrackerCode1" value="UA-40561276-1"><input type="hidden" name="ctl00$TrackerCode2" id="TrackerCode2">
-</form>
+            <div class="d-flex justify-content-center pb-3">
+                
+                <a id="ctl00_hlSB1"></a>
+                <a id="ctl00_hlSB2"></a>
+            </div>
+        </div>
+        
+        <input type="hidden" name="ctl00$TrackerCode1" id="TrackerCode1">
+        <input type="hidden" name="ctl00$TrackerCode2" id="TrackerCode2">
+    </form>
 
-    <!-- Google Analytics -->
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', document.getElementById("TrackerCode1").value, 'auto');
-        ga('create', document.getElementById("TrackerCode2").value, 'auto', 'clientTracker');
-        ga('send', 'pageview');
 
-    </script><!-- End Google Analytics -->
+
 </body>

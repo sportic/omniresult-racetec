@@ -19,7 +19,7 @@ class ResultsPageTest extends TestCase
         static::assertInstanceOf(Crawler::class, $crawler);
 
         static::assertSame(
-            'http://racetecresults.com/Results.aspx?CId=16648&RId=163&EId=1&dt=0',
+            'https://racetecresults.com/Results.aspx?CId=16648&RId=163&EId=1&dt=0',
             $crawler->getUri()
         );
 //        file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultsPage/netTime.html', $crawler->html());
@@ -32,7 +32,7 @@ class ResultsPageTest extends TestCase
         static::assertInstanceOf(Crawler::class, $crawler);
 
         static::assertSame(
-            'http://racetecresults.com/Results.aspx?CId=16648&RId=168&EId=2&dt=0',
+            'https://racetecresults.com/Results.aspx?CId=16648&RId=168&EId=2&dt=0',
             $crawler->getUri()
         );
 
@@ -48,7 +48,7 @@ class ResultsPageTest extends TestCase
         static::assertInstanceOf(Crawler::class, $crawler);
 
         static::assertSame(
-            'http://racetecresults.com/Results.aspx?CId=16648&RId=207&EId=2&dt=0',
+            'https://racetecresults.com/Results.aspx?CId=16648&RId=207&EId=2&dt=0',
             $crawler->getUri()
         );
 
@@ -64,7 +64,7 @@ class ResultsPageTest extends TestCase
         static::assertInstanceOf(Crawler::class, $crawler);
 
         static::assertSame(
-            'http://racetecresults.com/Results.aspx?CId=16648&RId=207&EId=1&dt=0',
+            'https://racetecresults.com/Results.aspx?CId=16648&RId=207&EId=1&dt=0',
             $crawler->getUri()
         );
 
@@ -80,7 +80,7 @@ class ResultsPageTest extends TestCase
         static::assertInstanceOf(Crawler::class, $crawler);
 
         static::assertSame(
-            'http://racetecresults.com/Results.aspx?CId=16648&RId=116&EId=1&dt=0',
+            'https://racetecresults.com/Results.aspx?CId=16648&RId=116&EId=1&dt=0',
             $crawler->getUri()
         );
 
@@ -91,12 +91,12 @@ class ResultsPageTest extends TestCase
 
     public function testGetCrawlerNoCategory()
     {
-        $crawler = $this->getCrawler(175, 1, 1);
+        $crawler = $this->getCrawler(6004, 1, 1);
 
         static::assertInstanceOf(Crawler::class, $crawler);
 
         static::assertSame(
-            'http://racetecresults.com/Results.aspx?CId=16648&RId=175&EId=1&dt=0',
+            'https://racetecresults.com/Results.aspx?CId=16648&RId=6004&EId=1&dt=0',
             $crawler->getUri()
         );
 //        file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultsPage/no_category.html', $crawler->html());

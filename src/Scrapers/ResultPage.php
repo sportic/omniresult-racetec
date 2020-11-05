@@ -13,13 +13,6 @@ use Symfony\Component\DomCrawler\Crawler;
  */
 class ResultPage extends AbstractScraper
 {
-    /**
-     * @throws \Sportic\Omniresult\Common\Exception\InvalidRequestException
-     */
-    protected function doCallValidation()
-    {
-        $this->validate('uid');
-    }
 
     /**
      * @return mixed
@@ -27,6 +20,40 @@ class ResultPage extends AbstractScraper
     public function getUid()
     {
         return $this->getParameter('uid');
+    }
+
+    public function setUid($uid)
+    {
+        if (strpos($uid, '::')) {
+            list($uid, $parameters) = explode('::', $uid);
+            $parameters = unserialize(base64_encode($parameters));
+            $this->initialize($parameters);
+        }
+        $this->setParameter('uid', $uid);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getGenderCategoryMerge()
+    {
+        return $this->getParameter('genderCategoryMerge', false);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isGenderCategoryMerge()
+    {
+        return $this->getGenderCategoryMerge() === true || $this->getGenderCategoryMerge() == 1;
+    }
+
+    /**
+     * @throws \Sportic\Omniresult\Common\Exception\InvalidRequestException
+     */
+    protected function doCallValidation()
+    {
+        $this->validate('uid');
     }
 
     /**

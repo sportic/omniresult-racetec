@@ -19,7 +19,7 @@ class ResultPageTest extends TestCase
         static::assertInstanceOf(Crawler::class, $crawler);
 
         static::assertSame(
-            'http://racetecresults.com/myresults.aspx?uid=16648-2091-1-29925',
+            'https://racetecresults.com/myresults.aspx?uid=16648-2091-1-29925',
             $crawler->getUri()
         );
     }

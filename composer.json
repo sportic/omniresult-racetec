@@ -1,39 +1,45 @@
 {
-  "name": "sportic/omniresult-racetec",
-  "description": "a scraper for getting data from racetec websites",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Gabriel Solomon",
-      "email": "hello@gabrielsolomon.ro"
-    }
-  ],
-  "require": {
-    "php": "^7.0",
-    "ext-dom": "*",
-    "sportic/omniresult-common": "^1.0"
-  },
-  "require-dev": {
-    "squizlabs/php_codesniffer": "^3.3",
-    "phpunit/phpunit": "^7.2",
-    "mockery/mockery": "^1.1"
-  },
-  "autoload": {
-    "psr-4": {
-      "Sportic\\Omniresult\\RaceTec\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Sportic\\Omniresult\\RaceTec\\Tests\\": "tests/"
-    }
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "ByTIC\\GouttePhantomJs\\Composer\\PhantomInstaller::installPhantomJS"
+    "name": "sportic/omniresult-racetec",
+    "description": "a scraper for getting data from racetec websites",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gabriel Solomon",
+            "email": "hello@gabrielsolomon.ro"
+        }
     ],
-    "post-update-cmd": [
-      "ByTIC\\GouttePhantomJs\\Composer\\PhantomInstaller::installPhantomJS"
-    ]
-  }
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/gabrielsolomon/php-phantomjs"
+        }
+    ],
+    "require": {
+        "php": "^7.0|^8.0",
+        "ext-dom": "*",
+        "sportic/omniresult-common": "^1.0"
+    },
+    "require-dev": {
+        "bytic/phpqatools": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sportic\\Omniresult\\RaceTec\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sportic\\Omniresult\\RaceTec\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "ByTIC\\GouttePhantomJs\\Composer\\PhantomInstaller::installPhantomJS"
+        ],
+        "post-update-cmd": [
+            "ByTIC\\GouttePhantomJs\\Composer\\PhantomInstaller::installPhantomJS"
+        ]
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
 }

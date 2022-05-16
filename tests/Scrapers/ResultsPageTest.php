@@ -52,7 +52,7 @@ class ResultsPageTest extends TestCase
             $crawler->getUri()
         );
 
-        static::assertContains('Stanciu Alecsandru', $crawler->html());
+        static::assertStringContainsString('Stanciu Alecsandru', $crawler->html());
 
         file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultsPage/hidden_fullname.html', $crawler->html());
     }
@@ -68,7 +68,7 @@ class ResultsPageTest extends TestCase
             $crawler->getUri()
         );
 
-        static::assertContains('Bocica Dragos', $crawler->html());
+        static::assertStringContainsString('Bocica Dragos', $crawler->html());
 
         file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultsPage/hidden_accordion_row.html', $crawler->html());
     }
@@ -84,7 +84,7 @@ class ResultsPageTest extends TestCase
             $crawler->getUri()
         );
 
-        static::assertContains('Farkas', $crawler->html());
+        static::assertStringContainsString('Farkas', $crawler->html());
 
         file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultsPage/net_time.html', $crawler->html());
     }

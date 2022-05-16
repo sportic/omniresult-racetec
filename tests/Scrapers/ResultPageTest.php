@@ -54,8 +54,8 @@ class ResultPageTest extends TestCase
 
         static::assertInstanceOf(Crawler::class, $crawler);
 
-        static::assertContains('Marius-Alexandru Dragu', $crawler->html());
-        static::assertContains('Masculin 45-49', $crawler->html());
+        static::assertStringContainsString('Marius-Alexandru Dragu', $crawler->html());
+        static::assertStringContainsString('Masculin 45-49', $crawler->html());
         file_put_contents(TEST_FIXTURE_PATH . '/Parsers/result_page.html', $crawler->html());
     }
 
@@ -65,7 +65,7 @@ class ResultPageTest extends TestCase
 
         static::assertInstanceOf(Crawler::class, $crawler);
 
-        static::assertContains('Palici', $crawler->html());
+        static::assertStringContainsString('Palici', $crawler->html());
 
         file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultPage/detailed_splits.html', $crawler->html());
     }
@@ -76,7 +76,7 @@ class ResultPageTest extends TestCase
 
         static::assertInstanceOf(Crawler::class, $crawler);
 
-        static::assertContains('Alin Bugari', $crawler->html());
+        static::assertStringContainsString('Alin Bugari', $crawler->html());
 
         file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultPage/net_time_details.html', $crawler->html());
     }
@@ -87,7 +87,7 @@ class ResultPageTest extends TestCase
 
         static::assertInstanceOf(Crawler::class, $crawler);
 
-        static::assertContains('Robert Eduard Peter', $crawler->html());
+        static::assertStringContainsString('Robert Eduard Peter', $crawler->html());
 
         file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultPage/no_splits.html', $crawler->html());
     }
@@ -98,7 +98,7 @@ class ResultPageTest extends TestCase
 
         static::assertInstanceOf(Crawler::class, $crawler);
 
-        static::assertContains('Serbu Victor', $crawler->html());
+        static::assertStringContainsString('Serbu Victor', $crawler->html());
 
         file_put_contents(TEST_FIXTURE_PATH . '/Parsers/ResultPage/with_laps.html', $crawler->html());
     }

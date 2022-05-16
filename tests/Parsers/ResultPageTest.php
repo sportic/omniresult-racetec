@@ -43,7 +43,7 @@ class ResultPageTest extends AbstractPageTest
 
     public function testNetTimeBox()
     {
-        $parsedParameters = static::getParserParameters('16648-116-1-40995', 'ResultPage\net_time_details');
+        $parsedParameters = static::getParserParameters('16648-116-1-40995', 'ResultPage/net_time_details');
 
         /** @var Result $record */
         $record = $parsedParameters->getRecord();

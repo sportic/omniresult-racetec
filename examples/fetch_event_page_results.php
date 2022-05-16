@@ -8,7 +8,6 @@ $parameters = [
     'eId' => 1,
     'page' => 10,
 ];
-
 $client = new \Sportic\Omniresult\RaceTec\RaceTecClient();
 $resultsParser = $client->results($parameters);
 $resultsData   = $resultsParser->getContent();

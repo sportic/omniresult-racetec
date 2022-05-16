@@ -161,14 +161,10 @@ class ResultsPageTest extends AbstractPageTest
 
         self::assertCount(50, $records);
         self::assertInstanceOf(Result::class, $records[5]);
-        self::assertArraySubset(
-            [
-                'fullName' => 'Branzoi Dorin',
-                'category' => 'Male',
-                'gender' => 'male',
-            ],
-            $records[5]->__toArray()
-        );
+        $record = $records[5]->__toArray();
+        self::assertSame('Branzoi Dorin', $record['fullName']);
+        self::assertSame('Male', $record['category']);
+        self::assertSame('male', $record['gender']);
     }
 
     public function testForResultsWithHiddenFullName()
@@ -251,7 +247,10 @@ class ResultsPageTest extends AbstractPageTest
         self::assertEquals('Serbu Victor', $result->getFullName());
         self::assertEquals('23:51:08', $result->getTime());
         self::assertEquals('26 laps', $result->getNotes());
-        self::assertEquals('16648-2146-1-51779::YToxOntzOjE5OiJnZW5kZXJDYXRlZ29yeU1lcmdlIjtzOjE6IjAiO30=', $result->getId());
+        self::assertEquals(
+            '16648-2146-1-51779::YToxOntzOjE5OiJnZW5kZXJDYXRlZ29yeU1lcmdlIjtzOjE6IjAiO30=',
+            $result->getId()
+        );
 
         $splits = $result->getSplits();
         self::assertCount(0, $splits);

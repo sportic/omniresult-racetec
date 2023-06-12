@@ -2,15 +2,16 @@
 	Timotion 2017
 </title><meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous"><link href="/css/rtv2_v2.css" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-6F4SKJ6H66&amp;l=dataLayer&amp;cx=c"></script><script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <script src="js/ltw.js" type="text/javascript"></script>
     <script src="css/jquery.min.js" type="text/javascript"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     
-    
+
+
     <script language="javascript">
         $(document).ready(function () {
             StartCountDown();
@@ -23,6 +24,10 @@
             if (input.value == val)
                 input.value = "";
         };
+        $(window).bind("pageshow", function () {
+            document.getElementById('ctl00_edtSearch').value = "";
+        });
+
     </script>
 
     <form name="aspnetForm" method="post" action="./myresults.aspx?uid=16648-116-1-40995" id="aspnetForm">
@@ -30,7 +35,7 @@
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
 <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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ID0gImx0dy1mb250LXhzbWFsbCBsdHctZGl2LWJkci1ib3QiPkdFTkRFUjwvc3Bhbj4gICAgICAgPC9kaXY+ICAgPC9kaXY+ICAgPGRpdiBjbGFzcz0iY29sLTIiPiAgICAgICA8ZGl2PiAgICAgICAgICAgPHNwYW4gQ2xhc3MgPSAibHR3LWZvbnQteHNtYWxsIGx0dy1kaXYtYmRyLWJvdCIgPlRJTUU8L3NwYW4+ICAgICAgIDwvZGl2PiAgIDwvZGl2PjxkaXYgY2xhc3M9ImNvbC04IGNvbC1zbS00IHRleHQtbGVmdCBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3BhbiBjbGFzcyA9ICJoNiI+S00gNCw1PC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgZC1ub25lIGQtc20tYmxvY2sgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4+Mzwvc3Bhbj48YnIvPjwvZGl2PjxkaXYgY2xhc3M9ImNvbC0yIHRleHQtY2VudGVyIG15LWF1dG8gbHR3LWxlZ3MtcGFkIj4gICAgICAgIDxzcGFuPiAzPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgZC1ub25lIGQtc20tYmxvY2sgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4+Mzwvc3Bhbj48YnIvPjwvZGl2PjxkaXYgY2xhc3M9ImNvbC0yIHRleHQtY2VudGVyIG15LWF1dG8gbHR3LWxlZ3MtcGFkIj4gICAgICAgIDxzcGFuIGNsYXNzPSJsdHctbnVtLWxlZyI+MDA6MTU6MTc8L3NwYW4+PGJyLz48L2Rpdj48ZGl2IGNsYXNzPSJjb2wtOCBjb2wtc20tNCB0ZXh0LWxlZnQgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4gY2xhc3MgPSAiaDYiPktNIDEwLDU8L3NwYW4+PGJyLz48L2Rpdj48ZGl2IGNsYXNzPSJjb2wtMiBkLW5vbmUgZC1zbS1ibG9jayB0ZXh0LWNlbnRlciBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3Bhbj4yPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4+IDI8L3NwYW4+PGJyLz48L2Rpdj48ZGl2IGNsYXNzPSJjb2wtMiBkLW5vbmUgZC1zbS1ibG9jayB0ZXh0LWNlbnRlciBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3Bhbj4yPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4gY2xhc3M9Imx0dy1udW0tbGVnIj4wMDoyMjowNzwvc3Bhbj48YnIvPjwvZGl2PjxkaXYgY2xhc3M9ImNvbC04IGNvbC1zbS00IHRleHQtbGVmdCBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3BhbiBjbGFzcyA9ICJoNiI+S00gMTU8L3NwYW4+PGJyLz48L2Rpdj48ZGl2IGNsYXNzPSJjb2wtMiBkLW5vbmUgZC1zbS1ibG9jayB0ZXh0LWNlbnRlciBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3Bhbj4xPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4+IDE8L3NwYW4+PGJyLz48L2Rpdj48ZGl2IGNsYXNzPSJjb2wtMiBkLW5vbmUgZC1zbS1ibG9jayB0ZXh0LWNlbnRlciBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3Bhbj4xPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4gY2xhc3M9Imx0dy1udW0tbGVnIj4wMDoxNToyNTwvc3Bhbj48YnIvPjwvZGl2PjxkaXYgY2xhc3M9ImNvbC04IGNvbC1zbS00IHRleHQtbGVmdCBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3BhbiBjbGFzcyA9ICJoNiI+RmluaXNoPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgZC1ub25lIGQtc20tYmxvY2sgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4+MTwvc3Bhbj48YnIvPjwvZGl2PjxkaXYgY2xhc3M9ImNvbC0yIHRleHQtY2VudGVyIG15LWF1dG8gbHR3LWxlZ3MtcGFkIj4gICAgICAgIDxzcGFuPiAxPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgZC1ub25lIGQtc20tYmxvY2sgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4+MTwvc3Bhbj48YnIvPjwvZGl2PjxkaXYgY2xhc3M9ImNvbC0yIHRleHQtY2VudGVyIG15LWF1dG8gbHR3LWxlZ3MtcGFkIj4gICAgICAgIDxzcGFuIGNsYXNzPSJsdHctbnVtLWxlZyI+MDA6MjI6NTE8L3NwYW4+PGJyLz48L2Rpdj48L2Rpdj4fBmdkAgkPFgIfBmhkAgUPFgIfBmhkAgcPZBYCAgEPFgIfBmhkAgkPDxYCHwIFI1JvdGF0ZSB5b3VyIGRldmljZSB0byBzZWUgbW9yZSBkYXRhZGQCCw8WAh8GZxYCAgEPDxYCHwIFCkFsbCBTcGxpdHNkZAINDxYCHwZoZAIPDw8WAh8GaGRkAg8PZBYEAgEPFgIfBmhkAgMPDxYGHwkFIH4vSW1hZ2VzL0NsaWVudHMvMTY2NDhfVGltZXIucG5nHwcFASMfBmhkZAIRDxYCHwZoFgICAQ8PFgIfCQUUfi9JbWFnZXMvUmFjZVRlYy5wbmdkZGTaRDCtkzBcX6yyURZ9+jUJm3UyqQ==">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTExMDE2NTQ4OTcPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCARYCZg8PFgIeC015UGFnZVRpdGxlBQ1UaW1vdGlvbiAyMDE3ZBYCAgEPZBYKAgEPFgIeB1Zpc2libGVoZAIDD2QWCgIBDxYCHgVzdHlsZQUZYmFja2dyb3VuZC1jb2xvcjojMDc2OUFEOxYEAgEPDxYGHgRUZXh0BQ1UaW1vdGlvbiAyMDE3HglGb3JlQ29sb3IJ/////x4EXyFTQgIEZGQCAw8PFgYfBAULMjMgQXByIDIwMTcfBQn/////HwYCBGRkAgMPFgQeBWNsYXNzBURuYXZiYXIgbmF2YmFyLXRoaW4gbmF2YmFyLWRhcmsgbmF2YmFyLWV4cGFuZC1tZCBuYXZiYXItdG9nZ2xlYWJsZS1tZB8DBTZwYWRkaW5nOjAuMnJlbTtiYWNrZ3JvdW5kLWNvbG9yOiMwNzY5QUQ7Y29sb3I6I0ZGRkZGRjsWFAIDDw8WBh8FCf////8fBgIEHwJoZGQCBQ8WAh8HBRluYXYtaXRlbSBmb250LXdlaWdodC1ib2xkFgICAQ8PFggfBAUHUmVzdWx0cx8FCf////8eC05hdmlnYXRlVXJsBSZ+L1Jlc3VsdHMuYXNweD9DSWQ9MTY2NDgmUklkPTExNiZFSWQ9MR8GAgRkZAIHD2QWAgIBDw8WBh8FCf////8fBgIEHwJoZGQCCQ9kFgICAQ8PFgYfBQn/////HwYCBB8CaGRkAgsPZBYCAgEPDxYGHwUJ/////x8GAgQfAmhkZAIND2QWAgIBDw8WCB8EBQdEZXRhaWxzHwUJ/////x8IBR5+L1N0YXRzLmFzcHg/Q0lkPTE2NjQ4JlJJZD0xMTYfBgIEZGQCDw9kFgICAQ8PFgYfBQn/////HwYCBB8CaGRkAhEPFgIfAmgWAgIBDxYCHwMFDmNvbG9yOiNGRkZGRkY7FgICAQ8PFgYfBAUFTGlua3MfBQn/////HwYCBGRkAhMPFgIfAmgWAgIBDw8WBB8FCf////8fBgIEZGQCFQ9kFgICAQ8PFggfBQn/////HwgFASMfBAUkPGkgY2xhc3M9ImZhcyBmYS1ob21lIj4mbmJzcDwvaT5Ib21lHwYCBGRkAgUPFgQfAwU5cGFkZGluZy1sZWZ0OjEwcHg7YmFja2dyb3VuZC1jb2xvcjojMDc2OUFEO2NvbG9yOiNGRkZGRkY7HwJoZAIJDxYCHwJoZAILDxYCHwMFE2JhY2tncm91bmQtY29sb3I6IzsWBAIBD2QWBAIBD2QWAmYPDxYGHghDc3NDbGFzcwUJaW1nLWZsdWlkHghJbWFnZVVybAUafi9JbWFnZXMvQ2xpZW50cy8xNjY0OC5wbmcfBgICZGQCAw8PFggfCQUSZC1ub25lIGQtbWQtaW5saW5lHwoFNmh0dHBzOi8vaW1hZ2VzLnJhY2V0ZWMubmV0L3Jlc3VsdHMvdG1yLzE2NjQ4X1RpbWVyLnBuZx8IBQEjHwYCAmRkAgMPZBYEAgEPZBYCZg8PFgYfCQUPaW1nLWZsdWlkIHctMTAwHwoFGn4vSW1hZ2VzL0NsaWVudHMvMTY2NDgucG5nHwYCAmRkAgMPDxYEHwoFNmh0dHBzOi8vaW1hZ2VzLnJhY2V0ZWMubmV0L3Jlc3VsdHMvdG1yLzE2NjQ4X1RpbWVyLnBuZx8IBQEjZGQCBQ9kFhICAQ8WAh8CZxYMAgEPDxYCHwQFDEFsaW4gQnVnYXJpIGRkAgMPFgIfAmhkAgUPFgIfAwUZYmFja2dyb3VuZC1jb2xvcjojMDc2OUFEOxYCAgEPDxYGHwQFATIfBQn/////HwYCBGRkAgcPZBYCAgEPDxYCHwQFC1NlbWltYXJhdG9uZGQCCQ9kFgICAQ8PFgQfCQVydGFibGUgdGFibGUtYm9yZGVybGVzcyB0YWJsZS1zbSB0YWJsZS1ob3ZlciBzbWFsbCBhbGlnbi1taWRkbGUgbHR3LWNlbGwtY2VudGVyIGx0dy1tYXJnaW4tYm90dG9tLTAgbHR3LXRhYmxlLWZpeGVkHwYCAmRkAgsPFgIfAmhkAgMPFgIfAmcWCgIBDxYCHwJoFhYCAQ8PFgIfBAULRmluaXNoIFRpbWVkZAIDDw8WBB8EBQdPVkVSQUxMHwJoZGQCBQ8PFggfCQUObHR3LWZvbnQtbGFyZ2UfBAUFMS8yMjkfBgICHwJnZGQCBw8PFgQfBAUIQ0FURUdPUlkfAmhkZAIJDw8WCB8JBQ5sdHctZm9udC1sYXJnZR8EBQUxLzE3Mx8GAgIfAmdkZAILDw8WBB8EBQZHRU5ERVIfAmhkZAINDw8WCB8JBQ5sdHctZm9udC1sYXJnZR8EBQUxLzE3NB8GAgIfAmdkZAIPDxYCHwJoFgICAQ8PFgQfBAUGMCBMQVBTHwJoZGQCEQ9kFgICAQ8PFgIfBAUIMDE6MTU6NDJkZAITDxYCHwJoFgICAQ8PFgQfBAUGMCBMQVBTHwJoZGQCFQ8PFgIfBAUIMDE6MTU6NDJkZAIDDxYCHwJnFhICAQ8PFgIfBAUITmV0IFRpbWVkZAIDDw8WBB8EBQdPVkVSQUxMHwJnZGQCBQ8PFggfCQUObHR3LWZvbnQtbGFyZ2UfBAUFMS8yMjkfBgICHwJnZGQCBw8PFgQfBAUIQ0FURUdPUlkfAmdkZAIJDw8WCB8JBQ5sdHctZm9udC1sYXJnZR8EBQUxLzE3Mx8GAgIfAmdkZAILDw8WBB8EBQZHRU5ERVIfAmdkZAINDw8WCB8JBQ5sdHctZm9udC1sYXJnZR8EBQUxLzE3NB8GAgIfAmdkZAIPDw8WAh8EBQgwMToxNTozOGRkAhEPDxYCHwQFCDAxOjE1OjM4ZGQCBQ8WAh8CaGQCBw8WBB4JaW5uZXJodG1sBfcVPGRpdiBjbGFzcz0icm93Ij4gICAgPGRpdiBjbGFzcz0iY29sLTEyIGx0dy1kaXYtYmRyLWJvdCBsdHctbGVnLXRpdGxlLXBhZCI+ICAgICAgICAgICA8c3BhbiBDbGFzcyA9ICJoNSAiID5MRUdTPC9zcGFuPiAgIDwvZGl2PiAgIDxkaXYgY2xhc3M9ImNvbC04IGNvbC1zbS00Ij4gICAgICAgPGRpdj4gICAgICAgIDwvZGl2PiAgIDwvZGl2PiAgIDxkaXYgY2xhc3M9ImNvbC0yIGQtbm9uZSBkLXNtLWJsb2NrIj4gICAgICAgPGRpdj4gICAgICAgICAgIDxzcGFuIENsYXNzID0gImx0dy1mb250LXhzbWFsbCBsdHctZGl2LWJkci1ib3QiID5PVkVSQUxMPC9zcGFuPiAgICAgICA8L2Rpdj4gICA8L2Rpdj4gICA8ZGl2IGNsYXNzPSJjb2wtMiI+ICAgICAgIDxkaXY+ICAgICAgICAgICA8c3BhbiBDbGFzcyA9ICJsdHctZm9udC14c21hbGwgbHR3LWRpdi1iZHItYm90IiA+Q0FURUdPUlk8L3NwYW4+ICAgICAgIDwvZGl2PiAgIDwvZGl2PiAgIDxkaXYgY2xhc3M9ImNvbC0yIGQtbm9uZSBkLXNtLWJsb2NrIj4gICAgICAgPGRpdj4gICAgICAgICAgIDxzcGFuIENsYXNzID0gImx0dy1mb250LXhzbWFsbCBsdHctZGl2LWJkci1ib3QiPkdFTkRFUjwvc3Bhbj4gICAgICAgPC9kaXY+ICAgPC9kaXY+ICAgPGRpdiBjbGFzcz0iY29sLTIiPiAgICAgICA8ZGl2PiAgICAgICAgICAgPHNwYW4gQ2xhc3MgPSAibHR3LWZvbnQteHNtYWxsIGx0dy1kaXYtYmRyLWJvdCIgPlRJTUU8L3NwYW4+ICAgICAgIDwvZGl2PiAgIDwvZGl2PjxkaXYgY2xhc3M9ImNvbC04IGNvbC1zbS00IHRleHQtbGVmdCBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3BhbiBjbGFzcyA9ICJoNiI+S00gNCw1PC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgZC1ub25lIGQtc20tYmxvY2sgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4+Mzwvc3Bhbj48YnIvPjwvZGl2PjxkaXYgY2xhc3M9ImNvbC0yIHRleHQtY2VudGVyIG15LWF1dG8gbHR3LWxlZ3MtcGFkIj4gICAgICAgIDxzcGFuPiAzPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgZC1ub25lIGQtc20tYmxvY2sgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4+Mzwvc3Bhbj48YnIvPjwvZGl2PjxkaXYgY2xhc3M9ImNvbC0yIHRleHQtY2VudGVyIG15LWF1dG8gbHR3LWxlZ3MtcGFkIj4gICAgICAgIDxzcGFuIGNsYXNzPSJsdHctbnVtLWxlZyI+MDA6MTU6MTc8L3NwYW4+PGJyLz48L2Rpdj48ZGl2IGNsYXNzPSJjb2wtOCBjb2wtc20tNCB0ZXh0LWxlZnQgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4gY2xhc3MgPSAiaDYiPktNIDEwLDU8L3NwYW4+PGJyLz48L2Rpdj48ZGl2IGNsYXNzPSJjb2wtMiBkLW5vbmUgZC1zbS1ibG9jayB0ZXh0LWNlbnRlciBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3Bhbj4yPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4+IDI8L3NwYW4+PGJyLz48L2Rpdj48ZGl2IGNsYXNzPSJjb2wtMiBkLW5vbmUgZC1zbS1ibG9jayB0ZXh0LWNlbnRlciBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3Bhbj4yPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4gY2xhc3M9Imx0dy1udW0tbGVnIj4wMDoyMjowNzwvc3Bhbj48YnIvPjwvZGl2PjxkaXYgY2xhc3M9ImNvbC04IGNvbC1zbS00IHRleHQtbGVmdCBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3BhbiBjbGFzcyA9ICJoNiI+S00gMTU8L3NwYW4+PGJyLz48L2Rpdj48ZGl2IGNsYXNzPSJjb2wtMiBkLW5vbmUgZC1zbS1ibG9jayB0ZXh0LWNlbnRlciBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3Bhbj4xPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4+IDE8L3NwYW4+PGJyLz48L2Rpdj48ZGl2IGNsYXNzPSJjb2wtMiBkLW5vbmUgZC1zbS1ibG9jayB0ZXh0LWNlbnRlciBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3Bhbj4xPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4gY2xhc3M9Imx0dy1udW0tbGVnIj4wMDoxNToyNTwvc3Bhbj48YnIvPjwvZGl2PjxkaXYgY2xhc3M9ImNvbC04IGNvbC1zbS00IHRleHQtbGVmdCBteS1hdXRvIGx0dy1sZWdzLXBhZCI+ICAgICAgICA8c3BhbiBjbGFzcyA9ICJoNiI+RmluaXNoPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgZC1ub25lIGQtc20tYmxvY2sgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4+MTwvc3Bhbj48YnIvPjwvZGl2PjxkaXYgY2xhc3M9ImNvbC0yIHRleHQtY2VudGVyIG15LWF1dG8gbHR3LWxlZ3MtcGFkIj4gICAgICAgIDxzcGFuPiAxPC9zcGFuPjxici8+PC9kaXY+PGRpdiBjbGFzcz0iY29sLTIgZC1ub25lIGQtc20tYmxvY2sgdGV4dC1jZW50ZXIgbXktYXV0byBsdHctbGVncy1wYWQiPiAgICAgICAgPHNwYW4+MTwvc3Bhbj48YnIvPjwvZGl2PjxkaXYgY2xhc3M9ImNvbC0yIHRleHQtY2VudGVyIG15LWF1dG8gbHR3LWxlZ3MtcGFkIj4gICAgICAgIDxzcGFuIGNsYXNzPSJsdHctbnVtLWxlZyI+MDA6MjI6NTE8L3NwYW4+PGJyLz48L2Rpdj48L2Rpdj4fAmdkAgkPFgIfAmhkAgUPFgIfAmhkAgcPFgIfAmhkAgkPZBYCAgEPFgIfAmhkAgsPDxYCHwQFI1JvdGF0ZSB5b3VyIGRldmljZSB0byBzZWUgbW9yZSBkYXRhZGQCDQ8WAh8CZxYCAgEPDxYCHwQFCkFsbCBTcGxpdHNkZAIPDxYCHwJoZAIRDw8WAh8CaGRkAgcPZBYEAgEPFgIfAmhkAgMPDxYGHwoFNmh0dHBzOi8vaW1hZ2VzLnJhY2V0ZWMubmV0L3Jlc3VsdHMvdG1yLzE2NjQ4X1RpbWVyLnBuZx8IBQEjHwJoZGQCCQ8WAh8CaBYCAgEPDxYCHwoFJmh0dHBzOi8vaW1hZ2VzLnJhY2V0ZWMubmV0L1JhY2VUZWMucG5nZGRkLiSvKKsKby0qcDR8old5pZ/1rZo=">
 </div>
 
 <script type="text/javascript">
@@ -56,73 +61,83 @@ function __doPostBack(eventTarget, eventArgument) {
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EF87DEBB">
 </div>
-        <div id="ctl00_divRaceName" class="d-flex justify-content-between" style="background-color:#0769AD;">
-            <div class="" style="padding-left: 10px">
-                <span id="ctl00_lblRaceName" class="h4" style="color:#FFFFFF;">Timotion 2017</span>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            $('#ctl00_popup').modal('show');
+        });
+    </script>
+
+
+        
+        <div id="ctl00_divAll">
+            <div id="ctl00_divRaceName" class="d-flex justify-content-between" style="background-color:#0769AD;">
+                <div class="" style="padding-left: 10px">
+                    <span id="ctl00_lblRaceName" class="h4" style="color:#FFFFFF;">Timotion 2017</span>
+                </div>
+                <div class="text-right" style="padding-right: 10px">
+                    <span id="ctl00_lblRaceDate" class="small" style="color:#FFFFFF;">23 Apr 2017</span>
+                </div>
             </div>
-            <div class="text-right" style="padding-right: 10px">
-                <span id="ctl00_lblRaceDate" class="small" style="color:#FFFFFF;">23 Apr 2017</span>
-            </div>
-        </div>
-        <nav id="ctl00_divNavBar" class="navbar navbar-thin navbar-dark navbar-expand-md navbar-toggleable-md" style="padding:0.2rem;background-color:#0769AD;color:#FFFFFF;">
-            <button id="ctl00_navbarbtn" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li id="ctl00_lnkResults" class="nav-item font-weight-bold">
-                        <a id="ctl00_hlResults" class="nav-link" href="Results.aspx?CId=16648&amp;RId=116&amp;EId=1" style="color:#FFFFFF;">Results</a>
-                    </li>
-                    <li id="ctl00_lnkTeams" class="nav-item">
+            <nav id="ctl00_divNavBar" class="navbar navbar-thin navbar-dark navbar-expand-md navbar-toggleable-md" style="padding:0.2rem;background-color:#0769AD;color:#FFFFFF;">
+                <button id="ctl00_navbarbtn" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li id="ctl00_lnkResults" class="nav-item font-weight-bold">
+                            <a id="ctl00_hlResults" class="nav-link" href="Results.aspx?CId=16648&amp;RId=116&amp;EId=1" style="color:#FFFFFF;">Results</a>
+                        </li>
+                        <li id="ctl00_lnkTeams" class="nav-item">
+                            
+                        </li>
+                        <li id="ctl00_lnkLive" class="nav-item">
+                            
+                        </li>
+                        <li id="ctl00_lnkTrack" class="nav-item">
+                            
+                        </li>
+                        <li id="ctl00_lnkStats" class="nav-item">
+                            <a id="ctl00_hlStats" class="nav-link" href="Stats.aspx?CId=16648&amp;RId=116" style="color:#FFFFFF;">Details</a>
+                        </li>
+                        <li id="ctl00_lnkIFrame" class="nav-item">
+                            
+                        </li>
                         
-                    </li>
-                    <li id="ctl00_lnkLive" class="nav-item">
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
                         
-                    </li>
-                    <li id="ctl00_lnkTrack" class="nav-item">
-                        
-                    </li>
-                    <li id="ctl00_lnkStats" class="nav-item">
-                        <a id="ctl00_hlStats" class="nav-link" href="Stats.aspx?CId=16648&amp;RId=116" style="color:#FFFFFF;">Details</a>
-                    </li>
-                    <li id="ctl00_lnkIFrame" class="nav-item">
-                        
-                    </li>
-                    
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    
-                    <li id="ctl00_lnkHome" class="nav-item">
-                        <a id="ctl00_hlHome" class="nav-link" href="#" style="color:#FFFFFF;"><i class="fas fa-home"> </i>Home</a>
-                    </li>
-                    <div id="ctl00_divSearch" class="md-form my-0">
-                        <div class="input-group">
-                            <input name="ctl00$edtSearch" type="text" onchange="javascript:setTimeout('__doPostBack(\'ctl00$edtSearch\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_edtSearch" class="form-control" placeholder="Search">
+                        <li id="ctl00_lnkHome" class="nav-item">
+                            <a id="ctl00_hlHome" class="nav-link" href="#" style="color:#FFFFFF;"><i class="fas fa-home"> </i>Home</a>
+                        </li>
+                        <div id="ctl00_divSearch" class="md-form my-0">
+                            <div class="input-group">
+                                <input name="ctl00$edtSearch" type="text" onchange="javascript:setTimeout('__doPostBack(\'ctl00$edtSearch\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_edtSearch" class="form-control" placeholder="Search">
+                            </div>
                         </div>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div id="ctl00_divSearch2" class="p-2 d-md-none" style="padding-left: 10px">
+                <div class="input-group ">
+                    <input name="ctl00$edtSearch2" type="text" onchange="javascript:setTimeout('__doPostBack(\'ctl00$edtSearch2\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_edtSearch2" class="form-control border-primary text-primary" placeholder="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary fa fa-search" type="button"></button>
                     </div>
-                </ul>
-            </div>
-        </nav>
-        
-        <div id="ctl00_divSearch2" class="p-2 d-md-none" style="padding-left: 10px">
-            <div class="input-group ">
-                <input name="ctl00$edtSearch2" type="text" onchange="javascript:setTimeout('__doPostBack(\'ctl00$edtSearch2\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_edtSearch2" class="form-control border-primary text-primary" placeholder="Search" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-primary fa fa-search" type="button"></button>
                 </div>
             </div>
-        </div>
-        
-        <div id="ctl00_divLogo" class="d-flex justify-content-center pb-1" align="center" style="background-color:#;">
-            <div class="row">
-                <div id="ctl00_divLargeLogo" class="d-none d-sm-block">
-                    <a id="ctl00_hlLargeLogo" target="_blank"><img id="ctl00_imgLargeLogo" class="img-fluid" src="Images/Clients/RaceLogos/16648_116.png" style="border-width:0px;"></a>
-                    <a id="ctl00_hlTimerImageTop" class="d-none d-md-inline" href="#"><img src="Images/Clients/16648_Timer.png" alt="" style="border-width:0px;"></a>
-                </div>
-                <div id="ctl00_divSmallLogo" class="d-block d-sm-none">
-                    <a id="ctl00_hlSmallLogo" target="_blank"><img id="ctl00_imgSmallLogo" class="img-fluid w-100" src="Images/Clients/RaceLogos/16648_116.png" style="border-width:0px;"></a>
-                    <a id="ctl00_hlSmallTimerImageTop" href="#"><img src="Images/Clients/16648_Timer.png" alt="" style="border-width:0px;"></a>
+            
+            <div id="ctl00_divLogo" class="d-flex justify-content-center pb-1" align="center" style="background-color:#;">
+                <div class="row">
+                    <div id="ctl00_divLargeLogo" class="d-none d-sm-block">
+                        <a id="ctl00_hlLargeLogo" target="_blank"><img id="ctl00_imgLargeLogo" class="img-fluid" src="Images/Clients/16648.png" style="border-width:0px;"></a>
+                        <a id="ctl00_hlTimerImageTop" class="d-none d-md-inline" href="#"><img src="https://images.racetec.net/results/tmr/16648_Timer.png" alt="" style="border-width:0px;"></a>
+                    </div>
+                    <div id="ctl00_divSmallLogo" class="d-block d-sm-none">
+                        <a id="ctl00_hlSmallLogo" target="_blank"><img id="ctl00_imgSmallLogo" class="img-fluid w-100" src="Images/Clients/16648.png" style="border-width:0px;"></a>
+                        <a id="ctl00_hlSmallTimerImageTop" href="#"><img src="https://images.racetec.net/results/tmr/16648_Timer.png" alt="" style="border-width:0px;"></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -232,6 +247,8 @@ function __doPostBack(eventTarget, eventArgument) {
                 </div>
 
             </div>
+            
+
             
             <div id="ctl00_Content_Main_divIFrame" class="row justify-content-center">
                 

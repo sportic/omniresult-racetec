@@ -1,6 +1,6 @@
 <?php
 
-namespace Sportic\Omniresult\RaceTec\Tests;
+namespace Sportic\Omniresult\RaceTec\Tests\src;
 
 use PHPUnit\Framework\TestCase;
 

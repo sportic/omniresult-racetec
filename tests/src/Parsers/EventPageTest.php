@@ -1,9 +1,9 @@
 <?php
 
-namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
+namespace Sportic\Omniresult\RaceTec\Tests\src\Parsers;
 
-use Sportic\Omniresult\RaceTec\Scrapers\EventPage as EventPageScraper;
 use Sportic\Omniresult\RaceTec\Parsers\EventPage as EventPageParser;
+use Sportic\Omniresult\RaceTec\Scrapers\EventPage as EventPageScraper;
 
 /**
  * Class EventPageTest

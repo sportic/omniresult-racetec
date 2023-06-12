@@ -1,6 +1,6 @@
 <?php
 
-namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
+namespace Sportic\Omniresult\RaceTec\Tests\src\Parsers;
 
 use Sportic\Omniresult\Common\Content\ItemContent;
 use Sportic\Omniresult\Common\Models\Result;
@@ -26,9 +26,9 @@ class ResultPageTest extends AbstractPageTest
 
         self::assertSame('02:12:11.38', $record->getTime());
 
-        self::assertSame('10', $record->getPosGen());
-        self::assertSame('10', $record->getPosGender());
-        self::assertSame('1', $record->getPosCategory());
+        self::assertEquals('10', $record->getPosGen());
+        self::assertEquals('10', $record->getPosGender());
+        self::assertEquals('1', $record->getPosCategory());
 
         $participants = $record->getParameter('participants');
         self::assertSame('211', $participants['race']);
@@ -51,9 +51,9 @@ class ResultPageTest extends AbstractPageTest
         self::assertInstanceOf(Result::class, $record);
         self::assertSame('Alin Bugari', $record->getFullName());
 
-        self::assertSame('01:15:38', $record->getTime());
-        self::assertSame('2', $record->getBib());
-        self::assertSame('1', $record->getPosGen());
+        self::assertEquals('01:15:38', $record->getTime());
+        self::assertEquals('2', $record->getBib());
+        self::assertEquals('1', $record->getPosGen());
         self::assertSame('Masculin', $record->getCategory());
         self::assertSame('Finished', $record->getStatus());
     }
@@ -109,7 +109,7 @@ class ResultPageTest extends AbstractPageTest
 
 //        self::assertSame('2', $split->getPosGen());
 //        self::assertSame('2', $split->getPosCategory());
-        self::assertSame('2', $split->getPosGender());
+        self::assertEquals('2', $split->getPosGender());
     }
 
     public function testSplitsWithLaps()

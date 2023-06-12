@@ -112,12 +112,13 @@ class ResultsPage extends AbstractScraper
         $pagerContent = $crawler->filter('#ctl00_Content_Main_divTopPager');
         $link = $pagerContent->selectLink($page)->first()->getNode(0);
         $href = $link->getAttribute('href');
-        $eventTarget = str_replace(["javascript:__doPostBack('", "','')"], '', $href);
 
-        $crawler->filter('#__EVENTTARGET')->getNode(0)->setAttribute('value', $eventTarget);
-
-        $form = $crawler->filter('#aspnetForm')->form();
-        $crawler = $client->submit($form);
+//        $eventTarget = str_replace(["javascript:__doPostBack('", "','')"], '', $href);
+//
+//        $crawler->filter('#__EVENTTARGET')->getNode(0)->setAttribute('value', $eventTarget);
+//
+//        $form = $crawler->filter('#aspnetForm')->form();
+        $crawler = $client->request('GET', $href);
         return $crawler;
     }
 

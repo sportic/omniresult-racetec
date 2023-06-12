@@ -1,6 +1,6 @@
 <?php
 
-namespace Sportic\Omniresult\RaceTec\Tests\Scrapers;
+namespace Sportic\Omniresult\RaceTec\Tests\src\Scrapers;
 
 use PHPUnit\Framework\TestCase;
 use Sportic\Omniresult\RaceTec\Scrapers\ResultPage;

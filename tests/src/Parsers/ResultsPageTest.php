@@ -1,7 +1,7 @@
 <?php
 /** @noinspection PhpMethodNamingConventionInspection */
 
-namespace Sportic\Omniresult\RaceTec\Tests\Parsers;
+namespace Sportic\Omniresult\RaceTec\Tests\src\Parsers;
 
 use Sportic\Omniresult\Common\Models\Result;
 use Sportic\Omniresult\RaceTec\Parsers\ResultsPage as PageParser;
@@ -34,15 +34,15 @@ class ResultsPageTest extends AbstractPageTest
         self::assertInstanceOf(Result::class, $results[5]);
         self::assertEquals(
             [
-                'posGen' => '6',
+                'posGen' => 6,
                 'bib' => '247',
                 'fullName' => 'Sorin Boriceanu',
                 'href' => 'myresults.aspx?uid=16648-2091-1-29984',
                 'time' => '02:04:16',
                 'category' => 'Masculin 35-39',
-                'posCategory' => '3',
+                'posCategory' => 3,
                 'gender' => 'male',
-                'posGender' => '6',
+                'posGender' => 6,
                 'id' => '16648-2091-1-29984::YToxOntzOjE5OiJnZW5kZXJDYXRlZ29yeU1lcmdlIjtzOjE6IjAiO30=',
                 'parameters' => null,
                 'splits' => [],
@@ -52,7 +52,8 @@ class ResultsPageTest extends AbstractPageTest
                 'firstName' => 'Sorin',
                 'lastName' => 'Boriceanu',
                 'timeGross' => null,
-                'notes' => null
+                'notes' => null,
+                'result' => null
             ],
             $results[5]->__toArray()
         );
@@ -104,7 +105,7 @@ class ResultsPageTest extends AbstractPageTest
         self::assertInstanceOf(Result::class, $records[5]);
         self::assertEquals(
             [
-                'posGen' => '6',
+                'posGen' => 6,
                 'bib' => '589',
                 'fullName' => 'Branzoi Dorin',
                 'href' => 'myresults.aspx?uid=16648-175-1-64191',
@@ -112,7 +113,7 @@ class ResultsPageTest extends AbstractPageTest
                 'category' => null,
                 'posCategory' => null,
                 'gender' => 'male',
-                'posGender' => '6',
+                'posGender' => 6,
                 'id' => '16648-175-1-64191::YToxOntzOjE5OiJnZW5kZXJDYXRlZ29yeU1lcmdlIjtzOjE6IjAiO30=',
                 'parameters' => null,
                 'splits' => [
@@ -124,7 +125,9 @@ class ResultsPageTest extends AbstractPageTest
                         'posGen' => null,
                         'posCategory' => null,
                         'posGender' => null,
-                        'parameters' => null
+                        'parameters' => null,
+                        'timeGross' => null,
+                        'result' => null
                     ],
                     1 => [
                         'name' => 'Lap2',
@@ -134,7 +137,9 @@ class ResultsPageTest extends AbstractPageTest
                         'posGen' => null,
                         'posCategory' => null,
                         'posGender' => null,
-                        'parameters' => null
+                        'parameters' => null,
+                        'timeGross' => null,
+                        'result' => null
                     ],
                 ],
                 'status' => null,
@@ -143,7 +148,8 @@ class ResultsPageTest extends AbstractPageTest
                 'firstName' => 'Branzoi',
                 'lastName' => 'Dorin',
                 'timeGross' => null,
-                'notes' => null
+                'notes' => null,
+                'result' => null
             ],
             $records[5]->__toArray()
         );
@@ -271,15 +277,15 @@ class ResultsPageTest extends AbstractPageTest
         self::assertInstanceOf(Result::class, $records[5]);
         self::assertEquals(
             [
-                'posGen' => '6',
+                'posGen' => 6,
                 'bib' => '201',
                 'fullName' => 'David Mihai',
                 'href' => 'myresults.aspx?uid=16648-168-2-10993',
                 'time' => '01:41:38',
                 'category' => 'Masculin 30-39',
-                'posCategory' => '1',
+                'posCategory' => 1,
                 'gender' => 'male',
-                'posGender' => '6',
+                'posGender' => 6,
                 'id' => '16648-168-2-10993::YToxOntzOjE5OiJnZW5kZXJDYXRlZ29yeU1lcmdlIjtzOjE6IjAiO30=',
                 'splits' => [
                     0 => [
@@ -290,7 +296,9 @@ class ResultsPageTest extends AbstractPageTest
                         'posGen' => null,
                         'posCategory' => null,
                         'posGender' => null,
-                        'parameters' => null
+                        'parameters' => null,
+                        'timeGross' => null,
+                        'result' => null
                     ],
                     1 => [
                         'name' => 'Lap 2',
@@ -300,7 +308,9 @@ class ResultsPageTest extends AbstractPageTest
                         'posGen' => null,
                         'posCategory' => null,
                         'posGender' => null,
-                        'parameters' => null
+                        'parameters' => null,
+                        'timeGross' => null,
+                        'result' => null
                     ],
                 ],
                 'status' => null,
@@ -310,7 +320,8 @@ class ResultsPageTest extends AbstractPageTest
                 'firstName' => 'David',
                 'lastName' => 'Mihai',
                 'timeGross' => null,
-                'notes' => null
+                'notes' => null,
+                'result' => null
             ],
             $records[5]->__toArray()
         );

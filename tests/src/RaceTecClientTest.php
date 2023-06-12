@@ -1,6 +1,6 @@
 <?php
 
-namespace Sportic\Omniresult\RaceTec\Tests;
+namespace Sportic\Omniresult\RaceTec\Tests\src;
 
 use Sportic\Omniresult\Common\RequestDetector\DetectorResult;
 use Sportic\Omniresult\RaceTec\RaceTecClient;

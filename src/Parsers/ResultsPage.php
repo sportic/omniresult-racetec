@@ -7,6 +7,7 @@ use Sportic\Omniresult\Common\Content\ListContent;
 use Sportic\Omniresult\Common\Models\Race;
 use Sportic\Omniresult\Common\Models\Result;
 use Sportic\Omniresult\Common\Models\Split;
+use Sportic\Omniresult\RaceTec\Helper;
 
 /**
  * Class ResultsPage
@@ -227,14 +228,8 @@ class ResultsPage extends AbstractParser
                 $split->setParameters(['time' => trim($cell->nodeValue)]);
                 $parameters['splits'][] = $split;
             } elseif ($field == 'fullName') {
-                $links = $cell->getElementsByTagName('a');
-                $parameters['href'] = $links->item(0)->getAttribute('href');
-                parse_str(parse_url($parameters['href'], PHP_URL_QUERY), $urlParameters);
-                $parameters['id'] = $urlParameters['uid'] ?? '';
-                $passedParams = ['genderCategoryMerge' => $this->getScraper()->isGenderCategoryMerge() ? '1' : '0'];
-                $parameters['id'] .= '::' . base64_encode(serialize($passedParams));
+                $parameters = $this->parseResultsRowCellFullName($cell, $field, $parameters);
 
-                $parameters[$field] = trim($cell->nodeValue);
             } elseif ($field == 'laps') {
                 $parameters['notes'] = trim($cell->nodeValue) . ' laps';
             } else {
@@ -303,5 +298,26 @@ class ResultsPage extends AbstractParser
     public function getModelClassName()
     {
         return Result::class;
+    }
+
+    protected function parseResultsRowCellFullName(DOMElement $cell, mixed $field, array $parameters)
+    {
+        $links = $cell->getElementsByTagName('a');
+        $firstLink = $links->item(0);
+
+        $parameters['href'] = $firstLink->getAttribute('href');
+        parse_str(parse_url($parameters['href'], PHP_URL_QUERY), $urlParameters);
+        $parameters['id'] = $urlParameters['uid'] ?? '';
+        $passedParams = ['genderCategoryMerge' => $this->getScraper()->isGenderCategoryMerge() ? '1' : '0'];
+
+        $parameters['id'] .= '::' . base64_encode(serialize($passedParams));
+
+        $parameters[$field] = trim($firstLink->nodeValue);
+
+        $badge = $cell->getElementsByTagName('span')->item(0);
+        if ($badge) {
+            $parameters['status'] = Helper::statusParse($badge->nodeValue);
+        }
+        return $parameters;
     }
 }

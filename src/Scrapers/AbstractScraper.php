@@ -3,8 +3,7 @@
 namespace Sportic\Omniresult\RaceTec\Scrapers;
 
 use ByTIC\GouttePhantomJs\Clients\ClientFactory;
-use Goutte\Client;
-use JonnyW\PhantomJs\Client as PhantomJsBaseClient;
+use Symfony\Component\BrowserKit\HttpBrowser;
 
 /**
  * Class AbstractScraper
@@ -14,14 +13,15 @@ abstract class AbstractScraper extends \Sportic\Omniresult\Common\Scrapers\Abstr
 {
 
     /**
-     * @return Client
+     * @inheritDoc
      */
     protected function generateClient()
     {
-        $client = PhantomJsBaseClient::getInstance();
-        $client->getEngine()->addOption('--ignore-ssl-errors=true');
+        $client = ClientFactory::getPhantomJsClient();
+//        $client->getEngine()->addOption('--ignore-ssl-errors=true');
 
-        return parent::generateClient();
+        return $client;
+//        return parent::generateClient();
     }
 
     /**
@@ -40,3 +40,4 @@ abstract class AbstractScraper extends \Sportic\Omniresult\Common\Scrapers\Abstr
         return 'https://racetecresults.com';
     }
 }
+

@@ -15,11 +15,14 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^8.2",
         "ext-dom": "*",
+        "bytic/goutte-phantomjs-bridge": "^1.0",
+        "jonnyw/php-phantomjs": "^5.0.8",
         "sportic/omniresult-common": "^1.0"
     },
     "require-dev": {
+        "symfony/css-selector": "^6.0|^7.0",
         "bytic/phpqatools": "^1.0"
     },
     "autoload": {

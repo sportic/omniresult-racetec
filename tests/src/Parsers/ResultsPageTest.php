@@ -53,7 +53,9 @@ class ResultsPageTest extends AbstractPageTest
                 'lastName' => 'Boriceanu',
                 'timeGross' => null,
                 'notes' => null,
-                'result' => null
+                'result' => null,
+                'dob' => null,
+                'yob' => null
             ],
             $results[5]->__toArray()
         );
@@ -127,7 +129,8 @@ class ResultsPageTest extends AbstractPageTest
                         'posGender' => null,
                         'parameters' => null,
                         'timeGross' => null,
-                        'result' => null
+                        'result' => null,
+                                    'id' => null
                     ],
                     1 => [
                         'name' => 'Lap2',
@@ -139,7 +142,8 @@ class ResultsPageTest extends AbstractPageTest
                         'posGender' => null,
                         'parameters' => null,
                         'timeGross' => null,
-                        'result' => null
+                        'result' => null,
+                                    'id' => null
                     ],
                 ],
                 'status' => null,
@@ -149,7 +153,9 @@ class ResultsPageTest extends AbstractPageTest
                 'lastName' => 'Dorin',
                 'timeGross' => null,
                 'notes' => null,
-                'result' => null
+                'result' => null,
+                    'dob' => null,
+    'yob' => null,
             ],
             $records[5]->__toArray()
         );
@@ -298,7 +304,8 @@ class ResultsPageTest extends AbstractPageTest
                         'posGender' => null,
                         'parameters' => null,
                         'timeGross' => null,
-                        'result' => null
+                        'result' => null,
+                                    'id' => null,
                     ],
                     1 => [
                         'name' => 'Lap 2',
@@ -310,7 +317,8 @@ class ResultsPageTest extends AbstractPageTest
                         'posGender' => null,
                         'parameters' => null,
                         'timeGross' => null,
-                        'result' => null
+                        'result' => null,
+                        'id' => null,
                     ],
                 ],
                 'status' => null,
@@ -321,7 +329,9 @@ class ResultsPageTest extends AbstractPageTest
                 'lastName' => 'Mihai',
                 'timeGross' => null,
                 'notes' => null,
-                'result' => null
+                'result' => null,
+                'dob' => null,
+    'yob' => null,
             ],
             $records[5]->__toArray()
         );
